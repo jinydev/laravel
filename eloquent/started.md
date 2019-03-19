@@ -1,4 +1,4 @@
-# Eloquent: 시작하기
+# 라라벨 > Eloquent: 시작하기
 
 * 소개
 * 모델 정의하기
@@ -33,24 +33,26 @@
 
 ## 모델 정의하기
 시작하기 위해서 Eloquent 모델 하나를 생성합니다. 
-일반적으로 모델은 app 디렉토리에 존재하지만, composer.json 파일에 의해서 오토로드 되는 곳이라면 어느곳에든 위치해도 상관없습니다. 
-모든 Eloquent 모델은 Illuminate\Database\Eloquent\Model을 상속받습니다.
 
-모델 인스턴스를 생성하는 가장 쉬운 방법은 make:model 아티즌 커맨드를 사용하는 것입니다:
+일반적으로 모델은 `app` 디렉토리에 존재하지만, `composer.json` 파일에 의해서 오토로드 되는 곳이라면 어느곳에든 위치해도 상관없습니다. 
+모든 `Eloquent` 모델은 `Illuminate\Database\Eloquent\Model`을 상속받습니다.
 
-```
+모델 인스턴스를 생성하는 가장 쉬운 방법은 `make:model 아티즌 커맨드`를 사용하는 것입니다:
+
+```bash
 php artisan make:model Flight
 ```
+
 모델을 생성할 때 데이터 마이그레이션을 생성하고 싶다면 --migration 혹은 -m 옵션을 사용할 수 있습니다:
 
-```
+```bash
 php artisan make:model Flight --migration
 
 php artisan make:model Flight -m
 ```
 
 ### Eloquent 모델 컨벤션
-이제 `flights` 데이터베이스 테이블에서 정보를 찾거나 저장할 때 쓸 Flight 모델의 예를 보겠습니다:
+이제 `flights` 데이터베이스 테이블에서 정보를 찾거나 저장할 때 쓸 `Flight 모델`의 예를 보겠습니다:
 
 ```php
 <?php
@@ -67,8 +69,10 @@ class Flight extends Model
 
 #### 테이블 이름
 생성한 Flight 모델에서 어떠한 테이블을 사용해야할지 Elquent 에게 알려주지 않았다는 점을 주목하십시오. 
-관례적으로 연관된 테이블이 별도로 지정되지 않는다면 클래스의 "스네이크 케이스" 로 표시된 복수형의 이름이 사용되어 집니다. 
-따라서 이 예제에서는 Eloquent는 Flight 모델은 flights 테이블에 레코드를 저장한다고 추정할 것입니다. 
+
+관례적으로 연관된 테이블이 별도로 지정되지 않는다면 클래스의 `스네이크 케이스` 로 표시된 복수형의 이름이 사용되어 집니다. 
+
+따라서 이 예제에서는 Eloquent는 `Flight 모델`은 `flights 테이블`에 레코드를 저장한다고 가정합니다.
 
 여러분은 모델의 table 속성을 통해서 고유한 테이블을 지정할 수 있습니다:
 
@@ -92,11 +96,13 @@ class Flight extends Model
 
 #### Primary Keys
 Eloquent는 테이블의 `primary key` 컬럼의 이름을 `id`로 추정합니다. 
-protected $primaryKey 속성을 통해서 이 컬럼명을 재정의할 수 있습니다.
+`protected $primaryKey` 속성을 통해서 이 컬럼명을 재정의할 수 있습니다.
 
-추가적으로, Eloquent 는 primary key가 증가하는 정수값(incrementing)이라고 추정합니다. 
-이는 기본적으로 primary key를 int로 자동 캐스팅 한다는 것을 의미합니다. 
-증가하지 않는(non-incrementing) 또는 숫자형이 아닌 primary key를 사용하고자 한다면, 모델의 public $incrementing 속성을 false 로 설정해야 합니다. 
+추가적으로, Eloquent 는 `primary key`가 증가하는 `정수`값(incrementing)이라고 추정합니다. 
+이는 기본적으로 primary key를 `int`로 자동 캐스팅 한다는 것을 의미합니다.
+
+증가하지 않는(non-incrementing) 또는 숫자형이 아닌 primary key를 사용하고자 한다면, 
+모델의 `public $incrementing` 속성을 false 로 설정해야 합니다. 
 
 primary key가 정수값(integer)이 아니라면, 모델의 protected $keyType 속성을 string으로 지정하십시오.
 
@@ -123,7 +129,8 @@ class Flight extends Model
 ```
 
 타임스탬프의 포맷을 변경하여야 한다면 모델에 `$dateFormat` 속성을 지정하면 됩니다. 
-이 속성은 날짜 속성이 데이터베이스에 저장될 때의 형식과 모델이 배열이나 JSON으로 직렬화-serialization되었을 때의 형식을 결정합니다:
+
+이 속성은 날짜 속성이 데이터베이스에 저장될 때의 형식과 모델이 배열이나 JSON으로 직렬화(serialization)되었을 때의 형식을 결정합니다:
 
 ```php
 <?php
@@ -202,7 +209,8 @@ class Flight extends Model
 
 ## 모델 조회하기
 하나의 모델과 해당 모델에 지정된 데이터베이스 테이블을 생성하였다면, 이제 데이터베이스에서 데이터를 조회할 수 있습니다. 
-각 Eloquent 모델을 데이터베이스 쿼리를 용이하게 해주는 강력한 쿼리 빌더로 생각하십시오.
+
+각 Eloquent 모델을 데이터베이스 쿼리를 용이하게 해주는 `강력한 쿼리 빌더`로 생각하십시오.
 
 예를 들자면:
 ```php
@@ -216,8 +224,10 @@ foreach ($flights as $flight) {
 ```
 
 ### 추가적인 제약조건 추가하기
-Eloquent의 all 메소드는 모델의 테이블에서 모든 결과를 반환할 것입니다. 
-각 Eloquent 모델은 쿼리 빌더의 역할을 하기 때문에 쿼리에 다양한 조건들을 추가할 수 있고, 마지막에 get 메소드를 사용하여 결과를 조회할 수 있습니다:
+Eloquent의 `all` 메소드는 모델의 테이블에서 모든 결과를 반환할 것입니다. 
+
+각 Eloquent 모델은 쿼리 빌더의 역할을 하기 때문에 쿼리에 다양한 조건들을 추가할 수 있고, 
+마지막에 get 메소드를 사용하여 결과를 조회할 수 있습니다:
 
 ```php
 $flights = App\Flight::where('active', 1)
@@ -225,13 +235,15 @@ $flights = App\Flight::where('active', 1)
                ->take(10)
                ->get();
 ```
+
 {tip}
 Eloquent 모델은 모두가 쿼리 빌더이기 때문에, 쿼리 빌더에서 제공되는 모든 메소드를 살펴 보시기 바랍니다. 
 여기의 어떠한 메소드라도 Eloquent 쿼리에서 사용할 수 있습니다.
 
 #### 모델의 리프레쉬
 `fresh` 와 `refresh` 메소드를 사용하여 모델을 리프레쉬 할 수 있습니다. 
-`fresh` 메소드는 데이터베이스로부터 모델을 다시 검색 할 것입니다. 기존 모델 인스턴스는 영향을받지 않습니다.
+`fresh` 메소드는 데이터베이스로부터 모델을 다시 검색 할 것입니다. 
+기존 모델 인스턴스는 영향을받지 않습니다.
 
 ```php
 $flight = App\Flight::where('number', 'FR 900')->first();
@@ -254,6 +266,7 @@ $flight->number; // "FR 900"
 
 ### 컬렉션
 `all`과 `get` 같이 여러개의 결과를 가져오는 Eloquent 메소드의 경우 `Illuminate\Database\Eloquent\Collection` 인스턴스가 반환됩니다.
+
 Collection 클래스는 Eloquent 결과에 사용할 수 있는 다양한 메소드들을 제공합니다:
 
 ```php
@@ -271,8 +284,9 @@ foreach ($flights as $flight) {
 ```
 
 ### 결과 분할하기
-수천개의 Eloquent 모델이 필요 할 때에는 chunk 명령어를 사용하십시오. 
-chunk 메소드는 `분할된` Eloquent 모델들을 가져올 것이며 주어진 Closure에 의해서 처리될 것입니다. 
+수천개의 Eloquent 모델이 필요 할 때에는 `chunk` 명령어를 사용하십시오. 
+
+chunk 메소드는 `분할된` Eloquent 모델들을 가져올 것이며 주어진 `Closure`에 의해서 처리될 것입니다. 
 chunk 메소드를 이용하면 결과가 아주 큰 경우 메모리를 절약할 수 있을 것입니다.
 
 ```php
@@ -283,7 +297,8 @@ Flight::chunk(200, function ($flights) {
 });
 ```
 
-메소드의 첫번째 인자는 `chunk` 메소드에서 받아 들일 레코드의 갯수 입니다. 
+메소드의 첫번째 인자는 `chunk` 메소드에서 받아 들일 레코드의 갯수 입니다.
+
 두번째 인자는 클로저로 데이터베이스로 부터 분할된 데이터들을 전달 받습니다. 
 데이터베이스 쿼리는 각가의 분할된 레코드들을 조회하여 클로저에 전달하도록 실행될 것입니다.
 
@@ -299,6 +314,7 @@ foreach (Flight::where('foo', 'bar')->cursor() as $flight) {
 
 ### 하나의 모델 / 집계 조회하기
 테이블에서 모든 정보를 조회하는 것 외에도 `find` 또는 `first`를 이용해서 하나의 레코드를 찾을 수 있습니다. 
+
 이 메소드들은 모델 컬렉션을 반환하는 대신 모델 인스턴스 하나를 반환합니다:
 
 ```php
@@ -326,6 +342,7 @@ $model = App\Flight::where('legs', '>', 100)->firstOrFail();
 ```
 
 예외를 처리하지 않는다면 404 HTTP 응답이 자동으로 사용자에게 보내집니다. 
+
 이 메소드들을 사용할 때 404 응답을 반환하는 것을 명시적으로 선언할 필요는 없습니다.
 
 ```php
@@ -336,6 +353,7 @@ Route::get('/api/flights/{id}', function ($id) {
 
 ### 합계 조회하기
 쿼리 빌더가 제공하는 count, sum, max을 비롯한 집계 메소드를 이용할 수 있습니다. 
+
 이 메소드들은 모델의 인스턴스 대신 적절한 스칼라 값을 반환합니다.
 
 ```php
@@ -380,13 +398,17 @@ class FlightController extends Controller
 ```
 
 이 예제에서 HTTP 요청에서 확인된 name 파라미터를 App\Flight 모델 인스턴스의 name 속성에 지정합니다. 
+
 save 메소드를 호출하면 데이터베이스에 레코드가 추가 될 것입니다. 
+
 save 메소드를 호출하면 `created_at`와 `updated_at` 타임스탬프가 자동으로 설정되며 수동으로 지정할 필요가 없습니다.
 
 
 ### Updates
-save 메소드는 데이터베이스에 이미 존재하는 모델들을 업데이트 하기 위해 사용될 수 있습니다. 
+`save` 메소드는 데이터베이스에 이미 존재하는 모델들을 업데이트 하기 위해 사용될 수 있습니다. 
+
 모델을 업데이트하기 위해서는 모델을 조회한 다음, 업데이트하기 원하는 속성을 수정한 뒤 save 메소드를 호출합니다. 
+
 이 때에도 `updated_at` 타임스탬프는 자동으로 설정되며 수동으로 값을 지정할 필요가 없습니다:
 
 ```php
@@ -410,18 +432,23 @@ App\Flight::where('active', 1)
 update 메소드는 컬럼의 정렬과 업데이트 될 컬럼을 대표하는 값의 배열을 필요로 합니다.
 
 {note}
-Eloquent를 통해서 여러개의 모델을 업데이트 할 때, 변경되는 모델에 대한 saved 및 updated 모델 이벤트는 발생되지 않습니다. 
+Eloquent를 통해서 여러개의 모델을 업데이트 할 때, 변경되는 모델에 대한 `saved` 및 `updated` 모델 이벤트는 발생되지 않습니다. 
 이 이유는 여러개의 모델을 업데이트 할 때 실제로 모델이 조회되는 것이 아니기 때문입니다.
 
 
 ### 대량 할당 - Mass Assignment
-create 메소드를 통해 한줄에서 바로 새로운 모델을 추가할 수도 있습니다. 
+`create` 메소드를 통해 한줄에서 바로 새로운 모델을 추가할 수도 있습니다. 
+
 메소드를 통해 추가된 모델 인스턴스가 결과로 반환될 것입니다. 
+
 하지만 기본적으로 모든 Eloquent 모델은 대량 할당-Mass Assignment 으로부터 보호되기 때문에, 이렇게 하기 전에 모델의 fillable나 guarded 속성을 지정해야 주어야 합니다.
 
-대량 할당(Mass Assignment)의 취약성은 사용자가 예상치 못한 HTTP 요청 파라미터를 전달했을 때 발생하며, 해당 파라미터는 데이터베이스의 예상하지 못한 컬럼을 변경하게 됩니다. 예를 들어 악의적인 사용자는 HTTP 요청을 통해 is_admin을 전달할 수 있으며 이 파라미터는 모델의 create 메소드에 전달되어 사용자를 관리자로 승격할 수 있습니다.
+대량 할당(Mass Assignment)의 취약성은 사용자가 예상치 못한 HTTP 요청 파라미터를 전달했을 때 발생하며, 해당 파라미터는 데이터베이스의 예상하지 못한 컬럼을 변경하게 됩니다. 
 
-따라서 시작하기 위해서는 대량 할당(Mass Assignment)할 모델의 속성을 정의해야 하며 이는 모델에 $fillable 속성을 사용해서 할 수 있습니다. 예를 들어 Flight 모델에서 name 속성을 대량 할당(Mass Assignment)될 수 있도록 만들 수 있습니다:
+예를 들어 악의적인 사용자는 HTTP 요청을 통해 is_admin을 전달할 수 있으며 이 파라미터는 모델의 create 메소드에 전달되어 사용자를 관리자로 승격할 수 있습니다.
+
+따라서 시작하기 위해서는 대량 할당(Mass Assignment)할 모델의 속성을 정의해야 하며 이는 모델에 `$fillable` 속성을 사용해서 할 수 있습니다. 
+예를 들어 Flight 모델에서 name 속성을 대량 할당(Mass Assignment)될 수 있도록 만들 수 있습니다:
 
 ```php
 <?php
@@ -492,8 +519,9 @@ class Flight extends Model
 protected $guarded = [];
 ```
 
-### 기타 생성을 위한 메소드들
-#### firstOrCreate/ firstOrNew
+## 기타 생성을 위한 메소드들
+
+### fir0stOrCreate/ firstOrNew
 속성을 대량 할당(mass assign) 하여 모델을 생성하는 또다른 방법은 `firstOrCreate`와 `firstOrNew`의 두 가지가 있습니다. 
 
 `firstOrCreate` 메소드는 주어진 컬럼 / 값의 쌍을 이용하여 데이터베이스 레코드를 찾으려고 시도할 것입니다. 
@@ -523,8 +551,10 @@ $flight = App\Flight::firstOrNew(
 );
 ```
 
-#### updateOrCreate
-또한 모델이 존재하는 경우에 이를 업데이트하고, 존재하지 않는 경우에는 새로운 모델을 생성할 수도 있습니다. 라라벨은 이런 경우 한번에 처리할 수 있는 updateOrCreate 메소드를 제공합니다. firstOrCreate메소드 처럼 updateOrCreate 모델을 직접 저장하므로, save() 메소드를 호출할 필요가 없습니다:
+### updateOrCreate
+또한 모델이 존재하는 경우에 이를 업데이트하고, 존재하지 않는 경우에는 새로운 모델을 생성할 수도 있습니다. 
+라라벨은 이런 경우 한번에 처리할 수 있는 updateOrCreate 메소드를 제공합니다. 
+firstOrCreate메소드 처럼 updateOrCreate 모델을 직접 저장하므로, save() 메소드를 호출할 필요가 없습니다:
 
 ```php
 // If there's a flight from Oakland to San Diego, set the price to $99.
@@ -536,7 +566,7 @@ $flight = App\Flight::updateOrCreate(
 ```
 
 ## 모델 삭제하기
-모델을 삭제하기 위해서는 모델 인스턴스에 delete 메소드를 호출하면 됩니다:
+모델을 삭제하기 위해서는 모델 인스턴스에 `delete` 메소드를 호출하면 됩니다:
 
 ```
 $flight = App\Flight::find(1);
@@ -547,7 +577,7 @@ $flight->delete();
 ### 키를 통해서 이미 존재하는 모델 삭제하기
 위의 예제에서는 delete 메소드를 호출하기 전에 데이터베이스에서 모델을 조회합니다. 
 하지만 모델의 기본 키를 알고 있다면 모델을 조회하지 않고 바로 삭제할 수 있습니다. 
-destroy 메소드는 단일 기본 키를 인수로 사용하는 것 이외에도 여러개의 기본 키, 기본 키의 배열 또는 기본키의 collection를 허용합니다.
+destroy 메소드는 단일 기본 키를 인수로 사용하는 것 이외에도 여러개의 기본 키, 기본 키의 배열 또는 기본키의 `collection`를 허용합니다.
 
 ```php
 App\Flight::destroy(1);
@@ -568,7 +598,8 @@ App\Flight::destroy(collect([1, 2, 3]));
 $deletedRows = App\Flight::where('active', 0)->delete();
 ```
 
-{note} Eloquent 를 통해서 대량으로 삭제 구문을 실행할 때, 삭제되는 모델에 대한 deleting 및 deleted 모델 이벤트는 발생되지 않습니다. 
+{note} 
+Eloquent 를 통해서 대량으로 삭제 구문을 실행할 때, 삭제되는 모델에 대한 deleting 및 deleted 모델 이벤트는 발생되지 않습니다. 
 이 이유는 삭제 구문을 실행할 때 실제로 모델이 조회 되는 것이 아니기 때문입니다.
 
 
@@ -622,6 +653,7 @@ if ($flight->trashed()) {
 ```
 
 ## 소프트 삭제된 모델 쿼리하기
+
 ### 소프트 삭제된 모델 포함하기
 위에서 본 바와 같이, 소프트 삭제된 모델들은 쿼리 결과에서 자동으로 제외됩니다. 
 하지만 쿼리에 withTrashed 메소드를 쓰면 결과 세트에 소프트 삭제된 모델도 나타나도록 강제할 수 있습니다:
@@ -883,22 +915,34 @@ class User extends Model
 
 $users = App\User::ofType('admin')->get();
 
-모델의 비교
+## 모델의 비교
 때로는 두개의 모델이 "동일한지" 판단할 필요가 있을 수도 있습니다. is 메소드는 두개의 모델이 동일한 primary key, 테이블, 데이터베이스 커넥션을 가지고 있는지 확인하는데 사용할 수 있습니다:
 
+```php
 if ($post->is($anotherPost)) {
     //
 }
+```
 
-이벤트
-Eloquent 모델은 여러 이벤트들을 발생시켜 모델의 라이프사이클의 다양한 지점에 후킹할 수 있도록 합니다: retrieved, creating, created, updating, updated, saving, saved, deleting, deleted, restoring, restored. 이벤트들은 특정 모델 클래스가 데이터베이스에 저장되거나 업데이트될 때마다 코드를 실행하기 용이하게 해줍니다. 각 이벤트는 생성자를 통해 모델의 인스턴스를 받습니다.
+## 이벤트
+Eloquent 모델은 여러 이벤트들을 발생시켜 모델의 라이프사이클의 다양한 지점에 후킹할 수 있도록 합니다: 
+retrieved, creating, created, updating, updated, saving, saved, deleting, deleted, restoring, restored. 
 
-데이터베이스에서 모델이 존재하고 조회가 되었을때 retrieved 이벤트가 발생합니다. 새로운 모델이 처음으로 저장되었을 때 creating과 created 이벤트가 발생합니다. 모델이 이미 데이터베이스에 존재할 때 save 메소드가 호출된다면 updating / updated 이벤트가 발생합니다. 하지만 이 두 경우 모두 saving / saved 이벤트가 발생할 것입니다.
+이벤트들은 특정 모델 클래스가 데이터베이스에 저장되거나 업데이트될 때마다 코드를 실행하기 용이하게 해줍니다. 
+각 이벤트는 생성자를 통해 모델의 인스턴스를 받습니다.
 
-{note} Eloquent를 통해 대량 업데이트를 할 때 업데이트 된 모델의 saved 및 updated 모델 이벤트는 실행되지 않습니다. 이것은 대량 업데이트를 발행 할 때 모델이 실제로 검색되지 않기 때문입니다.
+데이터베이스에서 모델이 존재하고 조회가 되었을때 retrieved 이벤트가 발생합니다. 
+새로운 모델이 처음으로 저장되었을 때 creating과 created 이벤트가 발생합니다. 
+모델이 이미 데이터베이스에 존재할 때 save 메소드가 호출된다면 updating / updated 이벤트가 발생합니다. 
+하지만 이 두 경우 모두 saving / saved 이벤트가 발생할 것입니다.
+
+{note} 
+Eloquent를 통해 대량 업데이트를 할 때 업데이트 된 모델의 saved 및 updated 모델 이벤트는 실행되지 않습니다. 
+이것은 대량 업데이트를 발행 할 때 모델이 실제로 검색되지 않기 때문입니다.
 
 이렇게 하기 위해서, Eloquent 모델의 라이프사이클의 다양한 지점을 고유한 이벤트 클래스에 맵핑하는 $dispatchesEvents 속성을 Eloquent 모델에 정의하면 됩니다:
 
+```php
 <?php
 
 namespace App;
@@ -922,16 +966,28 @@ class User extends Authenticatable
         'deleted' => UserDeleted::class,
     ];
 }
+```
+
 Eloquent 이벤트를 정의하고 매핑 한 후 이벤트 리스너를 사용하여 이벤트를 처리 할 수 있습니다.
 
 
-옵저버
-옵저버 객체 정의하기
-주어진 모델을 여러 이벤트들을 수신하고자 하는 경우, 옵저버를 사용하여 모든 리스너를 하나의 클래스로 구성할 수 있습니다. 옵저버 클래스는 수신하고자 하는 Eloquent 이벤트에 대항하는 메소드 이름을 가집니다. 각각의 이 메소드들은 인자로 모델을 전달 받습니다. make:observer 아티즌 명령어는 새로운 옵저버 클래스를 생성하는 가장 쉬운 방법입니다:
+## 옵저버
 
+### 옵저버 객체 정의하기
+주어진 모델을 여러 이벤트들을 수신하고자 하는 경우, 옵저버를 사용하여 모든 리스너를 하나의 클래스로 구성할 수 있습니다. 
+옵저버 클래스는 수신하고자 하는 Eloquent 이벤트에 대항하는 메소드 이름을 가집니다. 
+각각의 이 메소드들은 인자로 모델을 전달 받습니다. 
+`make:observer 아티즌 명령어`는 새로운 옵저버 클래스를 생성하는 가장 쉬운 방법입니다:
+
+```bash
 php artisan make:observer UserObserver --model=User
-이 명령어는 새로운 옵저버 클래스를 App/Observers 디렉토리에 생성합니다. 이 디렉토리가 존재하지 않는다면, 아티즌은 이 디렉토리를 자동으로 생성합니다. 새로운 옵저버 클래스는 다음과 같은 형태입니다:
+```
 
+이 명령어는 새로운 옵저버 클래스를 App/Observers 디렉토리에 생성합니다. 
+이 디렉토리가 존재하지 않는다면, 아티즌은 이 디렉토리를 자동으로 생성합니다. 
+새로운 옵저버 클래스는 다음과 같은 형태입니다:
+
+```php
 <?php
 
 namespace App\Observers;
@@ -973,8 +1029,13 @@ class UserObserver
         //
     }
 }
-옵저버를 등록하기 위해서는, 관찰할 모델에 대해 observe 메소드를 사용하면 됩니다. 서비스 프로바이더의 boot 메소드안에서 옵저버를 등록할 수 있습니다. 다음은 예제는 AppServiceProvider 에서 옵저버를 등록하는 예제 입니다:
+```
 
+옵저버를 등록하기 위해서는, 관찰할 모델에 대해 observe 메소드를 사용하면 됩니다. 
+서비스 프로바이더의 boot 메소드안에서 옵저버를 등록할 수 있습니다. 
+다음은 예제는 AppServiceProvider 에서 옵저버를 등록하는 예제 입니다:
+
+```php
 <?php
 
 namespace App\Providers;
@@ -1005,4 +1066,5 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
+```
 

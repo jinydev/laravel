@@ -1,28 +1,33 @@
-# Eloquent: Relationships - 관계
+# 라라벨 > Eloquent: 관계
 
-소개
-관계 정의하기
-    1:1(일대일) 관계
-    1:*(일대다) 관계
-    1:*(일대다) 역관계
-    *:*(다대다) 관계
-연결을 통한 다수를 가지는 관계
-다형성 관계
-다대다 다형성 관계
-관계 쿼리 질의하기
-관계 메소드 Vs. 동적 속성
-존재하는 관계에 대한 쿼리 질의하기
-관계된 모델이 존재하지 않는 것을 확인하며 질의하기
-연관된 모델 수량 확인하기-카운트
-Eager 로딩
-    Eager 로딩 조건 제한하기
-    지연 Eager 로딩
-연관된 모델 삽입하기
-    save 메소드
-    create 메소드
-소속된 관계
-다대다 관계
-부모의 타임스탬프 값 갱신하기
+* Introduction
+* Defining Relationships
+    - One To One
+    - One To Many
+    - One To Many (Inverse)
+    - Many To Many
+    - Defining Custom Intermediate Table Models
+    - Has One Through
+    - Has Many Through
+* Polymorphic Relationships
+    - One To One
+    - One To Many
+    - Many To Many
+    - Custom Polymorphic Types
+* Querying Relations
+    - Relationship Methods Vs. Dynamic Properties
+    - Querying Relationship Existence
+    - Querying Relationship Absence
+    - Counting Related Models
+* Eager Loading
+    - Constraining Eager Loads
+    - Lazy Eager Loading
+* Inserting & Updating Related Models
+    - The save Method
+    - The create Method
+    - Belongs To Relationships
+    - Many To Many Relationships
+* Touching Parent Timestamps
 
 ## 소개하기
 데이터베이스 테이블은 주로 서로 관련되어 있습니다. 예를 들어, 한 블로그 포스트가 많은 댓글을 가지고 있거나 어떤 명령이 그 명령을 내린 사용자와 관련되어 있을 수 있습니다. Eloquent는 이 relationship들과 관련한 작업을 하거나 관리하는 것을 쉽게 해주며 여러 타입의 relationship을 지원합니다:
