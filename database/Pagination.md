@@ -1,23 +1,18 @@
----
-layout: laravel
-title: Laravel
-subtitle: Prologue
-    
----
-
-데이터베이스 : 페이지네이션
-소개하기
-기본적인 사용법-
-쿼리 빌더 결과를 페이징 하기
-Eloquent 결과를 페이징 하기
-수동으로 Paginator 생성하기
-페이지네이션 결과 출력하기
-페이지네이션 결과를 JSON으로 변환하기
-페이지네이션 뷰 파일 수정하기
-페이지네이터 인스턴스 메소드
+# [라라벨](/) > [데이터베이스](/database) : [페이지네이션](/database/pagenation)
+* Introduction
+* Basic Usage
+    - Paginating Query Builder Results
+    - Paginating Eloquent Results
+    - Manually Creating A Paginator
+* Displaying Pagination Results
+    - Converting Results To JSON
+* Customizing The Pagination View
+* Paginator Instance Methods
 
 ## 소개하기
-다른 프레임 워크에서는 페이지 출력 처리를 하는것은 굉장히 성가신 일입니다. 라라벨의 페이지네이터는 별다른 설정없이도 쿼리 빌더 와 Eloquent ORM에 통합되어 있고, 간편하고 손쉽게 데이터베이스 결과를 페이지네이션 하는데 사용할 수 있습니다. 페이지네이터에 의해서 생성되는 HTML은 부트스트랩 CSS 프레임워크와 호환됩니다.
+다른 프레임 워크에서는 페이지 출력 처리를 하는것은 굉장히 성가신 일입니다. 
+라라벨의 페이지네이터는 별다른 설정없이도 쿼리 빌더 와 Eloquent ORM에 통합되어 있고, 간편하고 손쉽게 데이터베이스 결과를 페이지네이션 하는데 사용할 수 있습니다. 
+페이지네이터에 의해서 생성되는 HTML은 부트스트랩 CSS 프레임워크와 호환됩니다.
 
 
 ## 기본적인 사용법
