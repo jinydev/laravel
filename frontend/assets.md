@@ -1,69 +1,23 @@
----
-layout: laravel
-title: Laravel
-subtitle: Prologue
-    
----
-
-Compiling Assets (Laravel Mix)
-Assets 컴파일 하기 (라라벨 Mix)
-Introduction
-소개하기
-Installation & Setup
-설치하기 & 설정하기
-Running Mix
-Mix 실행하기
-Working With Stylesheets
-스타일시트 작업하기
-Less
-Less
-Sass
-Sass
-Stylus
-Stylus
-PostCSS
-PostCSS
-Plain CSS
-일반적인 CSS
-URL Processing
-Source Maps
-소스 맵
-Working With JavaScript
-자바스크립트 작업하기
-Vendor Extraction
-Vendor 분할
-React
-React
-Vanilla JS
-Vanilla JS
-Custom Webpack Configuration
-커스텀 Webpack 설정
-Copying Files & Directories
-파일 & 디렉토리 복사
-Versioning / Cache Busting
-버전 관리 / 캐시 갱신
-Browsersync Reloading
-Browsersync 리로딩
-Environment Variables
-환경변수
-Notifications
-Notifications-알림
-
-Introduction
+# Compiling Assets (Laravel Mix)
 
 ## 소개하기
-Laravel Mix provides a fluent API for defining Webpack build steps for your Laravel application using several common CSS and JavaScript pre-processors. Through simple method chaining, you can fluently define your asset pipeline. For example:
+Laravel Mix provides a fluent API for defining Webpack build steps for your Laravel application using several common CSS and JavaScript pre-processors. 
+Through simple method chaining, you can fluently define your asset pipeline. For example:
 
-라라벨 Mix(믹스)는 여러분의 라라벨 애플리케이션에 몇가지 공통적인 CSS 및 자바스크립트 전처리를 위한 Webpack 빌드를 위한 편리한 API를 제공합니다. 간단한 메소드 체이닝을 통해서, 간편하게 asset 파이프라인을 정의할 수 있습니다. 예를 들어:
+라라벨 Mix(믹스)는 여러분의 라라벨 애플리케이션에 몇가지 공통적인 CSS 및 자바스크립트 전처리를 위한 Webpack 빌드를 위한 편리한 API를 제공합니다. 
+간단한 메소드 체이닝을 통해서, 간편하게 asset 파이프라인을 정의할 수 있습니다. 예를 들어:
 
 ```php
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 ```
 
-If you've ever been confused and overwhelmed about getting started with Webpack and asset compilation, you will love Laravel Mix. However, you are not required to use it while developing your application. Of course, you are free to use any asset pipeline tool you wish, or even none at all.
+If you've ever been confused and overwhelmed about getting started with Webpack and asset compilation, you will love Laravel Mix. 
+However, you are not required to use it while developing your application. 
+Of course, you are free to use any asset pipeline tool you wish, or even none at all.
 
-만약 여러분이 Webpack 과 asset 컴파일에서 혼란스럽고 부담을 느끼고 있다면, 라라벨 Mix 를 좋아하게 될 것입니다. 하지만 애플리케이션을 개발할 때 라라벨 Mix가 꼭 필요한 건 아닙니다. 당연하게도, 원하는 그 어떤 asset pipeline 툴을 사용해도, 또 사용하지 않아도 괜찮습니다.
+만약 여러분이 Webpack 과 asset 컴파일에서 혼란스럽고 부담을 느끼고 있다면, 라라벨 Mix 를 좋아하게 될 것입니다. 
+하지만 애플리케이션을 개발할 때 라라벨 Mix가 꼭 필요한 건 아닙니다. 당연하게도, 원하는 그 어떤 asset pipeline 툴을 사용해도, 또 사용하지 않아도 괜찮습니다.
 
 
 Installation & Setup
@@ -85,9 +39,13 @@ By default, Laravel Homestead includes everything you need; however, if you aren
 
 Laravel Mix
 ## 라라벨 Mix
-The only remaining step is to install Laravel Mix. Within a fresh installation of Laravel, you'll find a package.json file in the root of your directory structure. The default package.json file includes everything you need to get started. Think of this like your composer.json file, except it defines Node dependencies instead of PHP. You may install the dependencies it references by running:
+The only remaining step is to install Laravel Mix. 
+Within a fresh installation of Laravel, you'll find a package.json file in the root of your directory structure. The default package.json file includes everything you need to get started. Think of this like your composer.json file, except it defines Node dependencies instead of PHP. You may install the dependencies it references by running:
 
-이제 남은 과정은 라라벨 Mix를 설치하는 것 뿐입니다. 라라벨을 새롭게 설치하고나면 디렉토리 구조의 루트 폴더에 위치한 package.json 파일을 볼 수 있습니다. 이 기본적인 package.json 파일은 여러분이 필요한 모든것들이 들어 있습니다. 이 파일은 PHP 대신 Node 의존 패키지를 정의 한다는것을 빼고는 여러분의 composer.json과 동일합니다. 아래의 명령어로 의존 패키지들을 설치할 수 있습니다.
+이제 남은 과정은 라라벨 Mix를 설치하는 것 뿐입니다. 
+라라벨을 새롭게 설치하고나면 디렉토리 구조의 루트 폴더에 위치한 package.json 파일을 볼 수 있습니다. 
+이 기본적인 package.json 파일은 여러분이 필요한 모든것들이 들어 있습니다. 
+이 파일은 PHP 대신 Node 의존 패키지를 정의 한다는것을 빼고는 여러분의 composer.json과 동일합니다. 아래의 명령어로 의존 패키지들을 설치할 수 있습니다.
 
 ```
 npm install

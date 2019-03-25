@@ -1,27 +1,15 @@
----
-layout: laravel
-title: Laravel
-subtitle: Prologue
-    
----
-
-Eloquent: Serialization
-소개하기
-모델 & 컬렉션 Serializing
-배열로 Serializing
-JSON 으로 Serializing
-JSON 변환시 속성값 숨기기
-JSON 변환시 특정 값 추가하기
-날짜 Serialization
+# Eloquent: Serialization
 
 ## 소개하기
-JSON API를 구성할 때, 여러분은 자주 특정 모델과, 연관된 모델들을 배열 또는 JSON 으로 변환해야될 필요가 있을 것입니다. Eloquent 는 serialization 에서 이러한 변환들과, 어떠한 속성들이 JSON에 포함되어야 하는지 제어할 수 있도록 편리한 메소드들을 가지고 있습니다.
+JSON API를 구성할 때, 여러분은 자주 특정 모델과, 연관된 모델들을 배열 또는 JSON 으로 변환해야될 필요가 있을 것입니다. 
+Eloquent 는 serialization 에서 이러한 변환들과, 어떠한 속성들이 JSON에 포함되어야 하는지 제어할 수 있도록 편리한 메소드들을 가지고 있습니다.
 
 
 ## 모델 & 컬렉션 Serializing
 
 배열로 Serializaing
-하나의 모델과 연관된 관계 모델들을 배열로 변환 하고자 할 때에는, toArray 메소드를 사용해야만 합니다. 이 메소드는 재귀적이기 때문에, 모든 속성들과 모든 관계 모델들(관계 모델들 안에 포함된 관계 모델들까지)이 배열로 변환될 것입니다.
+하나의 모델과 연관된 관계 모델들을 배열로 변환 하고자 할 때에는, toArray 메소드를 사용해야만 합니다. 
+이 메소드는 재귀적이기 때문에, 모든 속성들과 모든 관계 모델들(관계 모델들 안에 포함된 관계 모델들까지)이 배열로 변환될 것입니다.
 
 ```php
 $user = App\User::with('roles')->first();
@@ -38,7 +26,9 @@ return $users->toArray();
 ```
 
 ## JSON으로 Serializaing
-모델을 JSON으로 변환하기 위해서는, toJson 메소드를 사용해야 합니다. toArray 메소드와 같이 toJson 메소드는 재귀적이기 때문에, 모든 속성들과 relations-관계들은 JSON으로 변환됩니다. 또한 PHP에서 제공되는 JSON 인코딩 옵션을 지정할 수 있습니다:
+모델을 JSON으로 변환하기 위해서는, toJson 메소드를 사용해야 합니다. 
+toArray 메소드와 같이 toJson 메소드는 재귀적이기 때문에, 모든 속성들과 relations-관계들은 JSON으로 변환됩니다. 
+또한 PHP에서 제공되는 JSON 인코딩 옵션을 지정할 수 있습니다:
 
 ```php
 $user = App\User::find(1);
@@ -65,7 +55,8 @@ Route::get('users', function () {
 ```
 
 ## JSON 변환시 속성값 숨기기
-때로는 패스워드와 같이, 모델이 배열 또는 JSON으로 재구성될 때 속성을 제한하고자 할 수도 있습니다. 이렇게 하기 위해서는 모델의 $hidden 속성에 제한하고자 하는 필드를 추가하면 됩니다.
+때로는 패스워드와 같이, 모델이 배열 또는 JSON으로 재구성될 때 속성을 제한하고자 할 수도 있습니다. 
+이렇게 하기 위해서는 모델의 $hidden 속성에 제한하고자 하는 필드를 추가하면 됩니다.
 
 ```php
 <?php
@@ -87,7 +78,8 @@ class User extends Model
 
 {note} 관계를 숨기고자 할 때에는, 관계에 대한 메소드 이름을 사용하십시오
 
-이렇게 하는 대신, 모델이 배열 또는 JSON으로 재구성될 때 포함되어야 하는 속성들에 대한 화이트 리스트를 정의하는 visible 값을 사용할 수도 있습니다. 모든 다른 속성들은 모델이 배열이나 JSON 으로 변환될 때 숨겨질 것입니다.
+이렇게 하는 대신, 모델이 배열 또는 JSON으로 재구성될 때 포함되어야 하는 속성들에 대한 화이트 리스트를 정의하는 visible 값을 사용할 수도 있습니다. 
+모든 다른 속성들은 모델이 배열이나 JSON 으로 변환될 때 숨겨질 것입니다.
 
 ```php
 <?php
@@ -108,7 +100,8 @@ class User extends Model
 ```
 
 ## 일시적으로 속성들의 노출 정도를 수정하기
-주어진 모델 인스턴스에서 몇가지 일반적인 숨겨진 속성을 보이도록 만들고자 한다면, makeVisible 메소드를 사용하면 됩니다. makeVisible 메소드는 편리한 메소드 체이닝을 위해서 모델 인스턴스를 반환합니다:
+주어진 모델 인스턴스에서 몇가지 일반적인 숨겨진 속성을 보이도록 만들고자 한다면, makeVisible 메소드를 사용하면 됩니다. 
+makeVisible 메소드는 편리한 메소드 체이닝을 위해서 모델 인스턴스를 반환합니다:
 
 ```php
 return $user->makeVisible('attribute')->toArray();
@@ -121,7 +114,8 @@ return $user->makeHidden('attribute')->toArray();
 ```
 
 ## JSON 변환시 특정 값 추가하기
-때때로, 모델이 배열이나 JSON으로 캐스팅 될 때, 데이터베이스의 컬럼에 일치하지 않는 속성들을 추가하기를 원할 수도 있습니다. 이렇게 하기 위해서는, 단순히 값에 대한 accessor를 정의하면 됩니다:
+때때로, 모델이 배열이나 JSON으로 캐스팅 될 때, 데이터베이스의 컬럼에 일치하지 않는 속성들을 추가하기를 원할 수도 있습니다. 
+이렇게 하기 위해서는, 단순히 값에 대한 accessor를 정의하면 됩니다:
 
 ```php
 <?php
@@ -144,7 +138,8 @@ class User extends Model
 }
 ```
 
-accessor 를 생성한 다음에, 모델의 appends값에 속성의 이름을 추가합니다. accessor 가 "카멜 케이스"로 정의되어 있더라도, 속성 이름은 정상적으로 "스네이크 케이스"로 엑세스 됩니다:
+accessor 를 생성한 다음에, 모델의 appends값에 속성의 이름을 추가합니다. 
+accessor 가 "카멜 케이스"로 정의되어 있더라도, 속성 이름은 정상적으로 "스네이크 케이스"로 엑세스 됩니다:
 
 ```php
 <?php
@@ -164,10 +159,12 @@ class User extends Model
 }
 ```
 
-속성이 appends 리스트에 추가되고나면 모델이 배열이나 JSON 형태로 변환될 때 자동으로 포함될 것입니다 .appends 배열 안에 있는 속성들은 또한 모델에 정의된 visible와 hidden값에 영향을 받을 것입니다.
+속성이 appends 리스트에 추가되고나면 모델이 배열이나 JSON 형태로 변환될 때 자동으로 포함될 것입니다.
+`appends` 배열 안에 있는 속성들은 또한 모델에 정의된 visible와 hidden값에 영향을 받을 것입니다.
 
 ## 실행 될때(run time에서) 추가하기
-append 메소드를 사용해서 하나의 모델 인스턴스에 속성을 추가할 수도 있습니다. 또는 setAppends 메소드를 사용하여 주어진 모델 인스턴스에 추가된 속성들의 전체 배열을 오버라이드 할 수 있습니다:
+append 메소드를 사용해서 하나의 모델 인스턴스에 속성을 추가할 수도 있습니다. 
+또는 setAppends 메소드를 사용하여 주어진 모델 인스턴스에 추가된 속성들의 전체 배열을 오버라이드 할 수 있습니다:
 
 ```php
 return $user->append('is_admin')->toArray();
@@ -187,7 +184,9 @@ protected $casts = [
 ```
 
 ## Carbon을 통한 전역 커스터마이징
-라라벨은 Carbon의 JSON 시리얼라이즈 포맷을 편리하게 정의할 수 있도록 Carbon 날짜 라이브러리를 확장하고 있습니다. 애플리케이션에서 시리얼라이즈 되는 모든 Carbon 날짜를 커스터마이징 하려면 Carbon::serializeUsing 메소드를 사용하면 됩니다. Carbon::serializeUsing 메소드는 JSON 시리얼라이즈되는 날짜의 문자형식을 반환하는 클로저를 인자로 받습니다:
+라라벨은 Carbon의 JSON 시리얼라이즈 포맷을 편리하게 정의할 수 있도록 Carbon 날짜 라이브러리를 확장하고 있습니다. 
+애플리케이션에서 시리얼라이즈 되는 모든 Carbon 날짜를 커스터마이징 하려면 Carbon::serializeUsing 메소드를 사용하면 됩니다. 
+Carbon::serializeUsing 메소드는 JSON 시리얼라이즈되는 날짜의 문자형식을 반환하는 클로저를 인자로 받습니다:
 
 ```php
 <?php
