@@ -1,0 +1,131 @@
+---
+layout: default
+---
+
+{%- include header.html -%}  
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content" role="main">
+  <!-- Navbar -->
+  <nav class="js-nav-scroller navbar navbar-expand-lg navbar-sidebar navbar-vertical navbar-light bg-white border-end"
+        data-hs-nav-scroller-options='{
+          "type": "vertical",
+          "target": ".navbar-nav .active",
+          "offset": 80
+          }'>
+    <!-- Navbar Toggle -->
+    <button type="button" class="navbar-toggler btn btn-white d-grid w-100" data-bs-toggle="collapse" data-bs-target="#navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu">
+      <span class="d-flex justify-content-between align-items-center">
+        <span class="h3 mb-0">Nav menu</span>
+
+        <span class="navbar-toggler-default">
+          <i class="bi-list"></i>
+        </span>
+
+        <span class="navbar-toggler-toggled">
+          <i class="bi-x"></i>
+        </span>
+      </span>
+    </button>
+    <!-- End Navbar Toggle -->
+
+    <!-- Navbar Collapse -->
+    <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
+      <div class="navbar-brand-wrapper border-end" style="height: auto;">
+        <!-- Default Logo -->
+        <div class="d-flex align-items-center mb-3">
+          <a class="navbar-brand" href="/study" aria-label="laravel">
+            Jiny Laravel
+          </a>
+          <a class="navbar-brand-badge" href="../documentation/changelog.html">
+            <span class="badge bg-soft-primary text-primary ms-2">v0.1</span>
+          </a>
+        </div>
+        <!-- End Default Logo -->
+      </div>
+
+      <div class="docs-navbar-sidebar-aside-body navbar-sidebar-aside-body">
+        {%- include nav_study.html -%}        
+      </div>
+    </div>
+    <!-- End Navbar Collapse -->
+  </nav>
+
+  <!-- End Navbar -->
+
+  <!-- Content -->
+  <div class="navbar-sidebar-aside-content content-space-1 content-space-md-2 px-lg-5 px-xl-10">
+    {{ content }}
+  </div>
+  <!-- End Content -->
+</main>
+<!-- ========== END MAIN CONTENT ========== -->
+
+<!-- ========== SECONDARY CONTENTS ========== -->
+<!-- Go To -->
+<a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+    data-hs-go-to-options='{
+      "offsetTop": 700,
+      "position": {
+        "init": {
+          "right": "2rem"
+        },
+        "show": {
+          "bottom": "2rem"
+        },
+        "hide": {
+          "bottom": "-2rem"
+        }
+      }
+    }'>
+  <i class="bi-chevron-up"></i>
+</a>
+<!-- ========== END SECONDARY CONTENTS ========== -->
+
+<!-- JS Global Compulsory  -->
+<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS Implementing Plugins -->
+<script src="../assets/vendor/hs-header/dist/hs-header.min.js"></script>
+<script src="../assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
+<script src="../assets/vendor/list.js/dist/list.min.js"></script>
+<script src="../assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+
+<!-- JS Space -->
+<script src="../assets/js/theme.min.js"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+  (function() {
+    // INITIALIZATION OF HEADER
+    // =======================================================
+    new HSHeader('#header').init()
+
+
+    // INITIALIZATION OF NAV SCROLLER
+    // =======================================================
+    new HsNavScroller('.js-nav-scroller', {
+      delay: 400,
+      offset: 140
+    })
+
+
+    // INITIALIZATION OF LISTJS COMPONENT
+    // =======================================================
+    const docsSearch = HSCore.components.HSList.init('#docsSearch');
+
+
+    // GET JSON FILE RESULTS
+    // =======================================================
+    fetch('../assets/json/docs-search.json')
+    .then(response => response.json())
+    .then(data => {
+      docsSearch.getItem(0).add(data)
+    })
+
+    // INITIALIZATION OF GO TO
+    // =======================================================
+    new HSGoTo('.js-go-to')
+  })()
+</script>
