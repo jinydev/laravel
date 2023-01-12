@@ -1,496 +1,318 @@
 <!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>Laravel</title>
-
-        <!-- CSS Space Template -->
-        <link rel="stylesheet" href="/assets/css/theme.min.css">
-        <link rel="stylesheet" href="/assets/css/docs.min.css">
-    </head>
-    <body class="navbar-sidebar-aside-lg">
-
-        <!-- ========== HEADER ========== -->
-<header id="header" class="navbar navbar-expand navbar-fixed navbar-end navbar-light navbar-sticky-lg-top bg-white">
-    <div class="container-fluid">
-      <nav class="navbar-nav-wrap">
-        <div class="row flex-grow-1">
-          <!-- Default Logo -->
-          <div class="docs-navbar-sidebar-container d-flex align-items-center mb-2 mb-lg-0">
-            <a class="navbar-brand" href="/study" aria-label="laravel">
-              Jiny Laravel
-            </a>
-            <a href="../documentation/changelog.html">
-              <span class="badge bg-soft-primary text-primary">v2.1</span>
-            </a>
-          </div>
-          <!-- End Default Logo -->
-  
-          <div class="col-md px-lg-0">
-            <div class="d-flex justify-content-between align-items-center px-lg-5 px-xl-10">
-              <div class="d-none d-md-block">
-
-  
-                <!-- List Item Template -->
-                <div class="d-none">
-                  <div id="searchTemplate" class="dropdown-item">
-                    <a class="d-block link" href="#">
-                      <span class="category d-block text-muted mb-1"></span>
-                      <span class="component fw-bold text-dark"></span>
-                    </a>
-                  </div>
-                </div>
-                <!-- End List Item Template -->
-              </div>
-  
-
-
-            </div>
-          </div>
-          <!-- End Col -->
-        </div>
-        <!-- End Row -->
-      </nav>
-    </div>
-</header>
-<!-- ========== END HEADER ========== --><!-- ========== MAIN CONTENT ========== -->
-<main id="content" role="main">
-  <!-- Navbar -->
-  <nav class="js-nav-scroller navbar navbar-expand-lg navbar-sidebar navbar-vertical navbar-light bg-white border-end"
-        data-hs-nav-scroller-options='{
-          "type": "vertical",
-          "target": ".navbar-nav .active",
-          "offset": 80
-          }'>
-    <!-- Navbar Toggle -->
-    <button type="button" class="navbar-toggler btn btn-white d-grid w-100" data-bs-toggle="collapse" data-bs-target="#navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu">
-      <span class="d-flex justify-content-between align-items-center">
-        <span class="h3 mb-0">Nav menu</span>
-
-        <span class="navbar-toggler-default">
-          <i class="bi-list"></i>
-        </span>
-
-        <span class="navbar-toggler-toggled">
-          <i class="bi-x"></i>
-        </span>
-      </span>
-    </button>
-    <!-- End Navbar Toggle -->
-
-    <!-- Navbar Collapse -->
-    <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
-      <div class="navbar-brand-wrapper border-end" style="height: auto;">
-        <!-- Default Logo -->
-        <div class="d-flex align-items-center mb-3">
-          <a class="navbar-brand" href="/study" aria-label="laravel">
-            Jiny Laravel
-          </a>
-          <a class="navbar-brand-badge" href="../documentation/changelog.html">
-            <span class="badge bg-soft-primary text-primary ms-2">v0.1</span>
-          </a>
-        </div>
-        <!-- End Default Logo -->
-      </div>
-
-      <div class="docs-navbar-sidebar-aside-body navbar-sidebar-aside-body"><ul id="navbarSettings" class="navbar-nav nav nav-vertical nav-tabs nav-tabs-borderless nav-sm">
-    <li class="nav-item">
-      <span class="nav-subtitle">기본강좌</span>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="/study/01-installation">설치하기</a>
-    </li>
-
-    <li class="nav-item my-2 my-lg-5"></li>
-
-    <li class="nav-item">
-      <span class="nav-subtitle">Getting started</span>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/getting-started.html">Getting Started</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/gulp.html">Gulp</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/customization.html">Customization</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/credits.html">Credits</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/changelog.html">Changelog</a>
-    </li>
-
-    <li class="nav-item my-2 my-lg-5"></li>
-
-    <li class="nav-item">
-      <span class="nav-subtitle">Design &amp; Graphics</span>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/bs-icons.html">Bootstrap Icons</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/duotone-icons.html">Duotone Icons</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/illustrations.html">Illustrations</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/figma.html">Figma</a>
-    </li>
-
-    <li class="nav-item my-2 my-lg-5"></li>
-
-    <li class="nav-item">
-      <span class="nav-subtitle">Components</span>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/accordion.html">Accordion</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="../documentation/alerts.html">Alerts</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/avatars.html">Avatars</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/badge.html">Badge</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/banners.html">Banners</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/breadcrumb.html">Breadcrumb</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/buttons.html">Buttons</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/cards.html">Cards</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/collapse.html">Collapse</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/column-divider.html">Column Divider</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/devices.html">Devices</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/divider.html">Divider</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/dropdowns.html">Dropdowns</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/list-group.html">List Group</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/lists.html">Lists</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/modal.html">Modal</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/offcanvas.html">Offcanvas</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/pagination.html">Pagination</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/popovers.html">Popovers</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/progress.html">Progress</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/shapes.html">Shapes</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/spinners.html">Spinners</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/steps.html">Steps</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/tab.html">Tab</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/tables.html">Tables</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/toasts.html">Toasts</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/tooltips.html">Tooltips</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/typography.html">Typography</a>
-    </li>
-
-    <li class="nav-item my-2 my-lg-5"></li>
-
-    <li class="nav-item">
-      <small class="nav-subtitle d-block">Navbars</small>
-    </li>
+<html lang="en">
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/navbar.html">Navbar</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/navs.html">Navs</a>
-    </li>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Geeks is a fully responsive and yet modern premium bootstrap 5 template & snippets. Geek is feature-rich components and beautifully designed pages that help you create the best possible website and web application projects. Bootstrap Snippet " />
+		<meta name="keywords" content="Geeks UI, bootstrap, bootstrap 5, Course, Sass, landing, Marketing, admin themes, bootstrap admin, bootstrap dashboard, ui kit, web app, dash ui, admin dashboard, HTML5, multipurpose" />
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/mega-menu.html">Mega Menu</a>
-    </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/scrollspy.html">Scrollspy</a>
-    </li>
 
-    <li class="nav-item my-2 my-lg-5"></li>
 
-    <li class="nav-item">
-      <small class="nav-subtitle d-block">Basic forms</small>
-    </li>
+		<!-- Favicon icon-->
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico">
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/basic-forms.html">Basic Forms</a>
-    </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/checks-and-switches.html">Checks &amp; Switches</a>
-    </li>
+		<!-- Libs CSS -->
+		<link href="/assets/fonts/feather/feather.css" rel="stylesheet">
+		<link href="/assets/libs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+		<link href="/assets/libs/dragula/dist/dragula.min.css" rel="stylesheet" />
+		<link href="/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+		<link href="/assets/libs/dropzone/dist/dropzone.css" rel="stylesheet" />
+		<link href="/assets/libs/magnific-popup/dist/magnific-popup.css" rel="stylesheet" />
+		<link href="/assets/libs/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+		<link href="/assets/libs/@yaireo/tagify/dist/tagify.css" rel="stylesheet">
+		<link href="/assets/libs/tiny-slider/dist/tiny-slider.css" rel="stylesheet">
+		<link href="/assets/libs/tippy.js/dist/tippy.css" rel="stylesheet">
+		<link href="/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+		<link href="/assets/libs/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+		<link href="/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet">
+		<link href="/assets/libs/nouislider/dist/nouislider.min.css" rel="stylesheet">
+		<link href="/assets/libs/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/input-group.html">Input Group</a>
-    </li>
 
-    <li class="nav-item my-2 my-lg-5"></li>
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="/assets/css/theme.min.css">
+		<link rel="stylesheet" href="/assets/css/jiny.css">
+		
 
-    <li class="nav-item">
-      <small class="nav-subtitle">Media</small>
-    </li>
+		<!--SEO--><title>Laravel</title><meta name="keyword" content="javascript" /></head>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/fslightbox.html">Fullscreen Lightbox</a>
-    </li>
+<body class="bg-white">
+  <!-- Main wrapper -->
+  <div class="docs-main-wrapper">
+    <!-- Docs header --><div class="docs-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ms-0">
+         <a class="navbar-brand" href="/">
+            Laravel
+         </a>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/swiper.html">Swiper Touch Slider</a>
-    </li>
+         <ul class="navbar-nav ms-auto flex-row">
+            <li class="nav-item docs-header-btn">
+               <a target="_blank" href="">Github</a>
+            </li>
 
-    <li class="nav-item my-2 my-lg-5"></li>
+            <li class="nav-item d-md-none">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"  
+                  aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+            </li>
+         </ul>
 
-    <li class="nav-item">
-      <small class="nav-subtitle">Others</small>
+    </nav>
+</div><!-- left sidebar -->
+	<!-- Nav Sidebar -->
+	<div class="docs-nav-sidebar">
+		<div class="py-5"></div>
+		<div class="docs-nav" data-simplebar>
+			<nav class="navbar navbar-expand-md">
+			<div class="collapse navbar-collapse " id="navbarNav"><ul class="navbar-nav flex-column" id="sidebarnav">
+    <!-- Getting Started -->
+    <li class="navbar-header">
+      <h5 class="heading">시작하기</h5>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/sticky-block.html">Sticky Block</a>
+        <a href="/" class="nav-link">라라벨</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/countdown.html">Countdown</a>
+        <a href="/setup" class="nav-link">설치</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/sorting.html">Sorting (Shuffle.js)</a>
+        <a href="/setup/artisan" class="nav-link">아티산</a>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/go-to.html">Go To</a>
+    <li>
+        <div class="navbar-border"></div>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/show-animation.html">Show Animation</a>
+    <!-- Hello World -->
+    <li class="navbar-header">
+        <a href="/study" class="heading">기본학습+</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/typedjs.html">Typedjs</a>
+        <a href="/study/02-routing" class="nav-link">라우팅</a>
     </li>
 
-    <li class="nav-item my-2 my-lg-5"></li>
-
     <li class="nav-item">
-      <small class="nav-subtitle d-block">Utilities</small>
+        <a href="/study" class="nav-link">MVC패턴</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link "
-        href="../documentation/backgrounds.html">Backgrounds</a>
+        <a href="/study" class="nav-link">라우팅</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/borders.html">Borders</a>
+        <a href="/study" class="nav-link">View</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/colors.html">Colors</a>
+        <a href="/study" class="nav-link">Controller</a>
     </li>
-
     <li class="nav-item">
-      <a class="nav-link " href="../documentation/lines.html">Lines</a>
+        <a href="/study" class="nav-link">Model</a>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/links.html">Links</a>
+    <li>
+        <div class="navbar-border"></div>
     </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/position.html">Position</a>
+    <li class="navbar-header">
+        <h5 class="heading">Livewire</h5>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/rotations.html">Rotations</a>
+    <li>
+        <div class="navbar-border"></div>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/shadows.html">Shadows</a>
+    <li>
+        <div class="navbar-border"></div>
     </li>
-
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/sizing.html">Sizing</a>
+    <li class="navbar-header">
+        <h5 class="heading">프로젝트</h5>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/spacing.html">Spacing</a>
+    <li>
+        <div class="navbar-border"></div>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="../documentation/z-index.html">Z-index</a>
-    </li>
-  </ul></div>
-    </div>
-    <!-- End Navbar Collapse -->
-  </nav>
+</ul></div>
+			</nav>
+		</div>
+		<div class="nav-footer">
+			<p class="mb-0"> Developed by JinyDev</p>
+		</div>
+	</div>
 
-  <!-- End Navbar -->
+    <!-- Wrapper  -->
+    <div class="docs-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+    <div class="col-xl-10 col-md-12 col-sm-12 col-12 ">
+		<!-- Breadcrumb -->
+		<nav aria-label="breadcrumb" style="margin-top: 50px; padding: 0 10px 0 10px;">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Home</a></li>
+				<!--breadcrumb loop--></ol>    
+		</nav>
+		
+		<!-- Content -->
+		<div class="docs-content mx-xxl-9">
+			<div class="markdown">
+				<h1 id="라라벨-학습하기">라라벨 학습하기</h1>
 
-  <!-- Content -->
-  <div class="navbar-sidebar-aside-content content-space-1 content-space-md-2 px-lg-5 px-xl-10">
-    <h1 id="라라벨-기본강좌">라라벨 기본강좌</h1>
+<h2 id="1일">1일</h2>
 <ul>
   <li><a href="01-installation">라라벨 설치</a></li>
+  <li><a href="02-routing">라우팅</a></li>
+  <li>Controllers</li>
+  <li>Views</li>
+  <li>Blade</li>
+  <li>HTTP Client</li>
+  <li>Fluent</li>
+  <li>Stub Customization</li>
 </ul>
 
+<h2 id="2일">2일</h2>
+<ul>
+  <li>Form Request</li>
+  <li>Form Validation</li>
+  <li>Middleware</li>
+  <li>Session</li>
+  <li>database</li>
+  <li>crud</li>
+  <li>migration</li>
+  <li>seeding</li>
+  <li>blade template</li>
+  <li>template layout</li>
+  <li>pagination</li>
+  <li>file upload</li>
+  <li>localization</li>
+  <li>facades</li>
+  <li>custom 404</li>
+  <li>send Email using Gmail</li>
+  <li>Authentication</li>
+  <li>Eloquert</li>
+  <li>Eloquert CRUD</li>
+  <li>Relation 1:1</li>
+  <li>relation 1:n</li>
+  <li>relation n:M</li>
+  <li>expoert csv</li>
+  <li>expoert pdf</li>
+  <li>impoert excel</li>
+  <li>resize image</li>
+  <li>dropzone upload</li>
+  <li>lazy loading</li>
+  <li>WYSIWYG Edit</li>
+  <li>Image CRUD</li>
+  <li>Toastr</li>
+  <li>Sweet Alert</li>
+  <li>contact Form</li>
+  <li>helpers</li>
+  <li>AutoComplete Search</li>
+  <li>create Zip File and Download</li>
+  <li>Datatable</li>
+  <li>datatable export</li>
+  <li>insert ajax</li>
+  <li>update ajax</li>
+  <li>delete ajax</li>
+  <li>client validation</li>
+  <li>infinite scroll</li>
+  <li>highCharts</li>
+  <li>BarCharts</li>
+  <li>multi database connect</li>
+  <li>multistep forms</li>
+  <li>maintance Mode</li>
+  <li>Accessors and Mutators</li>
+  <li>custom artisan command</li>
+</ul>
+
+			</div>			
+		</div>
+    </div>
+    
+    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  d-none d-xl-block position-fixed end-0">
+      <!-- sidebar nav fixed -->
+      <div class="sidebar-nav-fixed">
+        <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semi-bold fs-6">목차</span>
+        <ul class="list-unstyled" id="book-mark">
+
+        </ul>
+
+        <div>
+          <!--구글 애드센스1-->
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-format="fluid"
+              data-ad-layout-key="-fb+5w+4e-db+86"
+              data-ad-client="ca-pub-3321560028329475"
+              data-ad-slot="6043271504"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          <br>
+        </div>
+
+      </div>
+    </div>
+
+	<!-- Bookmark Components -->
+	<script src="/assets/jiny/js/bookmark.js"></script>	
+
+	<script>
+		window.addEventListener('DOMContentLoaded', function(){
+			let current_url = window.location.pathname.slice(0, -1);
+			let current_page = document.querySelector('a[href="'+current_url+'"]');
+			current_page.classList.add('active');
+		});		
+	</script>
+</div>
+      </div>
+    </div>
   </div>
-  <!-- End Content -->
-</main>
-<!-- ========== END MAIN CONTENT ========== -->
 
-<!-- ========== SECONDARY CONTENTS ========== -->
-<!-- Go To -->
-<a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
-    data-hs-go-to-options='{
-      "offsetTop": 700,
-      "position": {
-        "init": {
-          "right": "2rem"
-        },
-        "show": {
-          "bottom": "2rem"
-        },
-        "hide": {
-          "bottom": "-2rem"
-        }
-      }
-    }'>
-  <i class="bi-chevron-up"></i>
-</a>
-<!-- ========== END SECONDARY CONTENTS ========== -->
+	<!-- Scripts -->
+	<!-- Libs JS -->
+	<script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/libs/odometer/odometer.min.js"></script>
+	<script src="/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	<script src="/assets/libs/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+	<script src="/assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
+	<script src="/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
 
-<!-- JS Global Compulsory  -->
-<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/libs/file-upload-with-preview/dist/file-upload-with-preview.iife.js"></script>
+	<script src="/assets/libs/dragula/dist/dragula.min.js"></script>
+	<script src="/assets/libs/bs-stepper/dist/js/bs-stepper.min.js"></script>
+	<script src="/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+	<script src="/assets/libs/jQuery.print/jQuery.print.js"></script>
+	<script src="/assets/libs/prismjs/prism.js"></script>
+	<script src="/assets/libs/prismjs/components/prism-scss.min.js"></script>
+	<script src="/assets/libs/@yaireo/tagify/dist/tagify.min.js"></script>
+	<script src="/assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
+	<script src="/assets/libs/@popperjs/core/dist/umd/popper.min.js"></script>
+	<script src="/assets/libs/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+	<script src="/assets/libs/typed.js/lib/typed.min.js"></script>
+	<script src="/assets/libs/jsvectormap/dist/js/jsvectormap.min.js"></script>
+	<script src="/assets/libs/jsvectormap/dist/maps/world.js"></script>
+	<script src="/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="/assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+	<script src="/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+	<script src="/assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+	<script src="/assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+	<script src="/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+	<script src="/assets/libs/fullcalendar/main.min.js"></script>
+	<script src="/assets/libs/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+	<script src="/assets/libs/simplebar/dist/simplebar.min.js"></script>
+	<script src="/assets/libs/nouislider/dist/nouislider.min.js"></script>
+	<script src="/assets/libs/wnumb/wNumb.min.js"></script>
+	<script src="/assets/libs/glightbox/dist/js/glightbox.min.js"></script>
 
-<!-- JS Implementing Plugins -->
-<script src="../assets/vendor/hs-header/dist/hs-header.min.js"></script>
-<script src="../assets/vendor/hs-nav-scroller/dist/hs-nav-scroller.min.js"></script>
-<script src="../assets/vendor/list.js/dist/list.min.js"></script>
-<script src="../assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-<script src="../assets/vendor/prism/prism.js"></script>
+	<!-- CDN File for moment -->
+	<script src='https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js'></script>
 
-<!-- JS Space -->
-<script src="../assets/js/theme.min.js"></script>
+	<!-- Theme JS -->
+	<script src="/assets/js/theme.min.js"></script>
+</body>
 
-<!-- JS Plugins Init. -->
-<script>
-  (function() {
-    // INITIALIZATION OF HEADER
-    // =======================================================
-    new HSHeader('#header').init()
-
-
-    // INITIALIZATION OF NAV SCROLLER
-    // =======================================================
-    new HsNavScroller('.js-nav-scroller', {
-      delay: 400,
-      offset: 140
-    })
-
-
-    // INITIALIZATION OF LISTJS COMPONENT
-    // =======================================================
-    const docsSearch = HSCore.components.HSList.init('#docsSearch');
-
-
-    // GET JSON FILE RESULTS
-    // =======================================================
-    fetch('../assets/json/docs-search.json')
-    .then(response => response.json())
-    .then(data => {
-      docsSearch.getItem(0).add(data)
-    })
-
-    // INITIALIZATION OF GO TO
-    // =======================================================
-    new HSGoTo('.js-go-to')
-  })()
-</script>
-
-    </body>
 </html>

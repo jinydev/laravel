@@ -1,44 +1,21 @@
-<!-- ========== HEADER ========== -->
-<header id="header" class="navbar navbar-expand navbar-fixed navbar-end navbar-light navbar-sticky-lg-top bg-white">
-    <div class="container-fluid">
-      <nav class="navbar-nav-wrap">
-        <div class="row flex-grow-1">
-          <!-- Default Logo -->
-          <div class="docs-navbar-sidebar-container d-flex align-items-center mb-2 mb-lg-0">
-            <a class="navbar-brand" href="/study" aria-label="laravel">
-              Jiny Laravel
-            </a>
-            <a href="../documentation/changelog.html">
-              <span class="badge bg-soft-primary text-primary">v2.1</span>
-            </a>
-          </div>
-          <!-- End Default Logo -->
-  
-          <div class="col-md px-lg-0">
-            <div class="d-flex justify-content-between align-items-center px-lg-5 px-xl-10">
-              <div class="d-none d-md-block">
+<div class="docs-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ms-0">
+         <a class="navbar-brand" href="/">
+            {{ site.title }}
+         </a>
 
-  
-                <!-- List Item Template -->
-                <div class="d-none">
-                  <div id="searchTemplate" class="dropdown-item">
-                    <a class="d-block link" href="#">
-                      <span class="category d-block text-muted mb-1"></span>
-                      <span class="component fw-bold text-dark"></span>
-                    </a>
-                  </div>
-                </div>
-                <!-- End List Item Template -->
-              </div>
-  
+         <ul class="navbar-nav ms-auto flex-row">
+            <li class="nav-item docs-header-btn">
+               <a target="_blank" href="{{site.github_url}}">Github</a>
+            </li>
 
+            <li class="nav-item d-md-none">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"  
+                  aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+            </li>
+         </ul>
 
-            </div>
-          </div>
-          <!-- End Col -->
-        </div>
-        <!-- End Row -->
-      </nav>
-    </div>
-</header>
-<!-- ========== END HEADER ========== -->
+    </nav>
+</div>
