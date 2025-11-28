@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "🍯 라우팅 맛보기 - 5분만에 라우팅 체험하기"
 description: "Laravel 라우팅을 5분만에 체험해보세요! 아파트에서 집 찾는 것처럼 쉬워요."
 keywords: "Laravel 라우팅, 맛보기, 초보자, 체험"

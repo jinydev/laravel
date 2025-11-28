@@ -83,24 +83,24 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "page"
+      layout: "geeks"
   - scope:
       path: ""
       type: "start"
     values:
-      layout: "page"
+      layout: "geeks"
       category: "Laravel 시작하기"
   - scope:
       path: ""
       type: "setup"
     values:
-      layout: "page"
+      layout: "geeks"
       category: "개발환경 설정"
   - scope:
       path: ""
       type: "deploy"
     values:
-      layout: "page"
+      layout: "geeks"
       category: "서버 배포"
 
 # 페이지네이션

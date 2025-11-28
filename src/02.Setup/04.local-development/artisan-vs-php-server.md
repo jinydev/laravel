@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "Laravel artisan serve vs PHP 내장 서버 완전 비교"
 description: "Laravel artisan serve와 PHP -S 명령의 차이점을 3단계 깊이로 상세 분석"
 category: 로컬 개발 환경

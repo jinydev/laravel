@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 ---
 
 # 프레임워크

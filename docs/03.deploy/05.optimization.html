@@ -1,4 +1,1013 @@
-<h1 id="5단계-성능-최적화-및-관리">5단계: 성능 최적화 및 관리</h1>
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="JinyPHP Team" />
+
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico" />
+
+    <!-- darkmode js -->
+    <script src="/assets/js/vendors/darkMode.js"></script>
+
+    <!-- Libs CSS -->
+    <link href="/assets/fonts/feather/feather.css" rel="stylesheet" />
+    <link href="/assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/docs.css">
+
+    <link rel="canonical" href="https://jinyphp.github.io/03.deploy/05.optimization.html">
+    <link href="/assets/libs/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+    <title>JinyDev</title>
+</head>
+
+<body class="bg-white">
+    <!-- Main wrapper -->
+    <div class="docs-main-wrapper">
+        <div class="docs-header">
+    <nav class="navbar navbar-expand-md fixed-top ms-0">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/images/brand/logo/logo.svg" alt="Geeks" />
+        </a>
+        <div class="ms-auto d-flex align-items-center">
+            <div class="d-flex">
+                <div class="me-2 me-lg-0 ms-2">
+                    <a class="btn btn-primary" href="https://github.com/jinydev/laravel" target="_blank">GitHub</a>
+                </div>
+                <div>
+                    <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+        <!-- left sidebar -->
+        <aside class="docs-nav-sidebar">
+  <div class="py-5"></div>
+  <div class="docs-nav">
+    <nav class="navbar navbar-expand-md">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav flex-column" id="sidebarnav">
+
+          
+          
+          
+
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">01.Laravel</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/01.Laravel/01.what-is-laravel.html" class="nav-link ">
+              01.what-is-laravel.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/01.Laravel/02.php-language.html" class="nav-link ">
+              02.php-language.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/01.Laravel/03.dependency-issues.html" class="nav-link ">
+              03.dependency-issues.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+          
+
+          
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" href="#testsub"
+              data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="testsub">
+              TestSub
+              <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="testsub">
+              <ul class="nav flex-column">
+                
+                
+
+                <li class="nav-item">
+                  <a href="/01.Laravel/TestSub/test.html" class="nav-link ">
+                    Test Page
+                  </a>
+                </li>
+
+                
+                
+                
+                
+                
+              </ul>
+            </div>
+          </li>
+          
+
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/01.Start/" class="nav-link ">
+              Laravel 시작하기
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">02.Setup</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/02.Setup/01.requirements.html" class="nav-link ">
+              01.requirements.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/02.Setup/02.laravel-install.html" class="nav-link ">
+              02.laravel-install.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/02.Setup/03.database.html" class="nav-link ">
+              03.database.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/02.Setup/04.local-development.html" class="nav-link ">
+              04.local-development.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+          
+
+          
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" href="#04-local-development"
+              data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="04-local-development">
+              04.local-development
+              <i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="04-local-development">
+              <ul class="nav flex-column">
+                
+                
+
+                <li class="nav-item">
+                  <a href="/02.Setup/04.local-development/artisan-vs-php-server.html" class="nav-link ">
+                    Laravel artisan serve vs PHP 내장 서버 완전 비교
+                  </a>
+                </li>
+
+                
+                
+                
+                
+                
+
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+          
+
+          
+
+          
+
+                <li class="nav-item">
+                  <a href="/02.Setup/04.local-development/" class="nav-link ">
+                    Laravel 로컬 개발 환경 완전 가이드
+                  </a>
+                </li>
+
+                
+                
+                
+                
+                
+              </ul>
+            </div>
+          </li>
+          
+
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/02.Setup/" class="nav-link ">
+              Laravel JinyERP 개발 환경 설정 가이드
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">03.deploy</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/01.cloud-setup.html" class="nav-link ">
+              01.cloud-setup.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/02.server-setup.html" class="nav-link ">
+              02.server-setup.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/03.laravel-deploy.html" class="nav-link ">
+              03.laravel-deploy.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/04.domain-https.html" class="nav-link ">
+              04.domain-https.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/05.optimization.html" class="nav-link active">
+              05.optimization.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/06.github-deploy.html" class="nav-link ">
+              06.github-deploy.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/03.deploy/" class="nav-link ">
+              Laravel 배포 가이드 - Ubuntu Server
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          <li class="nav-item">
+            <a href="/04.backend.html" class="nav-link ">
+              Laravel 백엔드 개발 완전 가이드
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">04.backend</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/04.backend/framework.html" class="nav-link ">
+              framework.md
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          <li class="nav-item">
+            <a href="/04.jinyphp.html" class="nav-link ">
+              JinyPHP 패키지 설치 및 설정 가이드
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">05.server-access</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/05.server-access/http.html" class="nav-link ">
+              HTTP 통신과 서버 접속
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/05.server-access/web-server.html" class="nav-link ">
+              웹서버란? 완전 정복
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">06.route-taste</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/06.route-taste/how-routing-works.html" class="nav-link ">
+              라우트의 동작 - Laravel 라우팅 작동 원리
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/06.route-taste/" class="nav-link ">
+              🍯 라우팅 맛보기 - 5분만에 라우팅 체험하기
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/06.route-taste/what-is-url.html" class="nav-link ">
+              주소란? URL과 웹 주소 체계
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+          <li class="nav-item">
+            <a href="/06.route-taste/why-routing-needed.html" class="nav-link ">
+              라우트의 필요성 - 왜 라우팅이 중요할까?
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          
+
+          
+          
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          
+
+          <li class="navbar-header">
+            <h5 class="heading">07.view-taste</h5>
+          </li>
+          
+          
+
+          <li class="nav-item">
+            <a href="/07.view-taste/" class="nav-link ">
+              🍯 뷰 맛보기 - 첫 번째 뷰 만들어보기
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          <li class="nav-item">
+            <a href="/feed.xml" class="nav-link ">
+              feed.xml
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          <li class="nav-item">
+            <a href="/" class="nav-link ">
+              JinyDev - Laravel과 JinyPHP 개발 학습 플랫폼
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          <li class="nav-item">
+            <a href="/robots.txt" class="nav-link ">
+              robots.txt
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+          
+          
+          
+
+          
+          
+
+          
+          
+          <li class="nav-item">
+            <a href="/sitemap.xml" class="nav-link ">
+              sitemap.xml
+            </a>
+          </li>
+
+          
+          
+
+          
+          
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="nav-footer">
+    <p class="mb-0">
+      Developed by
+      <a href="https://github.com/jinydev/laravel" target="_blank">JinyDev</a>
+    </p>
+  </div>
+
+  <style>
+    /* Chevron rotation */
+    .nav-link[data-bs-toggle="collapse"] .bi-chevron-down {
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link[data-bs-toggle="collapse"][aria-expanded="true"] .bi-chevron-down {
+      transform: rotate(180deg);
+    }
+  </style>
+</aside>
+
+        <!-- Wrapper  -->
+        <main class="docs-wrapper">
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                        <!-- Content -->
+                        <div class="docs-content mx-xxl-9">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="mb-8" id="intro">
+                                        <h1 class="mb-2 fw-bold display-3"></h1>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 id="5단계-성능-최적화-및-관리">5단계: 성능 최적화 및 관리</h1>
 
 <table>
   <tbody>
@@ -944,3 +1953,45 @@ Cache: 전용 Redis 클러스터
     </tr>
   </tbody>
 </table>
+
+                        </div>
+                    </div>
+                    
+
+                    <article>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+     crossorigin="anonymous"></script>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scroll top -->
+    <div class="btn-scroll-top">
+        <svg class="progress-square svg-content" width="100%" height="100%" viewBox="0 0 40 40">
+            <path
+                d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" />
+        </svg>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Libs JS -->
+    <script src="/assets/libs/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="/assets/js/theme.min.js"></script>
+
+    <script src="/assets/js/vendors/sidebarMenu.js"></script>
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <script src="/assets/libs/prismjs/components/prism-scss.min.js"></script>
+    <script src="/assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script
+        src="/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+    
+</body>
+
+</html>

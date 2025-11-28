@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "주소란? URL과 웹 주소 체계"
 description: "웹 주소가 무엇인지, URL 구조를 실생활 비유로 쉽게 이해하기"
 keywords: "URL, 웹 주소, 주소 체계, 라우팅 기초"

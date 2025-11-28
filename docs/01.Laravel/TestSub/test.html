@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="/assets/css/theme.css">
     <link rel="stylesheet" href="/assets/css/docs.css">
 
-    <link rel="canonical" href="https://jinyphp.github.io/02.Setup/04.local-development/artisan-vs-php-server.html">
+    <link rel="canonical" href="https://jinyphp.github.io/01.Laravel/TestSub/test.html">
     <link href="/assets/libs/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
-    <title>Laravel artisan serve vs PHP 내장 서버 완전 비교</title>
+    <title>Test Page</title>
 </head>
 
 <body class="bg-white">
@@ -173,7 +173,7 @@
                 
 
                 <li class="nav-item">
-                  <a href="/01.Laravel/TestSub/test.html" class="nav-link ">
+                  <a href="/01.Laravel/TestSub/test.html" class="nav-link active">
                     Test Page
                   </a>
                 </li>
@@ -351,7 +351,7 @@
                 
 
                 <li class="nav-item">
-                  <a href="/02.Setup/04.local-development/artisan-vs-php-server.html" class="nav-link active">
+                  <a href="/02.Setup/04.local-development/artisan-vs-php-server.html" class="nav-link ">
                     Laravel artisan serve vs PHP 내장 서버 완전 비교
                   </a>
                 </li>
@@ -1002,291 +1002,12 @@
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="mb-8" id="intro">
-                                        <h1 class="mb-2 fw-bold display-3">Laravel artisan serve vs PHP 내장 서버 완전 비교</h1>
-                                        
-                                        <p class="mb-6 lead">
-                                            Laravel artisan serve와 PHP -S 명령의 차이점을 3단계 깊이로 상세 분석
-                                        </p>
+                                        <h1 class="mb-2 fw-bold display-3">Test Page</h1>
                                         
                                     </div>
                                 </div>
                             </div>
-                            <h1 id="laravel-artisan-serve-vs-php-내장-서버-완전-비교">Laravel artisan serve vs PHP 내장 서버 완전 비교</h1>
-
-<p>Laravel의 <code class="language-plaintext highlighter-rouge">artisan serve</code> 명령은 <strong>PHP 언어에서 제공하는 자체 서버 <code class="language-plaintext highlighter-rouge">-S</code> 옵션을 쉽게 대체하는</strong> 편리한 도구입니다. 두 방법의 차이점을 자세히 알아봅시다.</p>
-
-<h2 id="1-기본-사용법-비교">1. 기본 사용법 비교</h2>
-
-<h3 id="1-1-php-내장-서버-raw-php">1-1. PHP 내장 서버 (Raw PHP)</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># PHP 내장 서버 직접 실행</span>
-php <span class="nt">-S</span> localhost:8000
-
-<span class="c"># 특정 디렉토리에서 실행</span>
-php <span class="nt">-S</span> localhost:8000 <span class="nt">-t</span> public/
-
-<span class="c"># 커스텀 라우터 파일 사용</span>
-php <span class="nt">-S</span> localhost:8000 <span class="nt">-t</span> public/ public/index.php
-</code></pre></div></div>
-
-<p><strong>💡 설명</strong>: PHP 5.4부터 제공되는 기본 기능으로, 간단한 웹 서버를 실행할 수 있습니다.</p>
-
-<h3 id="1-2-laravel-artisan-serve-framework">1-2. Laravel artisan serve (Framework)</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Laravel 전용 개발 서버</span>
-php artisan serve
-
-<span class="c"># 옵션 지정</span>
-php artisan serve <span class="nt">--host</span><span class="o">=</span>localhost <span class="nt">--port</span><span class="o">=</span>8000 <span class="nt">--env</span><span class="o">=</span><span class="nb">local</span>
-</code></pre></div></div>
-
-<p><strong>💡 설명</strong>: Laravel 프레임워크에서 제공하는 개발 전용 명령으로, PHP 내장 서버를 Laravel에 맞게 최적화했습니다.</p>
-
-<h2 id="2-설정-및-옵션-비교">2. 설정 및 옵션 비교</h2>
-
-<h3 id="2-1-기본-옵션-차이">2-1. 기본 옵션 차이</h3>
-
-<p><strong>PHP 내장 서버</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 사용 가능한 주요 옵션</span>
-php <span class="nt">-S</span> &lt;host&gt;:&lt;port&gt;          <span class="c"># 호스트와 포트 설정</span>
-    <span class="nt">-t</span> &lt;document_root&gt;        <span class="c"># 문서 루트 디렉토리</span>
-    <span class="nt">-c</span> &lt;ini_file&gt;            <span class="c"># PHP 설정 파일 지정</span>
-    <span class="nt">-d</span> &lt;name&gt;<span class="o">=</span>&lt;value&gt;        <span class="c"># PHP 설정 값 직접 지정</span>
-
-<span class="c"># 실제 사용 예시</span>
-php <span class="nt">-S</span> 0.0.0.0:8000 <span class="nt">-t</span> public/ <span class="nt">-d</span> <span class="nv">memory_limit</span><span class="o">=</span>256M
-</code></pre></div></div>
-
-<p><strong>Laravel artisan serve</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Laravel 전용 옵션들</span>
-php artisan serve <span class="nt">--host</span><span class="o">=</span>&lt;host&gt;    <span class="c"># 호스트 설정</span>
-                  <span class="nt">--port</span><span class="o">=</span>&lt;port&gt;    <span class="c"># 포트 설정</span>
-                  <span class="nt">--env</span><span class="o">=</span>&lt;<span class="nb">env</span><span class="o">&gt;</span>      <span class="c"># 환경 설정</span>
-                  <span class="nt">--no-reload</span>      <span class="c"># 자동 재시작 비활성화</span>
-
-<span class="c"># 실제 사용 예시</span>
-php artisan serve <span class="nt">--host</span><span class="o">=</span>0.0.0.0 <span class="nt">--port</span><span class="o">=</span>8080 <span class="nt">--env</span><span class="o">=</span><span class="nb">local</span>
-</code></pre></div></div>
-
-<h3 id="2-2-환경-설정-처리">2-2. 환경 설정 처리</h3>
-
-<p><strong>PHP 내장 서버의 한계</strong>:</p>
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// index.php에서 수동으로 처리해야 함
-<span class="cp">&lt;?php</span>
-<span class="c1">// 환경별 설정을 직접 로드</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">file_exists</span><span class="p">(</span><span class="s1">'.env.local'</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nv">$dotenv</span> <span class="o">=</span> <span class="nc">Dotenv\Dotenv</span><span class="o">::</span><span class="nf">createImmutable</span><span class="p">(</span><span class="k">__DIR__</span><span class="p">,</span> <span class="s1">'.env.local'</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nv">$dotenv</span> <span class="o">=</span> <span class="nc">Dotenv\Dotenv</span><span class="o">::</span><span class="nf">createImmutable</span><span class="p">(</span><span class="k">__DIR__</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nv">$dotenv</span><span class="o">-&gt;</span><span class="nf">load</span><span class="p">();</span>
-
-<span class="k">require_once</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
-<span class="nv">$app</span> <span class="o">=</span> <span class="k">require_once</span> <span class="s1">'bootstrap/app.php'</span><span class="p">;</span>
-<span class="c1">// ... 복잡한 초기화 과정</span>
-</code></pre></div></div>
-
-<p><strong>Laravel artisan serve의 편리함</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 환경 설정이 자동으로 처리됨</span>
-php artisan serve <span class="nt">--env</span><span class="o">=</span><span class="nb">local</span>     <span class="c"># .env.local 자동 로드</span>
-php artisan serve <span class="nt">--env</span><span class="o">=</span>testing   <span class="c"># .env.testing 자동 로드</span>
-
-<span class="c"># Laravel 초기화도 자동 처리 (별도 코딩 불필요)</span>
-</code></pre></div></div>
-
-<h2 id="3-기능-및-성능-차이점">3. 기능 및 성능 차이점</h2>
-
-<h3 id="3-1-laravel-특화-기능">3-1. Laravel 특화 기능</h3>
-
-<p><strong>artisan serve 전용 기능들</strong>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 자동 재시작 (코드 변경 감지)</span>
-php artisan serve              <span class="c"># 파일 변경 시 자동 재시작</span>
-
-<span class="c"># 2. Laravel 환경 완전 지원</span>
-php artisan serve <span class="nt">--env</span><span class="o">=</span><span class="nb">local</span>  <span class="c"># APP_ENV=local 자동 설정</span>
-                              <span class="c"># 디버그 모드, 로그 레벨 등 자동 처리</span>
-
-<span class="c"># 3. Artisan 명령 통합</span>
-php artisan serve &amp;            <span class="c"># 백그라운드 실행</span>
-php artisan queue:work &amp;       <span class="c"># 큐 워커 동시 실행</span>
-php artisan schedule:work &amp;    <span class="c"># 스케줄러 동시 실행</span>
-</code></pre></div></div>
-
-<p><strong>실제 비교 예시</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># PHP 내장 서버로 Laravel 실행 시 문제점</span>
-<span class="nb">cd</span> /path/to/laravel-project
-php <span class="nt">-S</span> localhost:8000 <span class="nt">-t</span> public/
-<span class="c"># ❌ .env 파일 자동 로드 안됨</span>
-<span class="c"># ❌ Laravel 캐시 제대로 안됨</span>
-<span class="c"># ❌ 에러 처리 제한적</span>
-<span class="c"># ❌ 디버그 정보 부족</span>
-
-<span class="c"># artisan serve로 실행</span>
-php artisan serve
-<span class="c"># ✅ 모든 Laravel 기능 완벽 지원</span>
-<span class="c"># ✅ 개발 모드 최적화</span>
-<span class="c"># ✅ 상세한 에러 정보</span>
-<span class="c"># ✅ 핫 리로드 지원</span>
-</code></pre></div></div>
-
-<h3 id="3-2-성능-및-안정성">3-2. 성능 및 안정성</h3>
-
-<p><strong>PHP 내장 서버</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 장점</span>
-+ 매우 가벼움 <span class="o">(</span>메모리 사용량 적음<span class="o">)</span>
-+ 순수 PHP만 있으면 실행 가능
-+ 프레임워크 의존성 없음
-
-<span class="c"># 단점</span>
-- 단일 스레드 <span class="o">(</span>동시 요청 처리 제한<span class="o">)</span>
-- 정적 파일 처리 기본적
-- 에러 디버깅 어려움
-</code></pre></div></div>
-
-<p><strong>Laravel artisan serve</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 장점</span>
-+ Laravel 생태계 완벽 지원
-+ 개발 친화적 에러 처리
-+ 자동 재시작 및 핫 리로드
-+ 통합된 개발 도구
-
-<span class="c"># 단점</span>
-- 메모리 사용량 더 많음
-- Laravel 프레임워크 필수
-- 약간의 오버헤드 존재
-</code></pre></div></div>
-
-<h3 id="3-3-실무에서의-사용-권장사항">3-3. 실무에서의 사용 권장사항</h3>
-
-<p><strong>상황별 권장 사용법</strong>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Laravel 프로젝트 개발 (권장: artisan serve)</span>
-php artisan serve <span class="nt">--host</span><span class="o">=</span>0.0.0.0 <span class="nt">--port</span><span class="o">=</span>8000
-<span class="c"># 👍 Laravel 기능 완벽 활용 가능</span>
-
-<span class="c"># 2. 빠른 PHP 파일 테스트 (권장: PHP -S)</span>
-<span class="nb">cd </span>simple-php-project
-php <span class="nt">-S</span> localhost:8000
-<span class="c"># 👍 가볍고 빠른 테스트</span>
-
-<span class="c"># 3. 프로덕션 환경 (권장: Nginx + PHP-FPM)</span>
-<span class="c"># 둘 다 개발용이므로 실제 서비스에는 부적합</span>
-</code></pre></div></div>
-
-<p><strong>메모리 사용량 실제 비교</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># PHP 내장 서버</span>
-php <span class="nt">-S</span> localhost:8000 <span class="nt">-t</span> public/
-<span class="c"># 메모리 사용량: ~10-15MB</span>
-
-<span class="c"># Laravel artisan serve</span>
-php artisan serve
-<span class="c"># 메모리 사용량: ~30-50MB (Laravel 로딩 때문)</span>
-</code></pre></div></div>
-
-<h2 id="️-고급-사용법">🛠️ 고급 사용법</h2>
-
-<h3 id="멀티-환경-테스트">멀티 환경 테스트</h3>
-
-<p><strong>PHP 내장 서버</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 여러 환경을 수동으로 관리</span>
-php <span class="nt">-S</span> localhost:8000 <span class="nt">-t</span> public/ <span class="nt">-d</span> <span class="nv">display_errors</span><span class="o">=</span>1    <span class="c"># 개발</span>
-php <span class="nt">-S</span> localhost:8001 <span class="nt">-t</span> public/ <span class="nt">-d</span> <span class="nv">display_errors</span><span class="o">=</span>0    <span class="c"># 스테이징</span>
-</code></pre></div></div>
-
-<p><strong>Laravel artisan serve</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 환경별 자동 설정</span>
-php artisan serve <span class="nt">--env</span><span class="o">=</span><span class="nb">local</span> <span class="nt">--port</span><span class="o">=</span>8000     <span class="c"># 로컬 개발</span>
-php artisan serve <span class="nt">--env</span><span class="o">=</span>testing <span class="nt">--port</span><span class="o">=</span>8001   <span class="c"># 테스트</span>
-php artisan serve <span class="nt">--env</span><span class="o">=</span>staging <span class="nt">--port</span><span class="o">=</span>8002   <span class="c"># 스테이징</span>
-</code></pre></div></div>
-
-<h3 id="성능-최적화">성능 최적화</h3>
-
-<p><strong>artisan serve 최적화</strong>:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># OPCache 활성화</span>
-php artisan serve <span class="nt">-d</span> opcache.enable<span class="o">=</span>1 <span class="nt">-d</span> opcache.enable_cli<span class="o">=</span>1
-
-<span class="c"># 메모리 제한 설정</span>
-php artisan serve <span class="nt">-d</span> <span class="nv">memory_limit</span><span class="o">=</span>512M
-
-<span class="c"># 실행 시간 제한 해제 (개발용)</span>
-php artisan serve <span class="nt">-d</span> <span class="nv">max_execution_time</span><span class="o">=</span>0
-</code></pre></div></div>
-
-<h2 id="-핵심-정리">💡 핵심 정리</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>기능</th>
-      <th>PHP 내장 서버</th>
-      <th>Laravel artisan serve</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>메모리 사용량</strong></td>
-      <td>10-15MB</td>
-      <td>30-50MB</td>
-    </tr>
-    <tr>
-      <td><strong>Laravel 기능</strong></td>
-      <td>제한적</td>
-      <td>완벽 지원</td>
-    </tr>
-    <tr>
-      <td><strong>자동 재시작</strong></td>
-      <td>❌</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td><strong>환경 설정</strong></td>
-      <td>수동</td>
-      <td>자동</td>
-    </tr>
-    <tr>
-      <td><strong>에러 디버깅</strong></td>
-      <td>기본적</td>
-      <td>고급</td>
-    </tr>
-    <tr>
-      <td><strong>속도</strong></td>
-      <td>빠름</td>
-      <td>약간 느림</td>
-    </tr>
-    <tr>
-      <td><strong>사용 편의성</strong></td>
-      <td>복잡</td>
-      <td>간단</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>📋 권장 사항</strong>:</p>
-<ul>
-  <li><strong>Laravel 프로젝트</strong>: <code class="language-plaintext highlighter-rouge">php artisan serve</code> 사용 권장</li>
-  <li><strong>단순 PHP 테스트</strong>: <code class="language-plaintext highlighter-rouge">php -S</code> 사용 가능</li>
-  <li><strong>프로덕션</strong>: 둘 다 사용 금지 (Nginx + PHP-FPM 권장)</li>
-</ul>
-
-<hr />
-
-<p><strong>네비게이션</strong></p>
-<ul>
-  <li><strong>이전</strong>: <a href="../04.local-development.html">로컬 개발 환경</a></li>
-  <li><strong>다음</strong>: <a href="../frontend-development.html">프론트엔드 개발 환경</a></li>
-  <li><strong>상위</strong>: <a href="../index.html">02.Setup 목차</a></li>
-</ul>
-
-<hr />
-
-<table>
-  <tbody>
-    <tr>
-      <td>마지막 업데이트: 2025-11-19</td>
-      <td>Laravel 12 &amp; PHP 8.4 기준</td>
-    </tr>
-  </tbody>
-</table>
+                            <p>Test Content</p>
 
                         </div>
                     </div>

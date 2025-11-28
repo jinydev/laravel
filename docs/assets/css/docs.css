@@ -1,0 +1,307 @@
+/* ============================================================
+   Docs Header
+   - 상단 네비게이션 바와 버튼 정렬
+   ============================================================ */
+.docs-header .docs-header-btn {
+    align-items: center;
+    display: flex
+}
+
+.docs-header .navbar {
+    background-color: var(--gk-navbar-bg);
+    box-shadow: 0 -9px 49px rgba(22, 20, 37, .12), 0 -2.71324px 14.7721px rgba(22, 20, 37, .14), 0 -1.12694px 6.13556px rgba(22, 20, 37, .16), 0 -.407592px 2.21911px rgba(22, 20, 37, .18);
+    margin-left: 18.75rem;
+    z-index: 1022
+}
+
+@media (max-width:576px) {
+    .docs-header .navbar {
+        margin-left: 0
+    }
+}
+
+/* ============================================================
+   Docs Left Sidebar
+   - 메인 문서 목록 네비게이션
+   ============================================================ */
+.docs-nav-sidebar {
+    background-color: var(--gk-navbar-bg);
+    border-right: 1px solid var(--gk-border-color);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 18.75rem;
+    z-index: 22
+}
+
+.docs-nav-sidebar .navbar-brand {
+    margin-right: 0;
+    padding: 14px 20px 10px
+}
+
+.docs-nav-sidebar .docs-nav {
+    height: calc(100% - 7.5rem) !important;
+    overflow-y: auto
+}
+
+.docs-nav-sidebar .navbar {
+    padding: 0
+}
+
+.docs-nav-sidebar .navbar-nav {
+    min-width: 100%
+}
+
+@media (max-width:375px) {
+    .docs-nav-sidebar .navbar-nav {
+        padding-top: 25px
+    }
+}
+
+.docs-nav-sidebar .navbar-nav .navbar-header {
+    margin-bottom: 1rem;
+    margin-top: 1.5625rem;
+    padding: 0 1.25rem
+}
+
+.docs-nav-sidebar .navbar-nav .navbar-header .heading {
+    color: var(--gk-gray-800);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize
+}
+
+.docs-nav-sidebar .navbar-nav .navbar-border {
+    border-bottom: 1px solid var(--gk-border-color);
+    margin: 1.25rem 0
+}
+
+.docs-nav-sidebar .navbar-nav .nav-item .nav-link {
+    border-bottom: 0;
+    border-radius: .375rem;
+    color: var(--gk-gray-600) !important;
+    margin: .05rem 1.25rem;
+    padding: .275rem .675rem !important
+}
+
+.docs-nav-sidebar .navbar-nav .nav-item .nav-link.active,
+.docs-nav-sidebar .navbar-nav .nav-item .nav-link:hover {
+    background-color: var(--gk-gray-100);
+    color: var(--gk-gray-500) !important
+}
+
+.docs-nav-sidebar .nav-footer {
+    background-color: var(--gk-navbar-bg);
+    border-top: 1px solid var(--gk-border-color);
+    bottom: 0;
+    padding: .875rem 1.5rem;
+    position: absolute;
+    width: 100%
+}
+
+/* ============================================================
+   Docs Right TOC Sidebar
+   - 페이지 목차 영역 스타일
+   ============================================================ */
+.sidebar-nav-fixed {
+    border-left: 1px solid var(--gk-gray-300);
+    height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding-top: 4.0625rem;
+    position: sticky;
+    top: 4rem
+}
+
+.sidebar-nav-fixed ul {
+    list-style: none
+}
+
+.sidebar-nav-fixed ul li a {
+    background: transparent;
+    border-left: 2px solid transparent;
+    border-radius: 0;
+    color: var(--gk-gray-600);
+    display: block;
+    font-size: .8125rem;
+    line-height: 1.4375rem;
+    padding: .125rem 1.5rem;
+    text-decoration: none;
+    transition: .5s ease
+}
+
+.sidebar-nav-fixed ul li a:hover {
+    color: var(--gk-primary)
+}
+
+.sidebar-nav-fixed ul li a.active {
+    background: transparent !important;
+    border-left-color: var(--gk-primary);
+    color: var(--gk-primary);
+    display: block;
+    text-decoration: none;
+    transition: .5s ease
+}
+
+.sidebar-nav-fixed ul li ul {
+    list-style: none;
+    padding-left: 0
+}
+
+.sidebar-nav-fixed ul li ul li a {
+    padding: .125rem 2.5rem
+}
+
+/* ============================================================
+   Docs Main Layout
+   - 본문/컨텐츠 영역 기본 레이아웃
+   ============================================================ */
+.docs-main-wrapper {
+    min-height: 100%;
+    position: relative
+}
+
+.docs-wrapper {
+    left: 0;
+    margin-left: 18.75rem;
+    position: relative;
+    top: 35px
+}
+
+.docs-content {
+    margin: 6rem 4rem
+}
+
+.docs-content-head {
+    padding: 4.375rem 0
+}
+
+.gd-example-modal.modal {
+    bottom: auto;
+    display: block;
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    z-index: 1
+}
+
+.scrollspy-example {
+    height: 12.5rem;
+    margin-top: .5rem;
+    overflow: auto;
+    position: relative
+}
+
+.scrollspy-example-2 {
+    height: 21.875rem;
+    overflow: auto;
+    position: relative
+}
+
+.toast.hide {
+    display: none
+}
+
+.color-swatch {
+    margin-bottom: 1.875rem
+}
+
+.color-swatch-header {
+    border-radius: .25rem;
+    height: 4.5rem
+}
+
+.color-swatch-body {
+    line-height: 1;
+    margin-top: .5rem
+}
+
+.color-swatch-body-label {
+    margin-bottom: .25rem
+}
+
+.color-swatch-body-value {
+    margin-bottom: 0
+}
+
+.docs-example-border-utils [class^=border] {
+    background-color: var(--gk-gray-100);
+    display: inline-block;
+    height: 5rem;
+    margin: .25rem;
+    width: 5rem
+}
+
+.docs-example-border-utils-0 [class^=border] {
+    border: 1px solid var(--gk-gray-300)
+}
+
+:focus {
+    outline: 0
+}
+
+@media only screen and (max-width:1400px) {
+    .docs-content {
+        margin: 6rem 0
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .docs-content {
+        margin: 5rem 3rem
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .docs-content {
+        margin: 5rem 3rem
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .docs-nav-sidebar {
+        position: relative;
+        right: 0;
+        width: 100%
+    }
+
+    .docs-nav-sidebar .top-search-bar {
+        border-bottom: 1px solid var(--gk-gray-300);
+        margin-top: 2.875rem;
+        padding: 1.25rem
+    }
+
+    .docs-nav-sidebar .navbar-toggler {
+        background-color: var(--gk-white)
+    }
+
+    .docs-wrapper {
+        margin-left: 0
+    }
+
+    .docs-main-wrapper .main-content {
+        margin-left: 0;
+        width: auto
+    }
+
+    .docs-content {
+        margin: 1rem
+    }
+}
+
+/* ============================================================
+   Misc Components
+   - 문서 내 샘플 컴포넌트 유틸리티
+   ============================================================ */
+.ratio {
+    background-color: var(--gk-gray-100);
+    border: 1px solid var(--gk-gray-300);
+    color: var(--gk-gray-600);
+    display: inline-block;
+    width: 10rem
+}
+
+.docs-content .nav-line-bottom .nav-item .nav-link {
+    padding: .75rem
+}

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "라우트의 필요성 - 왜 라우팅이 중요할까?"
 description: "라우팅 시스템이 없다면 어떤 문제가 생기는지, 왜 필요한지 쉽게 이해하기"
 keywords: "라우팅 필요성, 웹 개발, URL 관리, SEO"

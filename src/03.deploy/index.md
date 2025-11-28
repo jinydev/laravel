@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: Laravel 배포 가이드 - Ubuntu Server
 description: 클라우드 환경에서 Laravel 프로젝트를 처음부터 끝까지 배포하는 완벽한 가이드
 category: 서버 배포

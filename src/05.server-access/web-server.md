@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "웹서버란? 완전 정복"
 description: "웹서버의 개념부터 종류, 설정까지 완전 마스터"
 keywords: "웹서버, Apache, Nginx, PHP-FPM, 서버 종류"

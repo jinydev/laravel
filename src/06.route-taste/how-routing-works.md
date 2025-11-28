@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "라우트의 동작 - Laravel 라우팅 작동 원리"
 description: "Laravel에서 라우팅이 실제로 어떻게 작동하는지, HTTP 메소드와 응답을 실습으로 학습"
 keywords: "Laravel 라우팅, HTTP 메소드, 라우트 동작, 실습"

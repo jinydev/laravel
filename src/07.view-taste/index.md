@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "🍯 뷰 맛보기 - 첫 번째 뷰 만들어보기"
 description: "Laravel 뷰가 뭔지 5분만에 체험하고 첫 번째 HTML 페이지 만들어보세요"
 keywords: "Laravel 뷰, 맛보기, 초보자, Blade"

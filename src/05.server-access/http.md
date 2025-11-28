@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "HTTP 통신과 서버 접속"
 description: "브라우저와 서버가 대화하는 방법, Laravel 개발 서버 완전 활용법"
 keywords: "HTTP, 서버 접속, Laravel 개발 서버, 통신 프로토콜"

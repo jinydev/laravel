@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: "Laravel 로컬 개발 환경 완전 가이드"
 description: "Laravel 프로젝트의 로컬 개발 환경 구성부터 고급 설정까지 체계적으로 안내"
 category: 로컬 개발 환경

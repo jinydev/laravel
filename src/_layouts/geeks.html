@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
 
 <head>
     <!-- Required meta tags -->
@@ -19,7 +19,8 @@
     <link href="{{ '/assets/libs/simplebar/dist/simplebar.min.css' | relative_url }}" rel="stylesheet" />
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/theme.min.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/docs.css' | relative_url }}">
 
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link href="{{ '/assets/libs/prismjs/themes/prism-okaidia.min.css' | relative_url }}" rel="stylesheet">
@@ -29,27 +30,7 @@
 <body class="bg-white">
     <!-- Main wrapper -->
     <div class="docs-main-wrapper">
-        <div class="docs-header">
-            <nav class="navbar navbar-expand-md fixed-top ms-0">
-                <a class="navbar-brand" href="{{ '/' | relative_url }}">
-                    <img src="{{ '/assets/images/brand/logo/logo.svg' | relative_url }}" alt="Geeks" />
-                </a>
-                <div class="ms-auto d-flex align-items-center">
-                    <div class="d-flex">
-                        <div class="me-2 me-lg-0 ms-2">
-                            <a class="btn btn-primary" href="https://github.com/jinydev/laravel"
-                                target="_blank">GitHub</a>
-                        </div>
-                        <div>
-                            <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
+        {% include docs-header.html %}
 
         <!-- left sidebar -->
         {% include docs-sidebar.html %}
@@ -76,8 +57,8 @@
                             {{ content }}
                         </div>
                     </div>
-                    {% unless page.toc == false %}
-                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0" id="toc-container">
+                    {% if page.toc %}
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
                         <!-- Sidebar nav fixed -->
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
@@ -86,7 +67,12 @@
                             </ul>
                         </div>
                     </div>
-                    {% endunless %}
+                    {% endif %}
+
+                    <article>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+     crossorigin="anonymous"></script>
+                    </article>
                 </div>
             </section>
         </main>
@@ -116,20 +102,12 @@
     <script
         src="{{ '/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js' | relative_url }}"></script>
 
-     {% unless page.toc == false %}
+    {% if page.toc %}
     <script>
         // Simple TOC generator
         document.addEventListener('DOMContentLoaded', function () {
             const tocList = document.getElementById('toc-list');
-             const tocContainer = document.getElementById('toc-container');
             const headers = document.querySelectorAll('.docs-content h2, .docs-content h3');
-
-             if (!tocList || headers.length === 0) {
-                 if (tocContainer) {
-                     tocContainer.style.display = 'none';
-                 }
-                 return;
-             }
 
             headers.forEach(header => {
                 if (!header.id) {
@@ -147,7 +125,7 @@
             });
         });
     </script>
-     {% endunless %}
+    {% endif %}
 </body>
 
 </html>

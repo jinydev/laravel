@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: Laravel JinyERP 개발 환경 설정 가이드
 description: JinyERP Laravel 프로젝트의 로컬 개발 환경 설정을 단계별로 안내합니다.
 category: 개발환경 설정
