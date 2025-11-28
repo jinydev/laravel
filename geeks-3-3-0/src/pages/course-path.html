@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/bootstrap-select/dist/css/bootstrap-select.css" />
+    @@include("../partials/head.html")
+
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/course-path.html" />
+    <title>Course Path | Geeks - Bootstrap 5 Template</title>
+  </head>
+
+  <body>
+    <!-- Page Content -->
+    @@include("../partials/navbar-default.html")
+    <main>
+      <!-- Page header -->
+      <section class="bg-primary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+              <div class="py-4 py-lg-6">
+                <h1 class="mb-0 text-white display-4">Browse Paths</h1>
+                <p class="text-white mb-0 lead">Get started by learning from a path below</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Content -->
+      <section class="py-7">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-xl-8 col-md-6 col-12">
+                  <h4 class="mb-3 mb-md-0">Total 18 Paths</h4>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6 pe-0">
+                  <!-- Custom select -->
+                  <label class="form-label visually-hidden" for="coursePathCategory">Category</label>
+                  <select class="form-select" data-choices="" id="coursePathCategory" name="coursePathCategory">
+                    <option value="">Category</option>
+                    <option value="2">Design</option>
+                    <option value="3">Development</option>
+                    <option value="3">Program</option>
+                  </select>
+                </div>
+                <!-- Custom select -->
+                <div class="col-xl-2 col-md-3 col-6">
+                  <label class="form-label visually-hidden" for="coursePathSortby">Sort by</label>
+                  <select class="form-select" data-choices="" id="coursePathSortby" name="coursePathSortby">
+                    <option value="">Sort by</option>
+                    <option value="1">Newest</option>
+                    <option value="2">Popularity</option>
+                    <option value="3">Rated</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Content -->
+      <section class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-bootstrap.svg" alt="bootstrap" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Bootstrap</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">12</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">34</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-javascript.svg" alt="javascript" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">JavaScript Core Language</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">12</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">34</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-angular.svg" alt="angularjs" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">AngularJS</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">13</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">50</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-css.svg" alt="css" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Advanced CSS course</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">6</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">11</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-gatsby.svg" alt="getsby" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">GatsbyJS</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">6</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">11</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-react.svg" alt="react" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">React</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">20</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">12</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-graphql.svg" alt="graphqi" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">GraphQl</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">16</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">24</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-vue-js.svg" alt="vuejs" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Vue Js</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">12</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">17</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-nodejs.svg" alt="nodejs" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Node js</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">8</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">17</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-python.svg" alt="python" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Python</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">32</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">12</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-grunt.svg" alt="grunt" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Grunt</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">8</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">23</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-sass.svg" alt="sass" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Sass</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">6</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">43</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-html.svg" alt="html" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">HTML5</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">24</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">32</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-sketch.svg" alt="sketch" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Sketch</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">8</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">12</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-invision.svg" alt="invision" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Invision</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">8</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">12</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-invision-studio.svg" alt="invisionstudio" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Invision Studio</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">10</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">16</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-figma-log.svg" alt="figma" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Figma</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">8</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">12</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-adobe-xd.svg" alt="adobe xd" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Adobe XD</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">14</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">26</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card mb-4 card-hover">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <div class="d-flex">
+                  <a href="course-path-single.html">
+                    <!-- Img -->
+                    <img src="../assets/images/path/path-illustrator.svg" alt="adobeillustrator" class="avatar-md" />
+                  </a>
+                  <div class="ms-3">
+                    <h4 class="mb-1">
+                      <a href="course-path-single.html" class="text-inherit">Adobe Illustrator</a>
+                    </h4>
+                    <p class="mb-0 fs-6">
+                      <span class="me-2">
+                        <span class="text-dark fw-medium">5</span>
+                        Courses
+                      </span>
+                      <span>
+                        <span class="text-dark fw-medium">16</span>
+                        Hours
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    @@include("../partials/footer-default.html")
+
+    <!-- Scroll top -->
+    @@include("../partials/btn-scroll-top.html")
+    <!-- Scripts -->
+    @@include("../partials/scripts.html")
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

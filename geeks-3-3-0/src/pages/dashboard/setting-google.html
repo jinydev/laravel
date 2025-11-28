@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/setting-google.html" />
+    <title>Google Setting | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "google", "page_group": "sitesetting" })
+      <!-- Page content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Page header -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">Google Settings</h1>
+                  <nav aria-label="breadcrumb">
+                    <!-- Breadcrumb -->
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Setting</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Google Settings</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <div class="d-flex flex-column gap-4">
+                <!-- Card -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0">Google Settings</h4>
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input" id="googleSwitch" />
+                      <label class="form-check-label" for="googleSwitch"></label>
+                    </div>
+                  </div>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="googleage" class="form-label">
+                          Google Analytics Tracking ID
+                          <small>(ex. UA-000000-2 )</small>
+                        </label>
+                        <input class="form-control" id="googleage" placeholder="UA-000000-2 " type="text" required="" />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Update Settings</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0">Google Map</h4>
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input" id="MapSwitch" />
+                      <label class="form-check-label" for="MapSwitch"></label>
+                    </div>
+                  </div>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <!-- Form -->
+                    <form>
+                      <div class="mb-3">
+                        <label for="trackingPage" class="form-label">Goole Map API KeY</label>
+                        <input class="form-control" id="trackingPage" placeholder="6LeJd8IUAAAAAFOR_aW-SO8wMASDSDFRuYT-zQDLnHC " type="text" required="" />
+                      </div>
+
+                      <div class="mb-3 mb-4">
+                        <label for="latitudePage1" class="form-label">Map Latitude:</label>
+                        <input class="form-control" id="latitudePage1" placeholder="e.g. 25.3500 " type="text" required="" />
+                      </div>
+                      <div class="mb-3 mb-4">
+                        <label for="latitudePage2" class="form-label">Map Longitude:</label>
+                        <input class="form-control" id="latitudePage2" placeholder="e.g. 74.6333 " type="text" required="" />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Update Settings</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

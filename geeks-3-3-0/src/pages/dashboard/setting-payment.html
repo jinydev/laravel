@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/setting-payment.html" />
+    <title>Payment Settings | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "payment", "page_group": "sitesetting" })
+      <!-- Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Content -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">Payment Setting</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="../dashboard/admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Setting</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Payment Setting</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <!-- Card -->
+              <div class="card mb-4">
+                <!-- Card header -->
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <h4 class="mb-0">Paypal</h4>
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="paypalSwitch1" checked />
+                    <label class="form-check-label" for="paypalSwitch1"></label>
+                  </div>
+                </div>
+                <!-- Card body -->
+                <div class="card-body">
+                  <img src="../../assets/images/brand/paypal.svg" alt="" class="mb-2" />
+                  <p class="mb-4">Enter your PayPal email address below to accept payments from students.</p>
+                  <!-- Form -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="paypalEmail" class="form-label">Paypal Email Address</label>
+                      <input class="form-control" id="paypalEmail" placeholder="your@example.com" type="email" required />
+                    </div>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                  </form>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="card">
+                <!-- Card header -->
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <h4 class="mb-0">Stripe</h4>
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="stripeSwitch1" />
+                    <label class="form-check-label" for="stripeSwitch1"></label>
+                  </div>
+                </div>
+                <!-- Card body -->
+                <div class="card-body">
+                  <img src="../../assets/images/brand/stripe.svg" alt="" class="mb-2" />
+                  <p class="mb-4">Connect your Geeks to your stripe account for faster payouts.</p>
+                  <!-- Form -->
+                  <form>
+                    <div class="mb-3">
+                      <label for="stripeEmail" class="form-label">Stripe Email Address</label>
+                      <input class="form-control" id="stripeEmail" placeholder="your@example.com" type="email" required />
+                    </div>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

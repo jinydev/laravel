@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/project-task.html" />
+    <title>Project Task | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group_second": "projectSingle", "page_group": "project", "page": "task" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="d-flex flex-column flex-lg-row gap-2 align-items-lg-center justify-content-between mb-2">
+                <div>
+                  <h1 class="mb-0 h2 fw-bold">Geeks UI - Design & Development</h1>
+                </div>
+                <div class="d-flex align-items-center">
+                  <!-- avatar group -->
+                  <div class="avatar-group">
+                    <span class="avatar avatar-md">
+                      <!-- avatar  -->
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle imgtooltip" data-template="one" />
+                      <span id="one" class="d-none">
+                        <small class="fw-semibold">Paul Haney</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two" />
+                      <span id="two" class="d-none">
+                        <small class="fw-semibold">Gali Linear</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three" />
+                      <span id="three" class="d-none">
+                        <small class="fw-semibold">Mary Holler</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="four" />
+                      <span id="four" class="d-none">
+                        <small class="fw-semibold">Lio Nordal</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <span class="avatar-initials rounded-circle bg-light text-dark">5+</span>
+                    </span>
+                  </div>
+                  <!-- icon  -->
+                  <a href="#" class="btn btn-icon btn-white border border-2 rounded-circle btn-dashed ms-2">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row  -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <!-- nav  -->
+              <ul class="nav nav-lb-tab">
+                <li class="nav-item ms-0 me-3">
+                  <a class="nav-link" href="project-overview.html">Overview</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link active" href="project-task.html">Task</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-budget.html">Budget</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-files.html">Files</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-team.html">Team</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-summary.html">Summary</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row gy-4 mb-4">
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="mb-0">Task Summary</h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div>
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownSeven" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownSeven">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-primary mb-0 fw-bold">50</h1>
+                    <p class="mb-0">Total Task Count</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="mb-0">In Progress</h4>
+                    </div>
+                    <div>
+                      <!-- dropdown  -->
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownEight" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownEight">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-info mb-0 fw-bold">12</h1>
+                    <p class="mb-0">
+                      <span class="text-dark fw-semibold">6</span>
+                      In Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="mb-0">Completed</h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div>
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownNine" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownNine">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-success mb-0 fw-bold">30</h1>
+                    <p class="mb-0">
+                      <span class="text-dark fw-semibold">8</span>
+                      Today Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h4 class="mb-0">Overdue</h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div>
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownTen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownTen">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-danger mb-0 fw-bold">8</h1>
+                    <p class="mb-0">
+                      <span class="text-dark fw-semibold">4</span>
+                      Yesterday
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row  -->
+          <div class="row gy-4 mb-4">
+            <div class="col-xl-8 col-md-12 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h4 class="mb-0">Task Summary</h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div>
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownEleven" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownEleven">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="mt-4 mb-0">New vs. Closed</p>
+                  <!-- chart  -->
+                  <div id="taskSummary"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-12">
+              <!-- card  -->
+              <div class="card h-100">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="mb-4">
+                      <h4 class="mb-0">Task Completion Status</h4>
+                    </div>
+                    <div>
+                      <!-- dropdown  -->
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownTwelve" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownTwelve">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- chart  -->
+                  <div id="taskStatus" class="d-flex justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-xl-4 col-12">
+              <!-- card  -->
+              <div class="card h-100">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h4 class="mb-0">Task by Sections</h4>
+                    </div>
+                    <div>
+                      <!-- dropdown  -->
+                      <span class="dropdown dropstart">
+                        <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownThirteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span class="dropdown-menu" aria-labelledby="DropdownThirteen">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- chart  -->
+                  <div id="taskSectionchart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-8 col-12">
+              <!-- card  -->
+              <div class="card h-100">
+                <!-- card header  -->
+                <div class="card-header">
+                  <h4 class="mb-0">Upcoming task by Assignee</h4>
+                </div>
+                <!-- table  -->
+                <div class="table-responsive">
+                  <table class="table text-nowrap mb-0 table-hover table-centered">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Tasks</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                        <th>Assignee</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Design Wireframes</td>
+                        <td>Set end date</td>
+                        <td><span class="badge bg-light-primary text-primary">In Review</span></td>
+                        <td>
+                          <div class="taskWireframeChart"></div>
+                        </td>
+                        <td><img src="../../assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-xs rounded-circle" /></td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownFourteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownFourteen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Prototype design</td>
+                        <td>Aug 15, 2021</td>
+                        <td><span class="badge bg-light-info text-info">In Progress</span></td>
+                        <td>
+                          <div class="taskPrototypeChart"></div>
+                        </td>
+                        <td><img src="../../assets/images/avatar/avatar-2.jpg" alt="" class="avatar avatar-xs rounded-circle" /></td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownFifteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownFifteen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Content Writing</td>
+                        <td>Aug 16, 2021</td>
+                        <td><span class="badge bg-light-danger text-danger">Cancel</span></td>
+                        <td>
+                          <div class="taskContentChart"></div>
+                        </td>
+
+                        <td><img src="../../assets/images/avatar/avatar-3.jpg" alt="" class="avatar avatar-xs rounded-circle" /></td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownSixteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownSixteen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Figma to Bootstrap Conversion</td>
+                        <td>Aug 18, 2021</td>
+                        <td><span class="badge bg-primary-soft">In Review</span></td>
+                        <td>
+                          <div class="taskFigmaChart"></div>
+                        </td>
+                        <td><img src="../../assets/images/avatar/avatar-5.jpg" alt="" class="avatar avatar-xs rounded-circle" /></td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownSeventeen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownSeventeen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>User Interface Design</td>
+                        <td>Aug 18, 2021</td>
+                        <td><span class="badge bg-primary-soft">In Review</span></td>
+                        <td>
+                          <div class="taskInterfaceChart"></div>
+                        </td>
+                        <td><img src="../../assets/images/avatar/avatar-6.jpg" alt="" class="avatar avatar-xs rounded-circle" /></td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownEighteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="DropdownEighteen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/tooltip.js"></script>
+
+    <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/chart.js"></script>
+  </body>
+</html>

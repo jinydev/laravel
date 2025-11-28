@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../../../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/ecommerce/order.html" >
+        <title>Orders | Geeks - Academy Admin Template</title>
+    </head>
+
+    <body>
+        <!-- Wrapper -->
+        <div id="db-wrapper">
+            <!-- navbar vertical -->
+            @@include('../../../partials/navbar-vertical.html', { "page_group": "ecommerce", "page": "order" })
+            <!-- Page Content -->
+            <main id="page-content">
+                @@include('../../../partials/dashboard-header.html')
+                <!-- Container fluid -->
+                <section class="container-fluid p-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <!-- Page header -->
+                            <div class="border-bottom pb-3 mb-3 d-flex flex-lg-row flex-column gap-2 align-items-lg-center justify-content-between">
+                                <div>
+                                    <h1 class="mb-0 h2 fw-bold">Orders</h1>
+                                    <!-- Breadcrumb -->
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="admin-dashboard.html">Dashboard</a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="#">Ecommerce</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">Orders</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <!-- button -->
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="me-5 text-body">
+                                        <i class="fe fe-upload me-2"></i>
+                                        Export
+                                    </a>
+                                    <!-- button -->
+                                    <a href="add-product.html" class="btn btn-primary me-2">Create Product</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <!-- Card -->
+                            <div class="card rounded-3">
+                                <!-- Card Header -->
+                                <div class="card-header border-bottom-0 p-0">
+                                    <!-- nav -->
+                                    <ul class="nav nav-lb-tab" id="tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="all-orders-tab" data-bs-toggle="pill" href="#all-orders" role="tab" aria-controls="all-orders" aria-selected="true">
+                                                All Orders
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="shipped-tab" data-bs-toggle="pill" href="#shipped" role="tab" aria-controls="shipped" aria-selected="false">Shipped</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="cancelled-tab" data-bs-toggle="pill" href="#cancelled" role="tab" aria-controls="cancelled" aria-selected="false">Cancelled</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="return-tab" data-bs-toggle="pill" href="#return" role="tab" aria-controls="return" aria-selected="false">Return</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 row g-3">
+                                    <!-- Form -->
+                                    <div class="col-12 col-lg-6">
+                                        <!-- search -->
+                                        <form class="d-flex align-items-center">
+                                            <span class="position-absolute ps-3 search-icon">
+                                                <i class="fe fe-search"></i>
+                                            </span>
+                                            <!-- input -->
+                                            <input type="search" class="form-control ps-6" placeholder="Search for order ID, customer name, order status ..." >
+                                        </form>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <!-- form select -->
+                                        <select class="form-select" data-choices="">
+                                            <option selected>All</option>
+                                            <option value="1">Shipped</option>
+                                            <option value="2">Cancelled</option>
+                                            <option value="3">Return</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 col-lg-3">
+                                        <!-- form select -->
+                                        <select class="form-select" data-choices="">
+                                            <option selected>Status</option>
+                                            <option value="1">Shipped</option>
+                                            <option value="2">Cancelled</option>
+                                            <option value="3">Processing</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="tab-content" id="tabContent">
+                                        <!-- Tab -->
+                                        <div class="tab-pane fade show active" id="all-orders" role="tabpanel" aria-labelledby="all-orders-tab">
+                                            <div class="table-responsive">
+                                                <!-- Table -->
+                                                <table class="table mb-0 text-nowrap table-hover table-centered table-with-checkbox">
+                                                    <!-- Table Head -->
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="checkAll" >
+                                                                    <label class="form-check-label" for="checkAll"></label>
+                                                                </div>
+                                                            </th>
+                                                            <th>Order</th>
+                                                            <th>Customer</th>
+                                                            <th>Date</th>
+                                                            <th>Items</th>
+                                                            <th>Payment</th>
+                                                            <th>Total</th>
+                                                            <th>Order Status</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- Table body -->
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderOne" >
+                                                                    <label class="form-check-label" for="orderOne"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00017</a>
+                                                            </td>
+                                                            <td>Harold Gonzalez</td>
+                                                            <td>3 Oct, 2022 10:02 PM</td>
+                                                            <td>1 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$120.00</td>
+
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownOne"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownOne">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderTwo" >
+                                                                    <label class="form-check-label" for="orderTwo"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00016</a>
+                                                            </td>
+                                                            <td>Anthony Anderson</td>
+                                                            <td>19 August, 2022 6:22 PM</td>
+                                                            <td>2 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$220.00</td>
+
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownTwo"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownTwo">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderThree" >
+                                                                    <label class="form-check-label" for="orderThree"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00015</a>
+                                                            </td>
+                                                            <td>Gary Faulkner</td>
+                                                            <td>8 August, 2022 8:13 AM</td>
+                                                            <td>4 Items</td>
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Failed</span>
+                                                            </td>
+                                                            <td>$113.42</td>
+
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Cancelled</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownThree"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownThree">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="OrderFour" >
+                                                                    <label class="form-check-label" for="OrderFour"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00014</a>
+                                                            </td>
+                                                            <td>Steve Nelson</td>
+                                                            <td>26 July, 2022 10:19 AM</td>
+                                                            <td>1 Items</td>
+                                                            <td>
+                                                                <span class="badge text-warning bg-light-warning">Pending</span>
+                                                            </td>
+                                                            <td>$425.31</td>
+
+                                                            <td>
+                                                                <span class="badge text-warning bg-light-warning">Processing</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownFour"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownFour">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderFive" >
+                                                                    <label class="form-check-label" for="orderFive"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00013</a>
+                                                            </td>
+                                                            <td>Kimberly Sullivan</td>
+                                                            <td>18 July, 2022 9:52 PM</td>
+                                                            <td>2 Items</td>
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Failed</span>
+                                                            </td>
+                                                            <td>$113.00</td>
+
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Cancelled</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownFive"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownFive">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderSix" >
+                                                                    <label class="form-check-label" for="orderSix"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00012</a>
+                                                            </td>
+                                                            <td>Susan Pugh</td>
+                                                            <td>2 July, 2022 8:00 AM</td>
+                                                            <td>4 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$831.99</td>
+
+                                                            <td>
+                                                                <span class="badge text-warning bg-light-warning">Processing</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownSix"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownSix">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderSeven" >
+                                                                    <label class="form-check-label" for="orderSeven"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00013</a>
+                                                            </td>
+                                                            <td>Elliott Potts</td>
+                                                            <td>23 June, 2022 8:14 PM</td>
+                                                            <td>2 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$113.00</td>
+
+                                                            <td>
+                                                                <span class="badge text-warning bg-light-warning">Processing</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownSeven"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownSeven">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderEight" >
+                                                                    <label class="form-check-label" for="orderEight"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00012</a>
+                                                            </td>
+                                                            <td>Richard Beaudry</td>
+                                                            <td>13 June, 2022 4:12 PM</td>
+                                                            <td>3 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$582.99</td>
+
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownEight"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownEight">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="orderNine" >
+                                                                    <label class="form-check-label" for="orderNine"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00015</a>
+                                                            </td>
+                                                            <td>Henry Saxton</td>
+                                                            <td>5 May, 2022 12:02 PM</td>
+                                                            <td>6 Items</td>
+                                                            <td>
+                                                                <span class="badge text-dark bg-light-dark">Refunded</span>
+                                                            </td>
+                                                            <td>$00.00</td>
+
+                                                            <td>
+                                                                <span class="badge text-dark bg-light-dark">Return</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownNine"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownNine">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="dropdownTen" >
+                                                                    <label class="form-check-label" for="dropdownTen"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00012</a>
+                                                            </td>
+                                                            <td>Juanita Diener</td>
+                                                            <td>4 April, 2022 5:02 PM</td>
+                                                            <td>1 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$25.23</td>
+
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderDropdownTen"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderDropdownTen">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="shipped" role="tabpanel" aria-labelledby="shipped-tab">
+                                            <div class="table-responsive">
+                                                <!-- Table -->
+                                                <table class="table mb-0 text-nowrap table-hover table-centered table-with-checkbox">
+                                                    <!-- Table Head -->
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="checkAll" >
+                                                                    <label class="form-check-label" for="checkAll"></label>
+                                                                </div>
+                                                            </th>
+                                                            <th>Order</th>
+                                                            <th>Customer</th>
+                                                            <th>Date</th>
+                                                            <th>Items</th>
+                                                            <th>Payment</th>
+                                                            <th>Total</th>
+                                                            <th>Order Status</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- Table body -->
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="shippedOne" >
+                                                                    <label class="form-check-label" for="shippedOne"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00017</a>
+                                                            </td>
+                                                            <td>Harold Gonzalez</td>
+                                                            <td>3 Oct, 2022 10:02 PM</td>
+                                                            <td>1 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$120.00</td>
+
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderShippedOne"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderShippedOne">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="shippedTwo" >
+                                                                    <label class="form-check-label" for="shippedTwo"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00016</a>
+                                                            </td>
+                                                            <td>Anthony Anderson</td>
+                                                            <td>19 August, 2022 6:22 PM</td>
+                                                            <td>2 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$220.00</td>
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderShippedTwo"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderShippedTwo">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="shippedThree" >
+                                                                    <label class="form-check-label" for="shippedThree"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00012</a>
+                                                            </td>
+                                                            <td>Richard Beaudry</td>
+                                                            <td>13 June, 2022 4:12 PM</td>
+                                                            <td>3 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$582.99</td>
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderShippedThree"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderShippedThree">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="shippedFour" >
+                                                                    <label class="form-check-label" for="shippedFour"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00012</a>
+                                                            </td>
+                                                            <td>Juanita Diener</td>
+                                                            <td>4 April, 2022 5:02 PM</td>
+                                                            <td>1 Items</td>
+                                                            <td>
+                                                                <span class="badge text-success bg-light-success">Paid</span>
+                                                            </td>
+                                                            <td>$25.23</td>
+                                                            <td>
+                                                                <span class="badge text-info bg-light-info">Shipped</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="orderShippedFour"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="orderShippedFour">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
+                                            <div class="table-responsive">
+                                                <!-- Table -->
+                                                <table class="table mb-0 text-nowrap table-hover table-centered table-with-checkbox">
+                                                    <!-- Table Head -->
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="checkAll" >
+                                                                    <label class="form-check-label" for="checkAll"></label>
+                                                                </div>
+                                                            </th>
+                                                            <th>Order</th>
+                                                            <th>Customer</th>
+                                                            <th>Date</th>
+                                                            <th>Items</th>
+                                                            <th>Payment</th>
+                                                            <th>Total</th>
+                                                            <th>Order Status</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- Table body -->
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="cancelledOne" >
+                                                                    <label class="form-check-label" for="cancelledOne"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00015</a>
+                                                            </td>
+                                                            <td>Gary Faulkner</td>
+                                                            <td>8 August, 2022 8:13 AM</td>
+                                                            <td>4 Items</td>
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Failed</span>
+                                                            </td>
+                                                            <td>$113.42</td>
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Cancelled</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="cancelledDropdownOne"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="cancelledDropdownOne">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input" id="cancelledTwo" >
+                                                                    <label class="form-check-label" for="cancelledTwo"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="#" class="fw-semibold">#GK00013</a>
+                                                            </td>
+                                                            <td>Kimberly Sullivan</td>
+                                                            <td>18 July, 2022 9:52 PM</td>
+                                                            <td>2 Items</td>
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Failed</span>
+                                                            </td>
+                                                            <td>$113.00</td>
+                                                            <td>
+                                                                <span class="badge text-danger bg-light-danger">Cancelled</span>
+                                                            </td>
+                                                            <td>
+                                                                <span class="dropdown dropstart">
+                                                                    <a
+                                                                        class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                        href="#"
+                                                                        role="button"
+                                                                        id="cancelledDropdownTwo"
+                                                                        data-bs-toggle="dropdown"
+                                                                        data-bs-offset="-20,20"
+                                                                        aria-expanded="false">
+                                                                        <i class="fe fe-more-vertical"></i>
+                                                                    </a>
+                                                                    <span class="dropdown-menu" aria-labelledby="cancelledDropdownTwo">
+                                                                        <span class="dropdown-header">Settings</span>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                            Invite
+                                                                        </a>
+
+                                                                        <a class="dropdown-item" href="#">
+                                                                            <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                            Delete
+                                                                        </a>
+                                                                    </span>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="return" role="tabpanel" aria-labelledby="return-tab">
+                                            <!-- Table -->
+                                            <table class="table mb-0 text-nowrap table-hover table-centered table-with-checkbox">
+                                                <!-- Table Head -->
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="checkAll" >
+                                                                <label class="form-check-label" for="checkAll"></label>
+                                                            </div>
+                                                        </th>
+                                                        <th>Order</th>
+                                                        <th>Customer</th>
+                                                        <th>Date</th>
+                                                        <th>Items</th>
+                                                        <th>Payment</th>
+                                                        <th>Total</th>
+                                                        <th>Order Status</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Table body -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="returnOne" >
+                                                                <label class="form-check-label" for="returnOne"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="fw-semibold">#GK00015</a>
+                                                        </td>
+                                                        <td>Henry Saxton</td>
+                                                        <td>5 May, 2022 12:02 PM</td>
+                                                        <td>6 Items</td>
+                                                        <td>
+                                                            <span class="badge text-dark bg-light-dark">Refunded</span>
+                                                        </td>
+                                                        <td>$00.00</td>
+                                                        <td>
+                                                            <span class="badge text-dark bg-light-dark">Return</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="dropdown dropstart">
+                                                                <a
+                                                                    class="btn-icon btn btn-ghost btn-sm rounded-circle"
+                                                                    href="#"
+                                                                    role="button"
+                                                                    id="retrunDropdownOne"
+                                                                    data-bs-toggle="dropdown"
+                                                                    data-bs-offset="-20,20"
+                                                                    aria-expanded="false">
+                                                                    <i class="fe fe-more-vertical"></i>
+                                                                </a>
+                                                                <span class="dropdown-menu" aria-labelledby="retrunDropdownOne">
+                                                                    <span class="dropdown-header">Settings</span>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="fe fe-edit dropdown-item-icon"></i>
+                                                                        Edit
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="fe fe-mail dropdown-item-icon"></i>
+                                                                        Invite
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="fe fe-trash dropdown-item-icon"></i>
+                                                                        Delete
+                                                                    </a>
+                                                                </span>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Footer -->
+                                <div class="card-footer d-md-flex justify-content-end border-top-0">
+                                    <nav aria-label="">
+                                        <ul class="pagination mb-0">
+                                            <li class="page-item disabled">
+                                                <a class="page-link mx-1 rounded" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" >
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link mx-1 rounded" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link mx-1 rounded" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link mx-1 rounded" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link mx-1 rounded" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" >
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scripts -->
+        @@include("../../../partials/scripts.html")
+        <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+        <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+    </body>
+</html>

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/quill/dist/quill.snow.css " />
+    <link rel="stylesheet" href="@@webRoot/node_modules/glightbox/dist/css/glightbox.min.css " />
+    <link rel="stylesheet" href="@@webRoot/node_modules/bs-stepper/dist/css/bs-stepper.min.css " />
+    @@include("../partials/head.html")
+
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/add-course.html " />
+    <link href="@@webRoot/node_modules/@yaireo/tagify/dist/tagify.css" rel="stylesheet " />
+    <link href="@@webRoot/node_modules/dragula/dist/dragula.min.css" rel="stylesheet " />
+    <title>Add Course | Geeks - Bootstrap 5 Template</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    @@include("../partials/navbar-default.html")
+    <!-- Page header-->
+    <main>
+      <section class="py-4 py-lg-6 bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+              <div class="d-lg-flex align-items-center justify-content-between">
+                <!-- Content -->
+                <div class="mb-4 mb-lg-0">
+                  <h1 class="text-white mb-1">Add New Course</h1>
+                  <p class="mb-0 text-white lead">Just fill the form and create your courses.</p>
+                </div>
+                <div>
+                  <a href="instructor-courses.html" class="btn btn-white">Back to Course</a>
+                  <a href="instructor-courses.html" class="btn btn-dark">Save</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Content -->
+      <section class="pb-8">
+        <div class="container">
+          <div id="courseForm" class="bs-stepper">
+            <div class="row">
+              <div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+                <!-- Stepper Button -->
+                <div class="bs-stepper-header shadow-sm" role="tablist">
+                  <div class="step" data-target="#test-l-1">
+                    <button type="button" class="step-trigger" role="tab" id="courseFormtrigger1" aria-controls="test-l-1">
+                      <span class="bs-stepper-circle">1</span>
+                      <span class="bs-stepper-label">Basic Information</span>
+                    </button>
+                  </div>
+                  <div class="bs-stepper-line"></div>
+                  <div class="step" data-target="#test-l-2">
+                    <button type="button" class="step-trigger" role="tab" id="courseFormtrigger2" aria-controls="test-l-2">
+                      <span class="bs-stepper-circle">2</span>
+                      <span class="bs-stepper-label">Courses Media</span>
+                    </button>
+                  </div>
+                  <div class="bs-stepper-line"></div>
+                  <div class="step" data-target="#test-l-3">
+                    <button type="button" class="step-trigger" role="tab" id="courseFormtrigger3" aria-controls="test-l-3">
+                      <span class="bs-stepper-circle">3</span>
+                      <span class="bs-stepper-label">Curriculum</span>
+                    </button>
+                  </div>
+                  <div class="bs-stepper-line"></div>
+                  <div class="step" data-target="#test-l-4">
+                    <button type="button" class="step-trigger" role="tab" id="courseFormtrigger4" aria-controls="test-l-4">
+                      <span class="bs-stepper-circle">4</span>
+                      <span class="bs-stepper-label">Settings</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- Stepper content -->
+                <div class="bs-stepper-content mt-5">
+                  <form onSubmit="return false">
+                    <!-- Content one -->
+                    <div id="test-l-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="courseFormtrigger1">
+                      <!-- Card -->
+                      <div class="card mb-3">
+                        <div class="card-header border-bottom px-4 py-3">
+                          <h4 class="mb-0">Basic Information</h4>
+                        </div>
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label for="addCourseTitle" class="form-label">Course Title</label>
+                            <input id="addCourseTitle" name="addCourseTitle" class="form-control" type="text" placeholder="Course Title " />
+                            <small>Write a 60 character course title.</small>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label" for="addCourseCategory">Courses category</label>
+                            <select class="form-select" data-choices="" id="addCourseCategory" name="addCourseCategory">
+                              <option value="">Select category</option>
+                              <option value="React">React</option>
+                              <option value="Javascript">Javascript</option>
+                              <option value="HTML">HTML</option>
+                              <option value="Vue">Vue js</option>
+                              <option value="Gulp">Gulp js</option>
+                            </select>
+                            <small>Help people find your courses by choosing categories that represent your course.</small>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label" for="addCourseLevel">Courses level</label>
+                            <select class="form-select" data-choices="" id="addCourseLevel" name="addCourseLevel">
+                              <option value="">Select level</option>
+                              <option value="intermediate">Intermediate</option>
+                              <option value="Beignners">Beignners</option>
+                              <option value="Advance">Advance</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Course Description</label>
+                            <div id="editor">
+                              <p>Insert course description</p>
+                              <p>
+                                Some initial
+                                <strong>bold</strong>
+                                text
+                              </p>
+                              <p><br /></p>
+                            </div>
+                            <small>A brief summary of your courses.</small>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button -->
+                      <button class="btn btn-primary" onclick="courseForm.next()">Next</button>
+                    </div>
+                    <!-- Content two -->
+                    <div id="test-l-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="courseFormtrigger2">
+                      <!-- Card -->
+                      <div class="card mb-3 border-0">
+                        <div class="card-header border-bottom px-4 py-3">
+                          <h4 class="mb-0">Courses Media</h4>
+                        </div>
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="custom-file-container mb-4" data-upload-id="courseImage"></div>
+                          <div>
+                            <input type="url" class="form-control" placeholder="Video URL " />
+                          </div>
+                          <small class="mt-3 d-block">Enter a valid video URL. Students who watch a well-made promo video are 5X more likely to enroll in your course.</small>
+
+                          <div
+                            class="mt-3 d-flex justify-content-center align-items-center position-relative rounded py-16 border-white border rounded bg-cover"
+                            style="background-image: url(../assets/images/course/course-javascript.jpg); height: 250px">
+                            <a href="https://www.youtube.com/watch?v=Nfzi7034Kbg" class="icon-shape rounded-circle btn-play icon-xl glightbox position-absolute top-50 start-50 translate-middle">
+                              <i class="bi bi-play-fill fs-3"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Button -->
+                      <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary" onclick="courseForm.previous()">Previous</button>
+                        <button class="btn btn-primary" onclick="courseForm.next()">Next</button>
+                      </div>
+                    </div>
+                    <!-- Content three -->
+                    <div id="test-l-3" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="courseFormtrigger3">
+                      <!-- Card -->
+                      <div class="card mb-3 border-0">
+                        <div class="card-header border-bottom px-4 py-3">
+                          <h4 class="mb-0">Curriculum</h4>
+                        </div>
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="bg-light rounded p-2 mb-4">
+                            <h4>Introduction to JavaScript</h4>
+                            <!-- List group -->
+                            <div class="list-group list-group-flush border-top-0" id="courseList">
+                              <div id="courseOne">
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="introduction">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Introduction</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" aria-expanded="true" data-bs-toggle="collapse" data-bs-target="#collapselistOne" aria-controls="collapselistOne">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistOne" class="collapse show" aria-labelledby="introduction" data-bs-parent="#courseList">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="development">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Installing Development Software</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistTwo" aria-expanded="false" aria-controls="collapselistTwo">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistTwo" class="collapse" aria-labelledby="development" data-bs-parent="#courseList">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="project">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Hello World Project from GitHub</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistThree" aria-expanded="false" aria-controls="collapselistThree">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistThree" class="collapse" aria-labelledby="project" data-bs-parent="#courseList">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="sample">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Our Sample Website</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistFour" aria-expanded="false" aria-controls="collapselistFour">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistFour" class="collapse" aria-labelledby="sample" data-bs-parent="#courseList">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#addLectureModal">Add Lecture +</a>
+                          </div>
+                          <div class="bg-light rounded p-2 mb-4">
+                            <h4>JavaScript Beginnings</h4>
+
+                            <!-- List group -->
+                            <div class="list-group list-group-flush border-top-0" id="courseListSecond">
+                              <div id="courseTwo">
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="introductionSecond">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Introduction</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistFive" aria-expanded="false" aria-controls="collapselistFive">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistFive" class="collapse" aria-labelledby="introductionSecond" data-bs-parent="#courseListSecond">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="developmentSecond">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Installing Development Software</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistSix" aria-expanded="false" aria-controls="collapselistSix">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistSix" class="collapse" aria-labelledby="developmentSecond" data-bs-parent="#courseListSecond">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="projectSecond">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Hello World Project from GitHub</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistSeven" aria-expanded="false" aria-controls="collapselistSeven">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistSeven" class="collapse" aria-labelledby="projectSecond" data-bs-parent="#courseListSecond">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="list-group-item rounded px-3 text-nowrap mb-1" id="sampleSecond">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0 text-truncate">
+                                      <a href="#" class="text-inherit">
+                                        <i class="fe fe-menu me-1 align-middle"></i>
+                                        <span class="align-middle">Our Sample Website</span>
+                                      </a>
+                                    </h5>
+                                    <div>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fe fe-edit fs-6"></i>
+                                      </a>
+                                      <a href="#" class="me-1 text-inherit" data-bs-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="fe fe-trash-2 fs-6"></i>
+                                      </a>
+                                      <a href="#" class="text-inherit" data-bs-toggle="collapse" data-bs-target="#collapselistEight" aria-expanded="false" aria-controls="collapselistEight">
+                                        <span class="chevron-arrow"><i class="fe fe-chevron-down"></i></span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="collapselistEight" class="collapse" aria-labelledby="sampleSecond" data-bs-parent="#courseListSecond">
+                                    <div class="p-md-4 p-2">
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Article +</a>
+                                      <a href="#" class="btn btn-secondary btn-sm">Add Description +</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#addLectureModal">Add Lecture +</a>
+                          </div>
+                          <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addSectionModal">Add Section</a>
+                        </div>
+                      </div>
+                      <!-- Button -->
+                      <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary" onclick="courseForm.previous()">Previous</button>
+                        <button class="btn btn-primary" onclick="courseForm.next()">Next</button>
+                      </div>
+                    </div>
+                    <!-- Content four -->
+                    <div id="test-l-4" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="courseFormtrigger4">
+                      <!-- Card -->
+                      <div class="card mb-3 border-0">
+                        <div class="card-header border-bottom px-4 py-3">
+                          <h4 class="mb-0">Requirements</h4>
+                        </div>
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <input name="tags" class="w-100" value="jquery, bootstrap" />
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between mb-8">
+                        <!-- Button -->
+                        <button class="btn btn-secondary" onclick="courseForm.previous()">Previous</button>
+                        <button type="submit" class="btn btn-danger">Submit For Review</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    @@include("../partials/footer-default.html")
+    <!-- Scroll top -->
+    @@include("../partials/btn-scroll-top.html")
+    <!-- Modal -->
+    <div class="modal fade" id="addSectionModal" tabindex="-1" role="dialog" aria-labelledby="addSectionModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="addSectionModalLabel">Add New Section</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input class="form-control mb-3" type="text" placeholder="Add new section " />
+            <button class="btn btn-primary" type="Button">Add New Section</button>
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="addLectureModal" tabindex="-1" role="dialog" aria-labelledby="addLectureModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="addLectureModalLabel">Add New Lecture</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="CourseAddLecture" class="form-label">Add lecture</label>
+            <input class="form-control mb-3" type="text" placeholder="Add new lecture " id="CourseAddLecture" name="CourseAddLecture" />
+            <button class="btn btn-primary" type="Button">Add New Lecture</button>
+            <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addSectionModal" tabindex="-1" role="dialog" aria-labelledby="addSectionModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="addSectionModalLabel">Add New Section</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input class="form-control mb-3" type="text" placeholder="Add new section " />
+            <button class="btn btn-primary" type="Button">Add New Section</button>
+            <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="@@webRoot/node_modules/file-upload-with-preview/dist/file-upload-with-preview.iife.js"></script>
+    <script src="@@webRoot/node_modules/@yaireo/tagify/dist/tagify.min.js"></script>
+
+    <!-- Scripts -->
+    @@include("../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+    <script src="@@webRoot/node_modules/dragula/dist/dragula.min.js"></script>
+
+    <script src="@@webRoot/node_modules/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/beStepper.js"></script>
+    <script src="@@webRoot/assets/js/vendors/customDragula.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/file-upload.js"></script>
+    <script src="@@webRoot/node_modules/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/glight.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

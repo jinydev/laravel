@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/shadows.html">
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+        <title>Shadows | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body class="bg-white">
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- Left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <!-- Content -->
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-7">
+                                            <h1 class="mb-2 display-3 fw-bold">Shadows</h1>
+                                            <p class="mb-0 lead">Add or remove shadows to elements with box-shadow utilities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Flush -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-4">
+                                            <h2 class="fw-semibold mb-1">Example</h2>
+                                            <p class="mb-0">
+                                                While shadows on components are disabled by default in Bootstrap and can be enabled via
+                                                <code>$enable-shadows</code>
+                                                , you can also quickly add or remove a shadow with our
+                                                <code>box-shadow</code>
+                                                utility classes. Includes support for
+                                                <code>.shadow-none</code>
+                                                and three default sizes (which have associated variables to match).
+                                            </p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div class="mb-8">
+                                            <ul class="nav nav-line-bottom mb-3" id="pills-tab-shadows" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-shadows-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-shadows-design"
+                                                        role="tab"
+                                                        aria-controls="pills-shadows-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-shadows-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-shadows-html"
+                                                        role="tab"
+                                                        aria-controls="pills-shadows-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content" id="pills-tabContent-shadows">
+                                                <div class="tab-pane tab-example-design fade show active" id="pills-shadows-design" role="tabpanel" aria-labelledby="pills-shadows-design-tab">
+                                                    <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
+                                                    <div class="shadow-sm p-3 mb-5 bg-white rounded">Small shadow</div>
+                                                    <div class="shadow p-3 mb-5 bg-white rounded">Regular shadow</div>
+                                                    <div class="shadow-lg p-3 mb-5 bg-white rounded">Larger shadow</div>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-shadows-html" role="tabpanel" aria-labelledby="pills-shadows-html-tab">
+                                                    <pre><code class="language-markup"> <span class="token comment">&lt;!-- shadows --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shadow-none p-3 mb-5 bg-light rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>No shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shadow-sm p-3 mb-5 bg-white rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Small shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shadow p-3 mb-5 bg-white rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Regular shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shadow-lg p-3 mb-5 bg-white rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Larger shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Shadows -->
+                                <!-- Shadows -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-4">
+                                            <h2 class="fw-semibold mb-1">Smooth Shadows</h2>
+                                            <p class="mb-0">
+                                                Smoother & sharper shadows with layered box-shadows. for more information
+                                                <a href="https://tobiasahlin.com/blog/layered-smooth-box-shadows/" target="_blank"><i class="fe fe-external-link"></i></a>
+                                            </p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div>
+                                            <ul class="nav nav-line-bottom mb-3" id="pills-tab-smooth-shadows" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-smooth-shadows-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-smooth-shadows-design"
+                                                        role="tab"
+                                                        aria-controls="pills-smooth-shadows-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-smooth-shadows-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-smooth-shadows-html"
+                                                        role="tab"
+                                                        aria-controls="pills-smooth-shadows-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content" id="pills-tabContent-smooth-shadows">
+                                                <div
+                                                    class="tab-pane tab-example-design fade show active"
+                                                    id="pills-smooth-shadows-design"
+                                                    role="tabpanel"
+                                                    aria-labelledby="pills-smooth-shadows-design-tab">
+                                                    <div class="smooth-shadow-sm p-3 mb-5 bg-white rounded">Smooth regular shadow</div>
+                                                    <div class="smooth-shadow-md p-3 mb-5 bg-white rounded">Smooth medium shadow</div>
+                                                    <div class="smooth-shadow-lg p-3 bg-white rounded">Smooth larger shadow</div>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-smooth-shadows-html" role="tabpanel" aria-labelledby="pills-smooth-shadows-html-tab">
+                                                    <pre><code class="language-markup"><span class="token comment">&lt;!-- smooth shadow --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>smooth-shadow-sm p-3 mb-5 bg-white rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Smooth regular shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>smooth-shadow-md p-3 mb-5 bg-white rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Smooth medium shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>smooth-shadow-lg p-3 bg-white rounded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Smooth larger shadow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

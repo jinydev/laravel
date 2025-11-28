@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/quill/dist/quill.snow.css" />
+    <link rel="stylesheet" href="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.css" />
+    @@include("../../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/ecommerce/add-product.html" />
+    <link href="@@webRoot/node_modules/dropzone/dist/dropzone.css" rel="stylesheet" />
+    <link href="@@webRoot/node_modules/@yaireo/tagify/dist/tagify.css" rel="stylesheet" />
+    <title>Add Product | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../../partials/navbar-vertical.html', { "page_group": "ecommerce", "page_group_second": "product", "page": "addProduct" })
+      <!-- Page Content -->
+      <div id="page-content">
+        @@include('../../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <div class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3">
+                <div class="mb-2 mb-lg-0">
+                  <h1 class="mb-0 h2 fw-bold">Add Product</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Ecommerce</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Add Product</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-12">
+              <form class="needs-validation" novalidate>
+                <div class="d-flex flex-column gap-4">
+                  <!-- card -->
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">
+                      <div>
+                        <!-- input -->
+                        <div class="mb-3">
+                          <label class="form-label">Product Title</label>
+                          <input type="text" class="form-control" placeholder="Enter Product Title" required />
+                          <div class="invalid-feedback">Please enter product title</div>
+                        </div>
+                        <!-- input -->
+                        <div>
+                          <label class="form-label">Product Description</label>
+                          <div id="editor"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">
+                      <div>
+                        <div class="mb-4 d-flex flex-column gap-4">
+                          <!-- heading -->
+                          <div>
+                            <h4 class="mb-0">Product Gallery</h4>
+                          </div>
+                          <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                              <h5 class="mb-0">Product Image</h5>
+                              <p class="mb-0">Add Product main Image.</p>
+                            </div>
+                            <!-- input -->
+                            <input type="file" class="form-control" required />
+                          </div>
+                        </div>
+                        <div>
+                          <!-- heading -->
+                          <h5 class="mb-1">Product Gallery</h5>
+                          <p>Add Product Gallery Images.</p>
+                          <!-- input -->
+                          <div id="my-dropzone" class="dropzone mt-4 border-dashed rounded-2 min-h-0"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">
+                      <!-- input -->
+                      <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchStock" checked />
+                        <label class="form-check-label" for="flexSwitchStock">In Stock</label>
+                      </div>
+                      <!-- input -->
+                      <div>
+                        <div class="mb-3">
+                          <label class="form-label" for="productCode">Product Code</label>
+                          <input type="text" class="form-control" id="productCode" placeholder="Enter Product code" required />
+                          <div class="invalid-feedback">Please enter product code</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3">
+                          <label class="form-label" for="productSKU">Product SKU</label>
+                          <input type="text" class="form-control" id="productSKU" placeholder="Enter Product SKU" required />
+                          <div class="invalid-feedback">Please enter product SKU</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3">
+                          <label class="form-label">Gender</label>
+                          <br />
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                          </div>
+                          <!-- input -->
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                          </div>
+                          <!-- input -->
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2" />
+                            <label class="form-check-label" for="inlineRadio3">Kids</label>
+                          </div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between">
+                            <label class="form-label" for="category">Category</label>
+                            <a href="#">Add New</a>
+                          </div>
+                          <!-- select menu -->
+                          <select class="form-select" data-choices="" id="category" required>
+                            <option selected value="">Shoe</option>
+                            <option value="Sunglasses">Sunglasses</option>
+                            <option value="Handbag">Handbag</option>
+                            <option value="Slingbag">Slingbag</option>
+                          </select>
+                          <div class="invalid-feedback">Please enter product Category</div>
+                        </div>
+                        <!-- tag -->
+                        <div class="mb-3">
+                          <label class="form-label" for="tags">Tags</label>
+                          <input name="tags" id="tags" value="" class="w-100" required />
+                          <div class="invalid-feedback">Please enter tags</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">
+                      <!-- select -->
+                      <div class="mb-3">
+                        <label class="form-label" for="status">Status</label>
+                        <select class="form-select" data-choices="" id="status" required>
+                          <option selected value="">Published</option>
+                          <option value="Unpublished">Unpublished</option>
+                          <option value="Draft">Draft</option>
+                        </select>
+                        <div class="invalid-feedback">Please enter product Category</div>
+                      </div>
+                      <!-- date -->
+                      <div class="mb-3">
+                        <label class="form-label">Schedule</label>
+                        <div class="input-group me-3">
+                          <input class="form-control flatpickr" type="text" placeholder="Scheduled Product" aria-describedby="basic-addon2" />
+                          <span class="input-group-text" id="basic-addon2"><i class="fe fe-calendar"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">
+                      <!-- input -->
+                      <div class="mb-3">
+                        <label class="form-label" for="regularPrice">Regular Price</label>
+                        <input type="text" id="regularPrice" class="form-control" placeholder="$ 49.00" required />
+                        <div class="invalid-feedback">Please enter regular price</div>
+                      </div>
+                      <!-- input -->
+                      <div class="mb-3">
+                        <label class="form-label" for="salePrice">Sale Price</label>
+                        <input type="text" id="salePrice" class="form-control" placeholder="$ 49.00" required />
+                        <div class="invalid-feedback">Please enter sale price</div>
+                      </div>
+                      <!-- input -->
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="priceIncluded" checked />
+                        <label class="form-check-label" for="priceIncluded">Price includes taxes</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- button -->
+                  <div>
+                    <button type="submit" class="btn btn-primary">Create Product</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="@@webRoot/node_modules/@yaireo/tagify/dist/tagify.min.js"></script>
+    @@include("../../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+
+    <script src="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/flatpickr.js"></script>
+    <script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/tooltips.html" />
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet" />
+        <title>Tooltips | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body class="bg-white">
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- Left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <!-- Content -->
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-8" id="intro">
+                                            <h1 class="mb-2 display-3 fw-bold">Tooltips</h1>
+                                            <p class="mb-0 lead">
+                                                Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title
+                                                storage.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tooltips -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div id="tooltips" class="mb-4">
+                                            <h2 class="fw-semibold">Examples</h2>
+                                            <p>Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left.</p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div>
+                                            <ul class="nav nav-line-bottom mb-3" id="pills-tab-tooltips" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-tooltips-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-tooltips-design"
+                                                        role="tab"
+                                                        aria-controls="pills-tooltips-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-tooltips-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-tooltips-html"
+                                                        role="tab"
+                                                        aria-controls="pills-tooltips-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content" id="pills-tabContent-tooltips">
+                                                <div class="tab-pane tab-example-design fade show active" id="pills-tooltips-design" role="tabpanel" aria-labelledby="pills-tooltips-design-tab">
+                                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                                                        Tooltip on bottom
+                                                    </button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-tooltips-html" role="tabpanel" aria-labelledby="pills-tooltips-html-tab">
+                                                    <pre><code class="language-markup"> <span class="token comment">&lt;!-- tooltip on top --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-secondary<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltip<span class="token punctuation">"</span></span> <span class="token attr-name">data-placement</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tooltip on top<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Tooltip on top
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- tooltip on right --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-secondary<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltip<span class="token punctuation">"</span></span> <span class="token attr-name">data-placement</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tooltip on right<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Tooltip on right
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- tooltip on bottom --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-secondary<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltip<span class="token punctuation">"</span></span> <span class="token attr-name">data-placement</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bottom<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tooltip on bottom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Tooltip on bottom
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- tooltip on left --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-secondary<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tooltip<span class="token punctuation">"</span></span> <span class="token attr-name">data-placement</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Tooltip on left<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Tooltip on left
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tooltips -->
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
+                            <!-- Sidebar nav fixed -->
+                            <div class="sidebar-nav-fixed">
+                                <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
+                                <ul class="list-unstyled">
+                                    <li><a href="#intro" class="active">Introduction</a></li>
+                                    <li><a href="#tooltips">Tooltips</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

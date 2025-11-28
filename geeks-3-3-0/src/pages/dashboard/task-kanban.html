@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.css" />
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/task-kanban.html" />
+    <link href="@@webRoot/node_modules/dragula/dist/dragula.min.css" rel="stylesheet" />
+    <title>Task Kanban - Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "task" })
+      <!-- page content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div>
+                <div class="border-bottom pb-3 mb-3">
+                  <h2 class="mb-0 fw-bold">Kanban</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content -->
+
+          <div class="row mb-4 align-items-center">
+            <div class="col-xxl-10 col-xl-8 col-lg-6 col-md-12 col-12 mb-3 mb-lg-0">
+              <!-- heading -->
+              <h3 class="mb-0">Geeks UI - Design & Development</h3>
+            </div>
+            <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-12 pe-lg-2">
+              <!-- select -->
+              <select class="form-select mb-2 mb-lg-0">
+                <option selected>Sort</option>
+                <option value="None">None</option>
+                <option value="Due Date">Due Date</option>
+                <option value="Assignee">Assignee</option>
+                <option value="Likes">Likes</option>
+                <option value="Alphabetical">Alphabetical</option>
+                <option value="Priority">Priority</option>
+              </select>
+            </div>
+            <div class="col-xxl-1 col-xl-2 col-lg-3 col-md-12 ps-lg-2">
+              <!-- select -->
+              <select class="form-select" data-choices="">
+                <option selected>Filter</option>
+                <option value="Just my task">Just my task</option>
+                <option value="Due this week">Due this week</option>
+                <option value="Due next week">Due next week</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="task-kanban-container">
+                <!-- card -->
+                <div class="card bg-gray-200 shadow-none rounded-3 d-inline-block me-4 align-top mb-4 task-card">
+                  <!-- card body -->
+                  <!-- card body -->
+                  <div class="card-body p-3 d-flex flex-column gap-4">
+                    <!-- task list -->
+                    <div class="task-list">
+                      <!-- content -->
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                          <!-- heading -->
+                          <h4 class="mb-0">To Do</h4>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <!-- dropdown -->
+                          <div class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownboardOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-horizontal fs-4"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownboardOne">
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-users"></i>
+                                Edit Column
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-user-x"></i>
+                                Manage
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-clipboard"></i>
+                                Copy Column link
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-edit"></i>
+                                Archive All Cards
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                Delete column
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- task kanban -->
+                      <div class="task-kanban">
+                        <div id="kanbanDo">
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <!-- checkbox -->
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck1" />
+                                    <label class="form-check-label" for="customCheck1">
+                                      <span class="h5">Start prototyping in frame for admin dashboard.</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask1">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="one" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="one" class="d-none">
+                                    <h6 class="mb-0">Paul Haney</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">2</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">12</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck2" />
+                                    <label class="form-check-label" for="customCheck2">
+                                      <span class="h5">Invite your teammates and start collaborating</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask2">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mt-3 ps-4">
+                                <img src="../../assets/images/blog/blogpost-1.jpg" alt="" class="img-fluid rounded-3" />
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-2.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="two" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="two" class="d-none">
+                                    <h6 class="mb-0">Gali Lanier</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">4</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">12</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <!-- button -->
+                        <div class="d-grid">
+                          <div class="d-grid">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#taskModal">
+                              <i class="fe fe-plus-circle me-1"></i>
+                              Add Task
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-gray-200 shadow-none rounded-3 d-inline-block me-4 align-top mb-4 task-card">
+                  <!-- card body -->
+                  <div class="card-body p-3 d-flex flex-column gap-4">
+                    <!-- task list -->
+                    <div class="task-list">
+                      <!-- content -->
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                          <!-- task list -->
+                          <h4 class="mb-0">In Progress</h4>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <!-- dropdown -->
+                          <div class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownboardTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-horizontal fs-4"></i>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownboardTwo">
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-users"></i>
+                                Edit Column
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-user-x"></i>
+                                Manage
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-clipboard"></i>
+                                Copy Column link
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-edit"></i>
+                                Archive All Cards
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                Delete column
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- task kanban -->
+                      <div class="task-kanban">
+                        <div id="kanbanProgress">
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <!-- checkbox -->
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck3" />
+                                    <label class="form-check-label" for="customCheck3">
+                                      <span class="h5">Website launch planning</span>
+                                      <br />
+                                      <span class="badge bg-warning">Medium</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask3">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-3.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="three" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="three" class="d-none">
+                                    <h6 class="mb-0">Charlie Holland</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">6</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">16</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck4" />
+                                    <label class="form-check-label" for="customCheck4">
+                                      <span class="h5">Intial wireframe of website design</span>
+                                      <br />
+                                      <span class="badge bg-info">Low</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask4">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-4.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="four" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="four" class="d-none">
+                                    <h6 class="mb-0">Gillbert Farr</h6>
+                                  </div>
+
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">5</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">8</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck5" />
+                                    <label class="form-check-label" for="customCheck5">
+                                      <span class="h5">Start prototyping in framer for admin dashboard.</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask5">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-6.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="five" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="five" class="d-none">
+                                    <h6 class="mb-0">Jessica Nasto</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">9</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">18</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck6" />
+                                    <label class="form-check-label" for="customCheck6">
+                                      <span class="h5">Intial wireframe of website design</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask6">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-7.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="six" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="six" class="d-none">
+                                    <h6 class="mb-0">Nancy Limabd</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">12</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">22</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <!-- button -->
+                        <div class="d-grid">
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#taskModal">
+                            <i class="fe fe-plus-circle me-1"></i>
+                            Add Task
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-gray-200 shadow-none rounded-3 d-inline-block me-4 align-top mb-4 task-card">
+                  <!-- card body -->
+                  <div class="card-body p-3 d-flex flex-column gap-4">
+                    <!-- task list -->
+                    <div class="task-list">
+                      <!-- content -->
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                          <!-- task list -->
+                          <h4 class="mb-0">Review</h4>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <!-- dropdown -->
+                          <div class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownboardThree" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-horizontal fs-4"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownboardThree">
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-users"></i>
+                                Edit Column
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-user-x"></i>
+                                Manage
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-clipboard"></i>
+                                Copy Column link
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-edit"></i>
+                                Archive All Cards
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                Delete column
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- task kanban -->
+                      <div class="task-kanban">
+                        <div id="kanbanReview">
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck10" />
+                                    <label class="form-check-label" for="customCheck10">
+                                      <span class="h5">Intial wireframe of website design</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask10" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask10">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-12.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="seven" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="seven" class="d-none">
+                                    <h6 class="mb-0">Nishant Luka</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">12</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">22</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck9" />
+                                    <label class="form-check-label" for="customCheck9">
+                                      <span class="h5">Start prototyping in framer for admin dashboard.</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask9" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask9">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-10.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="eight" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="eight" class="d-none">
+                                    <h6 class="mb-0">Florin Pop</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">9</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">18</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <!-- checkbox -->
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck7" />
+                                    <label class="form-check-label" for="customCheck7">
+                                      <span class="h5">Website launch planning</span>
+                                      <br />
+                                      <span class="badge bg-warning">Medium</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask7">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-8.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="nine" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="nine" class="d-none">
+                                    <h6 class="mb-0">Disha Noma</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">6</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">16</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck8" />
+                                    <label class="form-check-label" for="customCheck8">
+                                      <span class="h5">Intial wireframe of website design</span>
+                                      <br />
+                                      <span class="badge bg-info">Low</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask8" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask8">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-4.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="eleven" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="eleven" class="d-none">
+                                    <h6 class="mb-0">Paul Haney</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">5</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">8</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <!-- button -->
+                        <div class="d-grid">
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#taskModal">
+                            <i class="fe fe-plus-circle me-1"></i>
+                            Add Task
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-gray-200 shadow-none rounded-3 d-inline-block me-4 align-top mb-4 task-card">
+                  <!-- card body -->
+                  <div class="card-body p-3 d-flex flex-column gap-4">
+                    <!-- task list -->
+                    <div class="task-list">
+                      <!-- content -->
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                          <!-- task list -->
+                          <h4 class="mb-0">Done</h4>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <!-- dropdown -->
+                          <div class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownboardFour" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-horizontal fs-4"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownboardFour">
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-users"></i>
+                                Edit Column
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-user-x"></i>
+                                Manage
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-clipboard"></i>
+                                Copy Column link
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-edit"></i>
+                                Archive All Cards
+                              </a>
+                              <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                Delete column
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- task kanban -->
+                      <div class="task-kanban">
+                        <div id="kanbanDone">
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck11" />
+                                    <label class="form-check-label" for="customCheck11">
+                                      <span class="h5">Intial wireframe of website design</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask11" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask11">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-12.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="tweleve" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="tweleve" class="d-none">
+                                    <h6 class="mb-0">Shrey Mojan</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">12</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">22</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card">
+                            <!-- card body -->
+                            <div class="card-body p-3 d-flex flex-column gap-4">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <div class="form-check custom-checkbox">
+                                    <input type="checkbox" class="form-check-input" id="customCheck12" />
+                                    <label class="form-check-label" for="customCheck12">
+                                      <span class="h5">Start prototyping in framer for admin dashboard.</span>
+                                      <br />
+                                      <span class="badge bg-danger">High</span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div>
+                                  <!-- dropdown -->
+                                  <div class="dropdown dropstart">
+                                    <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" id="dropdownTask12" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-horizontal"></i>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownTask12">
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-edit-2"></i>
+                                        Edit this task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-check-square"></i>
+                                        Mark Complete
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-eye"></i>
+                                        View Details
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-maximize-2"></i>
+                                        Open in New Tab
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-copy"></i>
+                                        Duplicate task
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-link"></i>
+                                        Copy task link
+                                      </a>
+                                      <a class="dropdown-item d-flex align-items-center" href="#">
+                                        <i class="dropdown-item-icon fe fe-trash-2"></i>
+                                        Delete task
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center ps-4">
+                                <!-- img -->
+                                <div class="d-flex align-items-center">
+                                  <img src="../../assets/images/avatar/avatar-14.jpg" alt="" class="avatar avatar-xs rounded-circle imgtooltip" data-template="thirteen" />
+                                  <!-- avatar -->
+                                  <!-- text -->
+                                  <div id="thirteen" class="d-none">
+                                    <h6 class="mb-0">Niman Kant</h6>
+                                  </div>
+                                  <!-- text -->
+                                  <div class="ms-2">
+                                    <span class="fs-6">
+                                      <i class="fe fe-clock me-1"></i>
+                                      30 Dec
+                                    </span>
+                                  </div>
+                                </div>
+                                <!-- message count -->
+                                <div>
+                                  <span class="me-2 align-middle">
+                                    <i class="fe fe-paperclip fs-6"></i>
+                                    <span class="fw-semibold fs-6">9</span>
+                                  </span>
+                                  <span class="align-middle">
+                                    <i class="fe fe-message-square fs-6"></i>
+                                    <span class="fw-semibold fs-6">18</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <!-- button -->
+                        <div class="d-grid">
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#taskModal">
+                            <i class="fe fe-plus-circle me-1"></i>
+                            Add Task
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="taskModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="taskModalLabel">Create New Task</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row needs-validation" novalidate>
+              <div class="mb-2 col-12">
+                <label for="taskTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="taskTitle" placeholder="Title" required />
+                <div class="invalid-feedback">Please enter task title</div>
+              </div>
+              <div class="col-6">
+                <label for="priority" class="form-label">Priority</label>
+                <select class="form-select" data-choices="" id="priority" required>
+                  <option selected value="">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+                <div class="invalid-feedback">Please enter choose priority</div>
+              </div>
+              <div class="mb-2 col-6">
+                <label for="date" class="form-label">Due Date</label>
+                <input class="form-control flatpickr" type="text" placeholder="Select Date" id="date" required />
+              </div>
+              <div class="mb-2 col-12">
+                <label for="descriptions" class="form-label">Descriptions</label>
+                <textarea class="form-control" id="descriptions" rows="3" required></textarea>
+                <div class="invalid-feedback">Please enter task description</div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="assignTo" class="form-label">Assign To</label>
+                <select class="form-select" data-choices="" id="assignTo" required>
+                  <option selected value="">Codescandy</option>
+                  <option value="John Deo">John Deo</option>
+                  <option value="Misty">Misty</option>
+                  <option value="Simon Ray">Simon Ray</option>
+                </select>
+                <div class="invalid-feedback">Please choose assignee</div>
+              </div>
+
+              <div class="col-12 d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Create Task</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/dragula/dist/dragula.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/customDragula.js"></script>
+    <script src="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/flatpickr.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

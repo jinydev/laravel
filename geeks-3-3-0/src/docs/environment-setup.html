@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/environment-setup.html">
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+        <title>Environment Setup | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body class="bg-white">
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <!-- Content -->
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-8" id="intro">
+                                            <h1 class="mb-2 fw-bold display-3">Environment Setup</h1>
+                                            <p class="mb-0 lead">To get started with Geeks Theme, the only requirement is a Node Js, Gulp, SASS & Bootstrap environment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div class="mb-6">
+                                            <div class="alert alert-warning" role="alert">
+                                                Please note: this step is absolutely optional. It aims for advanced user who want to speed up development process with professional grade Front-End
+                                                toolset shiped with Geeks. If you are not familiar with these tools and have no time to dive in you can still use plain HTML / CSS / JS to customize
+                                                Geeks. Files you need are located inside Geeks/dist folder. In this case you can skip this and next sections. Happy coding :)
+                                            </div>
+                                        </div>
+                                        <div class="mb-8">
+                                            <h2 class="fw-semibold">Modern development toolset.</h2>
+                                            <p class="mb-0">Below are the tools which we use to building a Geeks theme. For more detail of the toolset, go to their official website.</p>
+                                        </div>
+                                        <div class="mb-8">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mb-6">
+                                                        <div class="mb-4">
+                                                            <img src="@@webRoot/assets/images/path/path-nodejs.svg" alt="" class="avatar-md">
+                                                        </div>
+                                                        <h3 class="fw-semibold">Node Js</h3>
+                                                        <p>
+                                                            <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+                                                            is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a
+                                                            web browser.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mb-6">
+                                                        <div class="mb-4">
+                                                            <img src="@@webRoot/assets/images/path/path-gulp.svg" alt="" class="avatar-md">
+                                                        </div>
+                                                        <h3 class="fw-semibold">Gulp Js</h3>
+                                                        <p>
+                                                            A toolkit to automate & enhance your workflow.
+                                                            <a href="https://gulpjs.com/" target="_blank">Gulp</a>
+                                                            is an open-source JavaScript toolkit used as a streaming build system in front-end web development.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mb-6">
+                                                        <div class="mb-4">
+                                                            <img src="@@webRoot/assets/images/path/path-sass.svg" alt="" class="avatar-md">
+                                                        </div>
+                                                        <h3 class="fw-semibold">SASS</h3>
+                                                        <p>
+                                                            <a href="https://sass-lang.com/" target="_blank">Sass</a>
+                                                            (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style
+                                                            Sheets (CSS).
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="mb-6">
+                                                        <div class="mb-4">
+                                                            <img src="@@webRoot/assets/images/path/path-bootstrap.svg" alt="" class="avatar-md">
+                                                        </div>
+                                                        <h3 class="fw-semibold">Bootstrap 5</h3>
+                                                        <p>
+                                                            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                                                            is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. Geeks is built on 5 and heavily
+                                                            depends on it.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
+                            <!-- Sidebar nav fixed -->
+                            <div class="sidebar-nav-fixed">
+                                <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
+
+                                <ul class="list-unstyled">
+                                    <li><a href="#intro" class="active">Introduction</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

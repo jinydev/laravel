@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/images.html">
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+        <title>Images | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body>
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- Left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <!-- Content -->
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-8" id="intro">
+                                            <div class="d-flex align-items-center">
+                                                <h1 class="me-2 display-3 fw-bold">Images</h1>
+                                            </div>
+                                            <p class="mb-0 lead">
+                                                Documentation and examples for opting images into responsive behavior (so they never become wider than their parent) and add lightweight styles to
+                                                them—all via classes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Ratio -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div id="ratio" class="mb-4">
+                                            <h2>Ratio</h2>
+                                            <p>
+                                                For using
+                                                <code>4:3</code>
+                                                ratio size between the width and the height add class
+                                                <code>.img-4by3</code>
+                                                modifier class.
+                                            </p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div class="card">
+                                            <ul class="nav nav-line-bottom" id="pills-tab-ratio-img" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-ratio-img-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-ratio-img-design"
+                                                        role="tab"
+                                                        aria-controls="pills-ratio-img-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-ratio-img-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-ratio-img-html"
+                                                        role="tab"
+                                                        aria-controls="pills-ratio-img-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content p-4" id="pills-tabContent-ratio-img">
+                                                <div class="tab-pane tab-example-design fade show active" id="pills-ratio-img-design" role="tabpanel" aria-labelledby="pills-ratio-img-design-tab">
+                                                    <span>
+                                                        <img src="@@webRoot/assets/images/placeholder/4by3.jpg" alt="" class="rounded img-4by3-xl">
+                                                    </span>
+                                                    <span>
+                                                        <img src="@@webRoot/assets/images/placeholder/4by3.jpg" alt="" class="rounded img-4by3-lg">
+                                                    </span>
+                                                    <span>
+                                                        <img src="@@webRoot/assets/images/placeholder/4by3.jpg" alt="" class="rounded img-4by3-md">
+                                                    </span>
+                                                    <span>
+                                                        <img src="@@webRoot/assets/images/placeholder/4by3.jpg" alt="" class="rounded img-4by3-sm">
+                                                    </span>
+                                                    <span>
+                                                        <img src="@@webRoot/assets/images/placeholder/4by3.jpg" alt="" class="rounded img-4by3-xs">
+                                                    </span>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-ratio-img-html" role="tabpanel" aria-labelledby="pills-ratio-img-html-tab">
+                                                    <pre><code class="language-markup"><span class="token comment">&lt;!-- Images --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/images/placeholder/4by3.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded img-4by3-xl<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/images/placeholder/4by3.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded img-4by3-lg<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/images/placeholder/4by3.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded img-4by3-md<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/images/placeholder/4by3.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded img-4by3-sm<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/images/placeholder/4by3.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded img-4by3-xs<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+                          </code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
+                            <!-- Sidebar nav fixed -->
+                            <div class="sidebar-nav-fixed">
+                                <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
+                                <ul class="list-unstyled">
+                                    <li><a href="#intro" class="active">Introduction</a></li>
+
+                                    <li><a href="#ratio">Ratio</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

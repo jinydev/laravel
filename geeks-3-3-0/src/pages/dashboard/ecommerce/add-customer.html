@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/ecommerce/add-customer.html" />
+    <title>Add Customer | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../../partials/navbar-vertical.html', { "page_group": "ecommerce", "page_group_second": "product", "page": "addCustomer" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3">
+                <div>
+                  <h1 class="mb-0 h2 fw-bold">Add Customer</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Ecommerce</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Add Customer</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 col-12">
+              <!-- card -->
+              <form class="needs-validation" novalidate>
+                <div class="d-flex flex-column gap-4">
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body d-flex flex-column gap-4">
+                      <h4 class="mb-0">Customer Overview</h4>
+
+                      <!-- row -->
+                      <div class="row gx-3">
+                        <!-- input -->
+                        <div class="mb-3 col-md-6">
+                          <label class="form-label" for="firstName">First Name</label>
+                          <input type="text" class="form-control" placeholder="Enter first name" id="firstName" required />
+                          <div class="invalid-feedback">Please enter first name</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-6">
+                          <label class="form-label" for="lastName">Last Name</label>
+                          <input type="text" class="form-control" placeholder="Last Name" id="lastName" required />
+                          <div class="invalid-feedback">Please enter last name</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-12">
+                          <label class="form-label" for="email">Email</label>
+                          <input type="email" class="form-control" placeholder="Enter email address" id="email" required />
+                          <div class="invalid-feedback">Please enter email</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-12">
+                          <label class="form-label" for="phone">Phone</label>
+                          <input type="number" class="form-control" placeholder="Enter phone number" id="phone" required />
+                          <div class="invalid-feedback">Please enter first phone number</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body d-flex flex-column gap-4">
+                      <!-- heading -->
+                      <div class="d-flex flex-column gap-1">
+                        <h4 class="mb-0">Address</h4>
+                        <p class="mb-0">The primary address of this customer.</p>
+                      </div>
+                      <!-- row -->
+                      <div class="row gx-3">
+                        <!-- input -->
+                        <div class="mb-3 col-md-12">
+                          <label class="form-label" for="address">Address</label>
+                          <input type="text" class="form-control" placeholder="Enter address" id="address" required />
+                          <div class="invalid-feedback">Please enter address</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-12">
+                          <label class="form-label" for="aparment">Apartment, suite etc.</label>
+                          <input type="text" class="form-control" placeholder="Apartment street" id="aparment" required />
+                          <div class="invalid-feedback">Please enter appartment number</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-4">
+                          <label class="form-label" for="city">Town / City</label>
+                          <input type="text" class="form-control" placeholder="Enter City" id="city" required />
+                          <div class="invalid-feedback">Please enter city</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-4">
+                          <label class="form-label" for="state">State</label>
+                          <input type="text" class="form-control" placeholder="Enter state" id="state" required />
+                          <div class="invalid-feedback">Please enter state</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-4">
+                          <label class="form-label" for="zip">Zip / Postal Code</label>
+                          <input type="text" class="form-control" placeholder="Enter Zip / Code" id="zip" required />
+                          <div class="invalid-feedback">Please enter zip code</div>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-md-12">
+                          <label class="form-label" for="country">Country</label>
+                          <select class="form-select" data-choices="" aria-label="Default select example" id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="UK">UK</option>
+                            <option value="US">US</option>
+                          </select>
+                          <div class="invalid-feedback">Please enter country</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card">
+                    <!-- card body -->
+                    <div class="card-body">
+                      <!-- row -->
+                      <div class="row gx-3">
+                        <div class="col-md-12">
+                          <label for="customerNotes" class="form-label">
+                            Notes
+                            <small>(Optional)</small>
+                          </label>
+                          <textarea class="form-control" id="customerNotes" rows="3" placeholder="Write a Notes" required></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <!-- buttons -->
+                  <a href="#" class="btn btn-outline-primary me-2">Cancel</a>
+                  <button class="btn btn-primary" type="submit">Save Customer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scroll top -->
+
+    <!-- Scripts -->
+    @@include("../../../partials/scripts.html")
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

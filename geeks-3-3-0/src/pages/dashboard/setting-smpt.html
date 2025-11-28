@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/setting-smpt.html" />
+    <title>Server Settings | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "smpt", "page_group": "sitesetting" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Page header -->
+
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">SMTP Server Setting</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="../dashboard/admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item"><a href="#">Setting</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">SMTP Server Setting</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Card -->
+              <div class="card mb-4">
+                <!-- Card header -->
+                <div class="card-header">
+                  <h4 class="mb-0">SMTP Server Setting</h4>
+                </div>
+                <!-- Card body -->
+                <div class="card-body">
+                  <!-- Form -->
+                  <form class="row g-3">
+                    <!-- Name -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="senderName" class="form-label">Sendere’s Name</label>
+                      <input class="form-control" id="senderName" placeholder="Geeks" type="text" required />
+                    </div>
+                    <!-- Address -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="address" class="form-label">
+                        Mail Address
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input class="form-control" id="address" placeholder="Address here" type="text" required />
+                    </div>
+                    <!-- Mail driver -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="mailDriver" class="form-label">
+                        Mail Driver (SMTP, Mail)
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input class="form-control" id="mailDriver" placeholder="e.g.smtp,gmail.com" type="text" required />
+                    </div>
+                    <!-- Username -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="userName" class="form-label">
+                        Mail Username
+                        <span class="text-danger">*</span>
+                        (info@geeksuidesign.com)
+                      </label>
+                      <input class="form-control" id="userName" placeholder="e.g.smtp,gmail.com" type="text" required />
+                    </div>
+                    <!-- Host -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="mailHost" class="form-label">
+                        Mail Host
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input class="form-control" id="mailHost" placeholder="smtp,gmail.io" type="text" required />
+                    </div>
+                    <!-- Password -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="mailPassword" class="form-label">
+                        Mail Password
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input class="form-control" id="mailPassword" placeholder="*****************" type="password" required />
+                    </div>
+                    <!-- Port number -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="mailPort" class="form-label">
+                        Mail Port Number
+                        <span class="text-danger">*</span>
+                      </label>
+                      <input class="form-control" id="mailPort" placeholder="e.g. 465, 587" type="text" required />
+                    </div>
+                    <!-- Encryption -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <label for="mailEncryption" class="form-label">Mail Encryption (TLS / SSL)</label>
+                      <input class="form-control" id="mailEncryption" placeholder="tls" type="text" required />
+                    </div>
+                    <!-- Button -->
+                    <div class="col-12 col-md-12 col-lg-6">
+                      <button class="btn btn-primary" type="submit">Save</button>
+                      <a href="#" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

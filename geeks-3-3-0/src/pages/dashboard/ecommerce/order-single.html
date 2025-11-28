@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/ecommerce/order-single.html" />
+    <title>Order Single | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../../partials/navbar-vertical.html', { "page_group": "ecommerce", "page": "orderSingle" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3">
+                <div>
+                  <h1 class="mb-0 h2 fw-bold">Order Single</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Ecommerce</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Order Single</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-xl-8 col-lg-7 col-12">
+              <div class="d-flex flex-column gap-4">
+                <!-- card -->
+                <div class="card">
+                  <!-- card header -->
+                  <div class="card-header border-bottom-0">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <!-- heading -->
+                        <h4 class="mb-1">Order ID: GK00017</h4>
+                        <span>
+                          Order Date: a October 03,2022 t 6:31 pm
+                          <span class="badge bg-success-soft ms-2">Paid</span>
+                        </span>
+                      </div>
+                      <div>
+                        <!-- button -->
+                        <a href="#" class="btn btn-primary btn-sm">Invoice</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <!-- Table -->
+                    <table class="table mb-0 text-nowrap">
+                      <!-- Table Head -->
+                      <thead class="table-light">
+                        <tr>
+                          <th>Products</th>
+                          <th>Items</th>
+                          <th>Amounts</th>
+                        </tr>
+                      </thead>
+                      <!-- tbody -->
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a href="#" class="text-inherit">
+                              <div class="d-flex flex-lg-row flex-column gap-lg-4 gap-2">
+                                <div>
+                                  <img src="../../../assets/images/ecommerce/ecommerce-img-1.jpg" alt="" class="img-4by3-md rounded" />
+                                </div>
+                                <div class="">
+                                  <h5 class="mb-0">White & Red Nike Athletic Shoe</h5>
+                                  <span class="text-body">
+                                    SKU:
+                                    <span>Shoe01</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>1</td>
+                          <td>$120.00</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="#" class="text-inherit">
+                              <div class="d-flex flex-lg-row flex-column gap-lg-4 gap-2">
+                                <!-- img -->
+                                <div>
+                                  <img src="../../../assets/images/ecommerce/ecommerce-img-2.jpg" alt="" class="img-4by3-md rounded" />
+                                </div>
+                                <div class="">
+                                  <!-- heading -->
+                                  <h5 class="mb-0">Wayfarer Styled Sunglasses</h5>
+                                  <!-- body -->
+                                  <span class="text-body">
+                                    SKU:
+                                    <span>Glasses01</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </a>
+                          </td>
+                          <td>1</td>
+                          <td>$220.00</td>
+                        </tr>
+                        <tr>
+                          <td class="border-bottom-0 pb-0"></td>
+                          <td colspan="1" class="fw-medium text-dark border-bottom-0 pb-0">
+                            <!-- text -->
+                            Sub Total :
+                          </td>
+                          <td class="fw-medium text-dark border-bottom-0 pb-0 text-end">
+                            <!-- text -->
+                            $340.00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="border-bottom-0 pb-0"></td>
+                          <td colspan="1" class="fw-medium text-dark border-bottom-0 pb-0">
+                            <!-- text -->
+                            Discount (GKDIS15%) :
+                          </td>
+                          <td class="fw-medium text-dark border-bottom-0 pb-0 text-end">
+                            <!-- text -->
+                            -$51.00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="border-bottom-0 pb-0"></td>
+                          <td colspan="1" class="fw-medium text-dark border-bottom-0 pb-0">
+                            <!-- text -->
+                            Shipping Charge :
+                          </td>
+                          <td class="fw-medium text-dark border-bottom-0 pb-0 text-end">
+                            <!-- text -->
+                            $15.00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="border-bottom-0"></td>
+                          <td colspan="1" class="fw-semibold text-dark">
+                            <!-- text -->
+                            Tax Vat 19% (included) :
+                          </td>
+                          <td class="fw-semibold text-dark text-end">
+                            <!-- text -->
+                            $64.00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td colspan="1" class="fw-semibold text-dark">
+                            <!-- text -->
+                            Paid by Customer
+                          </td>
+                          <td class="fw-semibold text-dark text-end">
+                            <!-- text -->
+                            $368.00
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- card -->
+                <div class="card">
+                  <!-- card body -->
+                  <div class="card-body">
+                    <div class="d-md-flex justify-content-between align-items-center mb-5">
+                      <div>
+                        <!-- text -->
+                        <h4 class="mb-3 mb-md-0">Order Status</h4>
+                      </div>
+                      <div>
+                        <!-- button -->
+                        <a href="#" class="btn btn-light-primary btn-sm text-primary">Change Address</a>
+                        <a href="#" class="btn btn-light-danger btn-sm text-danger ms-2">Cancel Order</a>
+                      </div>
+                    </div>
+                    <div>
+                      <!-- List group -->
+                      <ul class="list-group list-group-flush list-timeline-activity">
+                        <li class="list-group-item px-0 pt-0 border-0 mb-4">
+                          <div class="row">
+                            <!-- col -->
+                            <div class="col-auto">
+                              <div class="icon-shape icon-md rounded-circle bg-primary text-white position-relative z-1">
+                                <i class="fe fe-shopping-cart"></i>
+                              </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col ms-n2 mt-1">
+                              <div class="d-flex flex-column gap-3">
+                                <h4 class="mb-0">Order Placed</h4>
+                                <h5 class="mb-0">An order has been placed.</h5>
+                              </div>
+                              <span class="fs-6">Wed, 15 April 2022 at 4:30 pm</span>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- List group -->
+                        <li class="list-group-item px-0 pt-0 border-0 mb-4">
+                          <div class="row">
+                            <!-- col -->
+                            <div class="col-auto">
+                              <div class="icon-shape icon-md rounded-circle bg-primary text-white position-relative z-1">
+                                <i class="fe fe-shopping-bag"></i>
+                              </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col ms-n2 mt-1">
+                              <div class="d-flex flex-column gap-3">
+                                <h4 class="mb-0">Packed Thu, 16 April 2022</h4>
+                                <h5 class="mb-0">Your Item has been picked up by courier patner</h5>
+                              </div>
+                              <span class="fs-6">Wed, 15 April 2022 at 4:30 pm</span>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- List group -->
+                        <li class="list-group-item px-0 pt-0 border-0 mb-4">
+                          <div class="row">
+                            <!-- col -->
+                            <div class="col-auto">
+                              <div class="icon-shape icon-md rounded-circle bg-primary text-white position-relative z-1">
+                                <i class="fe fe-box"></i>
+                              </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col ms-n2 mt-1">
+                              <div class="d-flex flex-column gap-3">
+                                <h4 class="mb-0">Shipping Thu, 16 April 2022</h4>
+                                <div class="d-flex flex-column gap-1">
+                                  <h5 class="mb-0">BlueDart Logistics GEEK3214566</h5>
+
+                                  <h5 class="mb-0">Your item has been shipped.</h5>
+                                  <span class="fs-6">Thu, 16 April 2022 at 5:00 pm</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- List group -->
+                        <li class="list-group-item px-0 pt-0 border-0">
+                          <div class="row">
+                            <!-- col -->
+                            <div class="col-auto">
+                              <div class="icon-shape icon-md rounded-circle bg-light-primary text-primary position-relative z-1">
+                                <i class="fe fe-gift"></i>
+                              </div>
+                            </div>
+                            <!-- col -->
+                            <div class="col ms-n2 mt-1">
+                              <h4 class="mb-0">Delivered</h4>
+                              <div class="d-flex flex-column gap-1">
+                                <h5 class="mb-0">Order has been successfully delivered</h5>
+                                <span class="fs-6">Thu, 17 April 2022 at 9:50am</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- List group -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-12">
+              <div class="d-flex flex-column gap-4">
+                <!-- card -->
+                <div class="card">
+                  <!-- card body -->
+                  <div class="card-body d-flex flex-column gap-4">
+                    <!-- heading -->
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h4 class="mb-0">Customer</h4>
+                      <a href="#">View Profile</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-row gap-3">
+                      <!-- img -->
+                      <img src="../../../assets/images/avatar/avatar-12.jpg" class="avatar-lg rounded-circle" alt="" />
+                      <div class="d-flex flex-column">
+                        <!-- title -->
+                        <h4 class="mb-0">Harold Gonzalez</h4>
+                        <div>
+                          <span>Customer since April 5,2022</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card body -->
+                  <div class="card-body border-top d-flex flex-column gap-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <!-- text -->
+                      <h4 class="mb-0">Contact</h4>
+                      <a href="#">Edit</a>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                      <!-- text -->
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="fe fe-mail fs-4"></i>
+                        <a href="#" class="">haroldonzalez@gmail.com</a>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="fe fe-phone fs-4"></i>
+                        <span class="">+(000) 123465 987</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card body -->
+                  <div class="card-body border-top d-flex flex-column gap-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h4 class="mb-0">Shipping Address</h4>
+                      <a href="#">Edit</a>
+                    </div>
+                    <div>
+                      <!-- address -->
+                      <p class="mb-0">
+                        3812 Orchard Street
+                        <br />
+                        Bloomington,
+                        <br />
+                        Minnesota 55431,
+                        <br />
+                        United States
+                        <br />
+                        +(000) 123465 987
+                      </p>
+                    </div>
+                  </div>
+                  <!-- card body -->
+                  <div class="card-body border-top d-flex flex-column gap-3">
+                    <div class="">
+                      <!-- heading -->
+                      <h4 class="mb-0">Billing Address</h4>
+                    </div>
+                    <div>
+                      <!-- address -->
+                      <p class="mb-0">
+                        3812 Orchard Street
+                        <br />
+                        Bloomington,
+                        <br />
+                        Minnesota 55431,
+                        <br />
+                        United States
+                        <br />
+                        +(000) 123465 987
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- card -->
+                <div class="card">
+                  <!-- card body -->
+                  <div class="card-body d-flex flex-column gap-3">
+                    <div class="">
+                      <h4 class="mb-0">Payment Details</h4>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                      <!-- text -->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span>Transactions:</span>
+                        <span class="text-dark">#GK444TO10000</span>
+                      </div>
+                      <!-- text -->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span>Payment Method:</span>
+                        <span class="text-dark">Credit Card</span>
+                      </div>
+                      <!-- text -->
+
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span>Card Holder Name:</span>
+                        <span class="text-dark">Harold Gonzalez</span>
+                      </div>
+                      <!-- text -->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span>Card Number:</span>
+                        <span class="text-dark">xxxx xxxx xxxx 6779</span>
+                      </div>
+                      <!-- text -->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span>Total Amount:</span>
+                        <span class="text-dark fw-bold">$368.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../../partials/scripts.html")
+  </body>
+</html>

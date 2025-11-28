@@ -1,0 +1,20 @@
+//
+// Extended from Bootstrap
+//
+
+// Body
+// @import url($path-to-fonts);
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+  background: $gray-100;
+}
+::-webkit-scrollbar-thumb {
+  background: $gray-200;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.css" />
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/add-project.html" />
+    <link href="@@webRoot/node_modules/dropzone/dist/dropzone.css" rel="stylesheet" />
+    <title>Create Project | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group": "project", "page": "create-project" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">Create New Project</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Project</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Create Project</li>
+                    </ol>
+                  </nav>
+                </div>
+                <!-- button -->
+                <div>
+                  <a href="project-grid.html" class="btn btn-primary me-2">Back to Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-6">
+            <!-- row -->
+            <div class="row">
+              <div class="offset-xl-3 col-xl-6 col-md-12 col-12">
+                <!-- card -->
+                <div class="card">
+                  <!-- card body -->
+                  <div class="card-body p-lg-6">
+                    <!-- form -->
+                    <form class="row gx-3 needs-validation" novalidate>
+                      <!-- form group -->
+                      <div class="mb-3 col-12">
+                        <label class="form-label">
+                          Name
+                          <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Enter project title" required />
+                        <div class="invalid-feedback">Please enter first title.</div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-12">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" placeholder="Enter brief about project..." rows="3" required></textarea>
+                        <div class="invalid-feedback">Please enter messages.</div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-md-6 col-12">
+                        <label class="form-label">
+                          Start Date
+                          <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group me-3">
+                          <input class="form-control flatpickr" type="text" placeholder="Select Date" aria-describedby="basic-addon2" />
+
+                          <span class="input-group-text" id="basic-addon2"><i class="fe fe-calendar"></i></span>
+                        </div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-md-6 col-12">
+                        <label class="form-label">
+                          End Date
+                          <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group me-3">
+                          <input class="form-control flatpickr" type="text" placeholder="Select Date" aria-describedby="basic-addon3" />
+
+                          <span class="input-group-text" id="basic-addon3"><i class="fe fe-calendar"></i></span>
+                        </div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-md-6 col-12">
+                        <label class="form-label" for="privacy">Privacy</label>
+                        <select class="form-select" data-choices="" id="privacy" required>
+                          <option value="">Select Privacy</option>
+                          <option value="Public to you team">Public to you team</option>
+                          <option value="Private to project members">Private to project members</option>
+                          <option value="Private to you">Private to you</option>
+                        </select>
+                        <div class="invalid-feedback">Please choose option.</div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-md-6 col-12">
+                        <label class="form-label" for="teamMembers">Team Members</label>
+                        <select class="form-select" data-choices="" id="teamMembers" required>
+                          <option value="">Assign to owner</option>
+                          <option value="Eleanor Pena">Eleanor Pena</option>
+                          <option value="Courtney Henry">Courtney Henry</option>
+                          <option value="Assign to Owner">Assign to Owner</option>
+                        </select>
+                        <div class="invalid-feedback">Please choose option.</div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-md-6 col-12">
+                        <label class="form-label" for="budget">Budget</label>
+                        <select class="form-select" data-choices="" id="budget" required>
+                          <option value="">Project Budget</option>
+                          <option value="Based on Project Amount">Based on Project Amount</option>
+                          <option value="Based on Project Hours">Based on Project Hours</option>
+                        </select>
+                        <div class="invalid-feedback">Please choose option.</div>
+                      </div>
+                      <!-- form group -->
+                      <div class="mb-3 col-md-6 col-12">
+                        <label class="form-label" for="priority">Priority</label>
+                        <select class="form-select" data-choices="" id="priority" required>
+                          <option value="">Set Priority</option>
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Low">Low</option>
+                        </select>
+                        <div class="invalid-feedback">Please choose option.</div>
+                      </div>
+
+                      <div class="col-md-3 col-12 mb-4">
+                        <div>
+                          <!-- logo -->
+                          <h5 class="mb-3">Project Logo</h5>
+                          <div class="icon-shape icon-xxl border rounded position-relative">
+                            <span class="position-absolute"><i class="bi bi-image fs-3"></i></span>
+                            <input class="form-control border-0 opacity-0" type="file" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-4">
+                        <h5 class="mb-3">Cover Image</h5>
+
+                        <div id="my-dropzone" class="dropzone mt-4 border-dashed rounded-2 min-h-0"></div>
+                      </div>
+                      <div class="col-md-8"></div>
+                      <!-- button -->
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button type="button" class="btn btn-outline-primary ms-2" data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/flatpickr.js"></script>
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+    <script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

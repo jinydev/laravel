@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/text-truncation.html">
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+        <title>Text truncation | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body class="bg-white">
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- Left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-8" id="intro">
+                                            <h1 class="mb-2 fw-bold display-3">Text truncation</h1>
+                                            <p class="mb-0 lead">Truncate long strings of text with an ellipsis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- vstack -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-4">
+                                            <p>
+                                                For longer content, you can add a
+                                                <code>.text-truncate</code>
+                                                class to truncate the text with an ellipsis.
+                                                <strong>
+                                                    Requires
+                                                    <code>display: inline-block</code>
+                                                    or
+                                                    <code>display: block</code>
+                                                    .
+                                                </strong>
+                                            </p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div class="mb-8">
+                                            <ul class="nav nav-line-bottom mb-3" id="pills-tab-text-truncation" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-text-truncation-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-text-truncation-design"
+                                                        role="tab"
+                                                        aria-controls="pills-text-truncation-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-text-truncation-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-text-truncation-html"
+                                                        role="tab"
+                                                        aria-controls="pills-text-truncation-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content" id="pills-tabContent-text-truncation">
+                                                <div
+                                                    class="tab-pane tab-example-design fade show active"
+                                                    id="pills-text-truncation-design"
+                                                    role="tabpanel"
+                                                    aria-labelledby="pills-text-truncation-design-tab">
+                                                    <!-- Block level -->
+                                                    <div class="row">
+                                                        <div class="col-2 text-truncate">This text is quite long, and will be truncated once displayed.</div>
+                                                    </div>
+
+                                                    <!-- Inline level -->
+                                                    <span class="d-inline-block text-truncate" style="max-width: 150px">This text is quite long, and will be truncated once displayed.</span>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-text-truncation-html" role="tabpanel" aria-labelledby="pills-text-truncation-html-tab">
+                                                    <pre><code class="language-markup"><span class="token comment">&lt;!-- text truncation--&gt;</span>
+ <span class="token comment">&lt;!-- Block level --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-2 text-truncate<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     This text is quite long, and will be truncated once displayed.
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- Inline level --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-inline-block text-truncate<span class="token punctuation">"</span></span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>max-width: 150px;<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   This text is quite long, and will be truncated once displayed.
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/setting-social.html" />
+    <title>Social Network | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "social", "page_group": "sitesetting" })
+      <!-- Page content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <!-- Page Header -->
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">Social Network</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="../dashboard/admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item"><a href="#">Setting</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Social Network</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <!-- Card -->
+              <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                  <h4 class="mb-0">Social Network</h4>
+                </div>
+                <!-- Card body -->
+                <div class="card-body">
+                  <!-- Form -->
+                  <form>
+                    <!-- Facebook -->
+                    <div class="mb-3 mb-4">
+                      <label for="facebookPage" class="form-label">
+                        Facebook Page ID
+                        <small>(ex. https://www.facebook.com/geeksuidesign)</small>
+                      </label>
+                      <input class="form-control" id="facebookPage" placeholder="geeksuidesign " type="text" required />
+                    </div>
+                    <!-- Twitter -->
+                    <div class="mb-3 mb-4">
+                      <label for="twitterPage" class="form-label">
+                        Twitter Username
+                        <small>(Enter your website description below)</small>
+                      </label>
+                      <input class="form-control" id="twitterPage" placeholder="geeksuidesign " type="text" required />
+                    </div>
+                    <!-- Youtube -->
+                    <div class="mb-3 mb-4">
+                      <label for="youtubePage" class="form-label">
+                        YouTube Channel Name
+                        <small>(ex. https://www.youtube.com/geeksuidesign)</small>
+                      </label>
+                      <input class="form-control" id="youtubePage" placeholder="geeksuidesign " type="text" required />
+                    </div>
+                    <!-- Instagram -->
+                    <div class="mb-3 mb-4">
+                      <label for="instaPage" class="form-label">
+                        Instagram Username
+                        <small>(ex.https://www.instagram.com/geeksuidesign)</small>
+                      </label>
+                      <input class="form-control" id="instaPage" placeholder="geeksuidesign " type="text" required />
+                    </div>
+                    <!-- Button -->
+                    <button type="submit" class="btn btn-primary">Update Settings</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

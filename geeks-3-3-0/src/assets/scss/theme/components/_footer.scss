@@ -1,0 +1,21 @@
+// Footer
+
+.footer {
+  color: var(--#{$prefix}gray-500);
+}
+
+.nav-footer {
+  .nav-link {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: var(--#{$prefix}gray-500);
+    padding: 0.2rem 1rem;
+    &:hover {
+      color: var(--#{$prefix}primary);
+    }
+  }
+}
+
+.footer-dark {
+  background-color: $dark !important;
+}

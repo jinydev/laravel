@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: geeks
+toc: true
 title: JinyDev - Laravel과 JinyPHP 개발 학습 플랫폼
 description: Laravel 12와 JinyPHP를 활용한 현대적인 웹 개발을 체계적으로 학습할 수 있는 한국어 교육 플랫폼입니다. 초보자부터 실전 배포까지 단계별 가이드를 제공합니다.
 keywords: Laravel, JinyPHP, PHP 8.4, 웹개발, 백엔드, 프레임워크, 튜토리얼, 한국어, 개발자교육, Livewire, MySQL, 서버배포
@@ -64,6 +65,12 @@ schema:
 - **[02. Laravel 프로젝트 설치](./02.Setup/02.laravel-install.md)** - 프로젝트 생성 및 기본 설정
 - **[03. 데이터베이스 설정](./02.Setup/03.database.md)** - SQLite/PostgreSQL/MySQL 선택 및 연결
 - **[04. GitHub 배포 준비](./02.Setup/04.github-deploy.md)** - Git 저장소 및 배포 설정
+
+#### 08. 라라벨 실행하기
+📖 **[라라벨 실행 - Hello World](./08.라라벨 실행.md)**
+- Laravel 개발 서버 실행하기
+- Welcome 페이지 확인하기
+- 서버 옵션 및 문제 해결
 
 #### 03. JinyPHP 패키지 설치
 📖 **[JinyPHP 패키지 설치 및 설정 가이드](./02.jinyphp.md)**

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/text-color.html">
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+        <title>Text Colors | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body class="bg-white">
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <!-- Content -->
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-8" id="intro">
+                                            <h1 class="mb-2 display-3 fw-bold">Text Colors</h1>
+                                            <p class="lead mb-0">
+                                                Convey meaning through
+                                                <code>color</code>
+                                                with a handful of color utility classes. Includes support for styling links with hover states, too.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- text-color -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div id="text-color" class="mb-4">
+                                            <h2 class="fw-semibold mb-1">Colors</h2>
+                                            <p>
+                                                Colorize text with color utilities. If you want to colorize links, you can use the
+                                                <a href="#">
+                                                    <code>.link-*</code>
+                                                    helper classes
+                                                </a>
+                                                which have
+                                                <code>:hover</code>
+                                                and
+                                                <code>:focus</code>
+                                                states.
+                                            </p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div class="mb-8">
+                                            <ul class="nav nav-line-bottom mb-3" id="pills-tab-text-color" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-text-color-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-text-color-design"
+                                                        role="tab"
+                                                        aria-controls="pills-text-color-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-text-color-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-text-color-html"
+                                                        role="tab"
+                                                        aria-controls="pills-text-color-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content" id="pills-tabContent-text-color">
+                                                <div class="tab-pane tab-example-design fade show active" id="pills-text-color-design" role="tabpanel" aria-labelledby="pills-text-color-design-tab">
+                                                    <p class="text-primary">.text-primary</p>
+                                                    <p class="text-secondary">.text-secondary</p>
+                                                    <p class="text-success">.text-success</p>
+                                                    <p class="text-danger">.text-danger</p>
+                                                    <p class="text-warning">.text-warning</p>
+                                                    <p class="text-info">.text-info</p>
+                                                    <p class="text-light bg-dark">.text-light</p>
+                                                    <p class="text-dark">.text-dark</p>
+                                                    <p class="text-body">.text-body</p>
+                                                    <p>.</p>
+                                                    <p class="text-white bg-dark">.text-white</p>
+                                                    <p class="text-black-50">.text-black-50</p>
+                                                    <p class="text-white-50 bg-dark">.text-white-50</p>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-text-color-html" role="tabpanel" aria-labelledby="pills-text-color-html-tab">
+                                                    <pre><code class="language-markup"><span class="token comment">&lt;!-- primary color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- secondary color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- success color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- danger color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- warning color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-warning<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- info color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-info<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- light color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-light bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- dark color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- body color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-body<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- muted color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- white color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-white bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-white<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- black 50 color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-black-50<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-black-50<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- white 50 color --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-white-50 bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.text-white-50<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- text-color -->
+
+                                <!-- text-color -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div id="opacity" class="mb-4">
+                                            <h2 class="fw-semibold mb-1">Opacity</h2>
+                                            <p>
+                                                As of v5.1.0, text color utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic
+                                                alpha transparency changes.
+                                            </p>
+                                        </div>
+                                        <!-- Card -->
+                                        <div class="mb-8">
+                                            <ul class="nav nav-line-bottom mb-3" id="pills-tab-text-opacity" role="tablist">
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link active"
+                                                        id="pills-text-opacity-design-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-text-opacity-design"
+                                                        role="tab"
+                                                        aria-controls="pills-text-opacity-design"
+                                                        aria-selected="true">
+                                                        Design
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a
+                                                        class="nav-link"
+                                                        id="pills-text-opacity-html-tab"
+                                                        data-bs-toggle="pill"
+                                                        href="#pills-text-opacity-html"
+                                                        role="tab"
+                                                        aria-controls="pills-text-opacity-html"
+                                                        aria-selected="false">
+                                                        HTML
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab content -->
+                                            <div class="tab-content" id="pills-tabContent-text-opacity">
+                                                <div
+                                                    class="tab-pane tab-example-design fade show active"
+                                                    id="pills-text-opacity-design"
+                                                    role="tabpanel"
+                                                    aria-labelledby="pills-text-opacity-design-tab">
+                                                    <div class="text-primary">This is default primary text</div>
+                                                    <div class="text-primary text-opacity-75">This is 75% opacity primary text</div>
+                                                    <div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
+                                                    <div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
+                                                </div>
+                                                <div class="tab-pane tab-example-html fade" id="pills-text-opacity-html" role="tabpanel" aria-labelledby="pills-text-opacity-html-tab">
+                                                    <pre><code class="language-markup"> <span class="token comment">&lt;!-- text opacity --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is default primary text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-primary text-opacity-75<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is 75% opacity primary text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-primary text-opacity-50<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is 50% opacity primary text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-primary text-opacity-25<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is 25% opacity primary text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- text-color -->
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
+                            <!-- Sidebar nav fixed -->
+                            <div class="sidebar-nav-fixed">
+                                <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
+                                <ul class="list-unstyled">
+                                    <li><a href="#intro" class="active">Introduction</a></li>
+                                    <li></li>
+                                    <li><a href="#text-color">Colors</a></li>
+                                    <li>
+                                        <a href="#opacity">Opacity</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

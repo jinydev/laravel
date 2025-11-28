@@ -1,0 +1,1321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.css " />
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/project-grid.html " />
+    <link href="@@webRoot/node_modules/dropzone/dist/dropzone.css" rel="stylesheet " />
+    <title>Project Grid | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "grid", "page_group": "project" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-md-row gap-3 align-items-md-center justify-content-between">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">Projects</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Project</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Grid</li>
+                    </ol>
+                  </nav>
+                </div>
+                <!-- button -->
+                <div>
+                  <a href="#" class="btn btn-primary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Create a Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row justify-content-md-between flex-md-row flex-column gap-1 gap-md-0 mb-4">
+            <!-- col -->
+            <div class="col-xl-2 col-lg-4 col-md-6 col-12">
+              <!-- search -->
+              <div>
+                <input type="search" class="form-control" placeholder="Search by project name " />
+              </div>
+            </div>
+            <div class="col-xxl-2 col-lg-2 col-md-6 col-12">
+              <!-- Custom select -->
+              <select class="form-select" data-choices="">
+                <option value="">Filter</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Pending">Pending</option>
+                <option value="Modified">Modified</option>
+                <option value="Finished">Finished</option>
+                <option value="Cancel">Cancel</option>
+              </select>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+
+                        <div>
+                          <h4 class="mb-0"><a href="#" class="text-inherit">Web Application Design</a></h4>
+                          <span class="fs-6">Web Design</span>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex align-items-center">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectOne">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div class="">
+                        <p class="mb-0">Web application design is an important stage when building a web application...</p>
+                      </div>
+                    </div>
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <!-- avatar -->
+                          <span class="avatar avatar-md">
+                            <!-- img -->
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle imgtooltip" data-template="one " />
+                            <span id="one" class="d-none">
+                              <small class="fw-semibold">Paul Haney</small>
+                            </span>
+                          </span>
+                          <!-- avatar -->
+                          <span class="avatar avatar-md">
+                            <!-- img -->
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two " />
+                            <span id="two" class="d-none">
+                              <small class="fw-semibold">Gali Linear</small>
+                            </span>
+                          </span>
+                          <!-- avatar -->
+                          <span class="avatar avatar-md">
+                            <!-- img -->
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three " />
+                            <span id="three" class="d-none">
+                              <small class="fw-semibold">Mary Holler</small>
+                            </span>
+                          </span>
+                          <!-- avatar -->
+                          <span class="avatar avatar-md">
+                            <!-- img -->
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="nordl" />
+                            <span id="nordl" class="d-none">
+                              <small class="fw-semibold">Lio Nordal</small>
+                            </span>
+                          </span>
+                          <!-- avatar -->
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">5+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-info-soft">In Progress</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                        <span>45%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">1 Jan, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$1,23,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+                        <div>
+                          <h4 class="mb-0"><a href="#" class="text-inherit">Task Application Development..</a></h4>
+                          <span class="fs-6">Web Development</span>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex align-items-center">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectTwo">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div class="">
+                        <p class="mb-0">Mauris quis nibh eu tortor blandit lacinia id sed ans dui turpis, semper ac turpis quis</p>
+                      </div>
+                    </div>
+
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-5.jpg" class="rounded-circle imgtooltip" data-template="four " />
+                            <span id="four" class="d-none">
+                              <small class="fw-semibold">Gilbert Farr</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md avatar-primary imgtooltip" data-template="textOne">
+                            <span class="avatar-initials rounded-circle h6">GK</span>
+
+                            <span id="textOne" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-6.jpg" class="rounded-circle imgtooltip" data-template="five " />
+                            <span id="five" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">6+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-danger-soft">Cancel</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
+                        <span>12%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">-</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$0</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+
+                        <div>
+                          <h4 class="mb-0"><a href="#" class="text-inherit">CRM Dashboard</a></h4>
+                          <span class="fs-6">Front End Development</span>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex align-items-center">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectThree" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectThree">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div class="">
+                        <p class="mb-0">Quisque at augue convallis, tincidunt erat et, tristique ssa mollis dignissim eget</p>
+                      </div>
+                    </div>
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md avatar-info imgtooltip" data-template="textTwo">
+                            <span class="avatar-initials rounded-circle">GK</span>
+
+                            <span id="textTwo" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-9.jpg" class="rounded-circle imgtooltip" data-template="eight " />
+                            <span id="eight" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-10.jpg" class="rounded-circle imgtooltip" data-template="nine " />
+                            <span id="nine" class="d-none">
+                              <small class="fw-semibold">Jamie Lusar</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">3+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-success-soft">Finished</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <span>100%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">1 Sept, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$5,200</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+                        <div>
+                          <h4 class="mb-0"><a href="#" class="text-inherit">Task Application Development..</a></h4>
+                          <span class="fs-6">Web Development</span>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex align-items-center">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectEight" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectEight">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div class="">
+                        <p class="mb-0">Mauris quis nibh eu tortor blandit lacinia id sed ans dui turpis, semper ac turpis quis</p>
+                      </div>
+                    </div>
+
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-5.jpg" class="rounded-circle imgtooltip" data-template="eighTeen " />
+                            <span id="eighTeen" class="d-none">
+                              <small class="fw-semibold">Gilbert Farr</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md avatar-primary imgtooltip" data-template="textTen">
+                            <span class="avatar-initials rounded-circle fs-6">GK</span>
+
+                            <span id="textTen" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-6.jpg" class="rounded-circle imgtooltip" data-template="nineTeen " />
+                            <span id="nineTeen" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">6+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-info-soft">In Progress</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <span>50%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">22 Sept, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$400</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+
+                        <div class="d-flex align-items-center">
+                          <div class="icon-shape icon-lg rounded-3 border p-4">
+                            <i class="fe fe-clipboard fs-3"></i>
+                          </div>
+                          <div class="ms-3">
+                            <h4 class="mb-0"><a href="#" class="text-inherit">File Management App</a></h4>
+                            <span class="fs-6">Web Design</span>
+                          </div>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectFour" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectFour">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div>
+                        <p class="mb-0">Quisque at augue convallis, tincidunt erat et, tristique ssa mollis dignissim eget</p>
+                      </div>
+                    </div>
+
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md avatar-warning imgtooltip" data-template="textFour">
+                            <span class="avatar-initials rounded-circle">GK</span>
+
+                            <span id="textFour" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-12.jpg" class="rounded-circle imgtooltip" data-template="eleven " />
+                            <span id="eleven" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-13.jpg" class="rounded-circle imgtooltip" data-template="twelve " />
+                            <span id="twelve" class="d-none">
+                              <small class="fw-semibold">Jamie Lusar</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">2+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-info-soft">In Progress</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="85">
+                        <span>85%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">25 Jan, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$2,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+
+                        <div class="d-flex align-items-center">
+                          <div class="icon-shape icon-lg rounded-3 border p-4">
+                            <i class="fe fe-message-square fs-3"></i>
+                          </div>
+                          <div class="ms-3">
+                            <h4 class="mb-0"><a href="#" class="text-inherit">Chat Application Design</a></h4>
+                            <span class="fs-6">Web Design</span>
+                          </div>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectFive" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectFive">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div>
+                        <p class="mb-0">Nam gravida vestibulum justo, ac aliquet erat. Pellentesque vitae massa lacus.</p>
+                      </div>
+                    </div>
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-12.jpg" class="rounded-circle imgtooltip" data-template="thirteen " />
+                            <span id="thirteen" class="d-none">
+                              <small class="fw-semibold">Gilbert Farr</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-13.jpg" class="rounded-circle imgtooltip" data-template="fourteen " />
+                            <span id="fourteen" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md avatar-success imgtooltip" data-template="textThree">
+                            <span class="avatar-initials rounded-circle">GK</span>
+
+                            <span id="textThree" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">4+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-warning-soft">Pending</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95">
+                        <span>95%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">30 May, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$800</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+
+                        <div class="d-flex align-items-center">
+                          <div class="icon-shape icon-lg rounded-3 border p-4">
+                            <i class="fe fe-shopping-cart fs-3"></i>
+                          </div>
+                          <div class="ms-3">
+                            <h4 class="mb-0"><a href="#" class="text-inherit">E-Commerce Project</a></h4>
+                            <span class="fs-6">Web Development</span>
+                          </div>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectSix" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectSix">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div>
+                        <p class="mb-0">Donec vel tellus nec purus mollis consequat sed at urna. In sit amet vehicula odio.</p>
+                      </div>
+                    </div>
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-15.jpg" class="rounded-circle imgtooltip" data-template="sixteen " />
+                            <span id="sixteen" class="d-none">
+                              <small class="fw-semibold">Gilbert Farr</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md avatar-danger imgtooltip" data-template="textFive">
+                            <span class="avatar-initials rounded-circle">GK</span>
+
+                            <span id="textFive" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-17.jpg" class="rounded-circle imgtooltip" data-template="eighteen " />
+                            <span id="eighteen" class="d-none">
+                              <small class="fw-semibold">Jamie Lusar</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">5+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-success-soft">Finished</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <span>100%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">31 June, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$2,53,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="d-flex flex-column gap-4">
+                    <div class="d-flex flex-column gap-3">
+                      <!-- heading-->
+                      <div class="d-flex align-items-center justify-content-between">
+                        <!-- text-->
+
+                        <div class="d-flex align-items-center">
+                          <div class="icon-shape icon-lg rounded-3 border p-4">
+                            <i class="fe fe-message-square fs-3"></i>
+                          </div>
+                          <div class="ms-3">
+                            <h4 class="mb-0"><a href="#" class="text-inherit">Chat Application Design</a></h4>
+                            <span class="fs-6">Web Design</span>
+                          </div>
+                        </div>
+                        <!-- dropdown-->
+                        <div class="d-flex">
+                          <div class="dropdown dropstart">
+                            <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectEleven" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownProjectEleven">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-edit dropdown-item-icon"></i>
+                                Edit Details
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-link dropdown-item-icon"></i>
+                                Copy project link
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-save dropdown-item-icon"></i>
+                                Save as Default
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-copy dropdown-item-icon"></i>
+                                Duplicate
+                              </a>
+
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-upload dropdown-item-icon"></i>
+                                Import
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-printer dropdown-item-icon"></i>
+                                Export / Print
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-users dropdown-item-icon"></i>
+                                Move to another team
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-archive dropdown-item-icon"></i>
+                                Archive
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Project
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- para-->
+                      <div>
+                        <p class="mb-0">Nam gravida vestibulum justo, ac aliquet erat. Pellentesque vitae massa lacus.</p>
+                      </div>
+                    </div>
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-12.jpg" class="rounded-circle imgtooltip" data-template="twenty " />
+                            <span id="twenty" class="d-none">
+                              <small class="fw-semibold">Gilbert Farr</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-13.jpg" class="rounded-circle imgtooltip" data-template="twentyone " />
+                            <span id="twentyone" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md avatar-success imgtooltip" data-template="textTwelve">
+                            <span class="avatar-initials rounded-circle">GK</span>
+
+                            <span id="textTwelve" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">4+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-warning-soft">Pending</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95">
+                        <span>95%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">30 May, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$800</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
+              <!-- card -->
+              <div class="card h-100">
+                <img src="../../assets/images/background/project-cover-img.jpg" alt="" class="img-fluid rounded-top" />
+                <div class="d-flex position-absolute end-0 pe-3 pt-3">
+                  <div class="dropdown dropstart">
+                    <a href="#" class="btn-icon btn btn-ghost btn-sm rounded-circle" id="dropdownProjectTen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownProjectTen">
+                      <span class="dropdown-header">Settings</span>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-edit dropdown-item-icon"></i>
+                        Edit Details
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-link dropdown-item-icon"></i>
+                        Copy project link
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-save dropdown-item-icon"></i>
+                        Save as Default
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-copy dropdown-item-icon"></i>
+                        Duplicate
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-upload dropdown-item-icon"></i>
+                        Import
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-printer dropdown-item-icon"></i>
+                        Export / Print
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-users dropdown-item-icon"></i>
+                        Move to another team
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-archive dropdown-item-icon"></i>
+                        Archive
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fe fe-trash dropdown-item-icon"></i>
+                        Delete Project
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- card body -->
+                <div class="card-body">
+                  <!-- heading-->
+
+                  <!-- text-->
+                  <div class="d-flex flex-column gap-4">
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">CRM Dashboard</a></h4>
+                      <span class="fs-6">Front End Development</span>
+                    </div>
+
+                    <!-- progress -->
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar group -->
+                        <div class="avatar-group">
+                          <span class="avatar avatar-md avatar-success imgtooltip" data-template="textThirteen">
+                            <span class="avatar-initials rounded-circle">GK</span>
+
+                            <span id="textThirteen" class="d-none">
+                              <small class="fw-semibold">Geeks Only</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-13.jpg" class="rounded-circle imgtooltip" data-template="fifteen " />
+                            <span id="fifteen" class="d-none">
+                              <small class="fw-semibold">Charlie Holland</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <img alt="avatar" src="../../assets/images/avatar/avatar-14.jpg" class="rounded-circle imgtooltip" data-template="seventeen " />
+                            <span id="seventeen" class="d-none">
+                              <small class="fw-semibold">Jamie Lusar</small>
+                            </span>
+                          </span>
+                          <span class="avatar avatar-md">
+                            <span class="avatar-initials rounded-circle bg-light text-dark">9+</span>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- text -->
+                      <div>
+                        <span class="badge bg-success-soft">Finished</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- progress bar -->
+
+                    <div class="progress progress-tooltip" style="height: 6px">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <span>100%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer p-0">
+                  <div class="d-flex justify-content-between">
+                    <div class="w-50 py-3 px-4">
+                      <h6 class="mb-0">Due Date:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">1 Sept, 2022</p>
+                    </div>
+                    <div class="border-start w-50 py-3 px-4">
+                      <h6 class="mb-0">Budget:</h6>
+                      <p class="text-dark fs-6 fw-semibold mb-0">$5,200</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xxl-3 col-xl-4 col-lg-6 col-12 mb-4">
+              <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <div class="card h-100 border border-2 shadow-none card-dashed-hover p-12">
+                  <div class="card-body d-flex flex-column justify-content-center text-center">
+                    <i class="fe fe-plus text-secondary mb-3 fs-2" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Offcanvas -->
+
+    @@include("../../partials/offcanvas.html")
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@webRoot/node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/tooltip.js"></script>
+    <script src="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/flatpickr.js"></script>
+    <script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

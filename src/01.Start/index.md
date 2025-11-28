@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: geeks
 title: Laravel 시작하기
 description: Laravel의 기본 개념과 PHP 언어, 프레임워크의 이해
 category: Laravel 시작하기

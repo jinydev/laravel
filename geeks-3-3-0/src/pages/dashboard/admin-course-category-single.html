@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/admin-course-category-single.html" />
+    <title>Course Category | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "categorysingle", "page_group" : "courses" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <!-- Page Header -->
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="border-bottom pb-3 mb-3 d-flex flex-column flex-lg-row gap-3 align-items-lg-center justify-content-between">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">
+                    Web Development
+                    <span class="fs-5">(210 Courses)</span>
+                  </h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="../dashboard/admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Category</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Web Development</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div>
+                  <a href="#" class="btn btn-outline-secondary">Back to All Category</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Card -->
+              <div class="card mb-4">
+                <!-- Card Header -->
+                <div class="card-header border-bottom-0">
+                  <form class="d-flex align-items-center">
+                    <span class="position-absolute ps-3 search-icon">
+                      <i class="fe fe-search"></i>
+                    </span>
+                    <input type="search" class="form-control ps-6" placeholder="Search Courses" />
+                  </form>
+                </div>
+                <!-- Table  -->
+                <div class="table-responsive border-0 overflow-y-hidden">
+                  <table class="table mb-0 text-nowrap table-hover table-centered">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Courses</th>
+                        <th>Instructor</th>
+                        <th>Enrolled</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-gatsby.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Revolutionize how you build the web...</h4>
+                                <span>Added on 7 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-7.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Reva Yokk</h5>
+                          </div>
+                        </td>
+                        <td>12,234</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown1" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown1">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-graphql.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Guide to Static Sites with Gatsby...</h4>
+                                <span>Added on 6 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-6.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Brooklyn Simmons</h5>
+                          </div>
+                        </td>
+                        <td>2,000</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown2" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown2">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-html.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">The Modern JavaScript Courses ...</h4>
+                                <span>Added on 5 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-cente0 flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-5.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Miston Wilson</h5>
+                          </div>
+                        </td>
+                        <td>22,345</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown3" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown3">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-javascript.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Courses JavaScript Heading Title ...</h4>
+                                <span>Added on 5 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-10.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Guy Hawkins</h5>
+                          </div>
+                        </td>
+                        <td>5,235</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown4" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown4">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-node.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Get Start with Node Heading Title ...</h4>
+                                <span>Added on 5 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-3.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Sina Ray</h5>
+                          </div>
+                        </td>
+                        <td>7,200</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown5" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown5">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-laravel.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Get Start with Laravel...</h4>
+                                <span>Added on 5 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-9.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Sobo Rikhan</h5>
+                          </div>
+                        </td>
+                        <td>22,500</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown6" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown6">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-react.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Get Start with React...</h4>
+                                <span>Added on 4 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-2.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">April Noms</h5>
+                          </div>
+                        </td>
+                        <td>6,759</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown7" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown7">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#" class="text-inherit">
+                            <div class="d-flex align-items-center flex-row gap-3">
+                              <div>
+                                <img src="../../assets/images/course/course-angular.jpg" alt="" class="img-4by3-lg rounded" />
+                              </div>
+                              <div class="d-flex flex-column flex-column gap-1">
+                                <h4 class="mb-0 text-primary-hover">Get Start with Angular...</h4>
+                                <span>Added on 3 July, 2023</span>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>
+                          <div class="d-flex align-items-center flex-row gap-2">
+                            <img src="../../assets/images/avatar/avatar-4.jpg" alt="" class="rounded-circle avatar-xs" />
+                            <h5 class="mb-0">Jacob Jones</h5>
+                          </div>
+                        </td>
+                        <td>7,234</td>
+                        <td>
+                          <span class="dropdown dropstart">
+                            <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="courseDropdown8" data-bs-toggle="dropdown" data-bs-offset="-20,20" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span class="dropdown-menu" aria-labelledby="courseDropdown8">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-layers dropdown-item-icon"></i>
+                                Change Category
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                <i class="fe fe-trash dropdown-item-icon"></i>
+                                Delete Course
+                              </a>
+                            </span>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Card Footer -->
+                <div class="card-footer">
+                  <nav>
+                    <ul class="pagination justify-content-center mb-0">
+                      <li class="page-item disabled">
+                        <a class="page-link mx-1 rounded" href="#" tabindex="-1" aria-disabled="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link mx-1 rounded" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link mx-1 rounded" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link mx-1 rounded" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link mx-1 rounded" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

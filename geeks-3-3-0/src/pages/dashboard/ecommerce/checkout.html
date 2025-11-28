@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="@@webRoot/node_modules/bs-stepper/dist/css/bs-stepper.min.css" />
+    @@include("../../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/ecommerce/checkout.html" />
+    <title>Checkout | Geeks - Academy Admin Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../../partials/navbar-vertical.html', { "page_group": "ecommerce", "page": "checkout" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-3 mb-3">
+                <div>
+                  <h1 class="mb-0 h2 fw-bold">Checkout</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Ecommerce</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row gy-4">
+            <div class="col-xl-8 col-lg-7">
+              <!-- stepper -->
+              <div id="stepperForm" class="bs-stepper">
+                <!-- card -->
+                <div class="card">
+                  <div class="card-header">
+                    <!-- Stepper Button -->
+                    <div class="bs-stepper-header p-0 bg-transparent" role="tablist">
+                      <div class="step" data-target="#test-l-1">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormtrigger1" aria-controls="test-l-1">
+                          <span class="bs-stepper-circle p-2 me-2"><i class="fe fe-user"></i></span>
+                          <span class="bs-stepper-label">Billing Info</span>
+                        </button>
+                      </div>
+                      <div class="bs-stepper-line"></div>
+                      <!-- Stepper Button -->
+                      <div class="step" data-target="#test-l-2">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormtrigger2" aria-controls="test-l-2">
+                          <span class="bs-stepper-circle p-2 me-2"><i class="fe fe-shopping-bag"></i></span>
+                          <span class="bs-stepper-label">Shipping Details</span>
+                        </button>
+                      </div>
+                      <div class="bs-stepper-line"></div>
+                      <!-- Stepper Button -->
+                      <div class="step" data-target="#test-l-3">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormtrigger3" aria-controls="test-l-3">
+                          <span class="bs-stepper-circle p-2 me-2"><i class="fe fe-credit-card"></i></span>
+                          <span class="bs-stepper-label">Payment Info</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <!-- Stepper content -->
+                    <div class="bs-stepper-content">
+                      <form onSubmit="return false">
+                        <!-- Content one -->
+                        <div id="test-l-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormtrigger1">
+                          <!-- heading -->
+                          <div class="d-flex flex-column gap-5">
+                            <div class="d-flex flex-column gap-1">
+                              <h3 class="mb-0">Billing Information</h3>
+                              <p class="mb-0">Please fill all information below</p>
+                            </div>
+                            <!-- row -->
+                            <div class="row gx-3">
+                              <!-- input -->
+                              <div class="mb-3 col-md-6">
+                                <label class="form-label" for="firstName">First Name</label>
+                                <input type="text" class="form-control" placeholder="Enter first name" id="firstName" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-md-6">
+                                <label class="form-label" for="lastName">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter last name" id="lastName" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-md-6">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter email address" id="email" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-md-6">
+                                <label class="form-label" for="phone">Phone</label>
+                                <input type="text" class="form-control" placeholder="Enter phone number" id="phone" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-12">
+                                <label class="form-label" for="address">Address</label>
+                                <input type="text" class="form-control" placeholder="Enter address" id="address" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-12">
+                                <label class="form-label" for="town">Town / City</label>
+                                <input type="text" class="form-control" placeholder="Enter City" id="town" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-12">
+                                <label class="form-label" for="state">State</label>
+                                <input type="text" class="form-control" placeholder="Enter State" id="state" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-12">
+                                <label class="form-label" for="zip">Zip / Postal Code</label>
+                                <input type="text" class="form-control" placeholder="Zip / Postal Code" id="zip" />
+                              </div>
+                              <!-- select -->
+                              <div class="mb-3 col-12">
+                                <label class="form-label">Country</label>
+                                <select class="form-select" data-choices="">
+                                  <option selected>Select Country</option>
+                                  <option value="1">India</option>
+                                  <option value="2">UK</option>
+                                  <option value="3">US</option>
+                                </select>
+                              </div>
+                              <!-- checkbox -->
+                              <div class="mb-3 col-12">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="shipAddress" />
+                                  <label class="form-check-label" for="shipAddress">Ship to different address ?</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Button -->
+                          <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary" onclick="stepperForm.next()">
+                              Proceed to Shipping
+                              <i class="fe fe-shopping-bag ms-1"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- Content two -->
+                        <div id="test-l-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormtrigger2">
+                          <!-- text -->
+                          <div class="mb-5">
+                            <h3 class="mb-1">Shipping Information</h3>
+                            <p class="mb-0">Fill the form below in order to send you the orders invoice.</p>
+                          </div>
+                          <!-- text -->
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="mb-0">Saved Address</h4>
+                            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addNewAddress">Add new address</a>
+                          </div>
+                          <!-- row -->
+                          <div class="row">
+                            <div class="col-lg-6 col-12 mb-4">
+                              <!-- form -->
+                              <div class="border p-4 rounded-3">
+                                <div class="form-check mb-2">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="homeRadio" />
+                                  <label class="form-check-label text-dark fw-semibold" for="homeRadio">Home</label>
+                                </div>
+                                <!-- address -->
+                                <p class="mb-0">
+                                  3812 Orchard Street
+                                  <br />
+
+                                  Bloomington,
+                                  <br />
+
+                                  Minnesota 55431,
+                                  <br />
+
+                                  United States
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-4">
+                              <!-- input -->
+                              <div class="border p-4 rounded-3">
+                                <div class="form-check mb-2">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="officeRadio" />
+                                  <label class="form-check-label text-dark fw-semibold" for="officeRadio">Office</label>
+                                </div>
+                                <!-- address -->
+                                <p class="mb-0">
+                                  3853 Coal Road
+                                  <br />
+
+                                  Tannersville,
+                                  <br />
+
+                                  Pennsylvania, 18372
+                                  <br />
+
+                                  United States
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <!-- heading -->
+                            <h4 class="mb-4">Shipping Method</h4>
+                            <!-- card -->
+                            <div class="card card-bordered shadow-none mb-2">
+                              <!-- card body -->
+                              <div class="card-body">
+                                <!-- form check -->
+                                <div class="d-flex">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="freeDelivery" />
+                                    <label class="form-check-label ms-2" for="freeDelivery"></label>
+                                  </div>
+                                  <div>
+                                    <h5 class="mb-1">Free Delivery</h5>
+                                    <span class="fs-6">Expected Delivery 3 to 5 Days</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card card-bordered shadow-none mb-2">
+                              <!-- card body -->
+                              <div class="card-body">
+                                <!-- form check -->
+                                <div class="d-md-flex">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="nextDelivery" />
+                                    <label class="form-check-label ms-2 w-100" for="nextDelivery"></label>
+                                  </div>
+                                  <div class="d-flex justify-content-between align-items-center w-100">
+                                    <div class="d-flex align-items-start">
+                                      <!-- img -->
+                                      <img src="../../../assets/images/svg/payment-logo-fedex.svg" alt="" />
+                                      <!-- text -->
+                                      <div class="ms-2">
+                                        <h5 class="mb-1">FedEx Next Day Delivery</h5>
+                                        <p class="mb-0 fs-6">No Delivery on Public Holidays</p>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <!-- heading -->
+                                      <h3 class="mb-0">$19.99</h3>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card card-bordered shadow-none">
+                              <!-- card body -->
+                              <div class="card-body">
+                                <div class="d-md-flex">
+                                  <div class="form-check">
+                                    <!-- input -->
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="DHLExpress" />
+                                    <label class="form-check-label ms-2 w-100" for="DHLExpress"></label>
+                                  </div>
+                                  <div class="d-flex justify-content-between align-items-center w-100">
+                                    <!-- img -->
+                                    <div class="d-flex align-items-start">
+                                      <img src="../../../assets/images/svg/payment-logo-dhl.svg" alt="" />
+                                      <!-- text -->
+                                      <div class="ms-2">
+                                        <h5 class="mb-1">DHL Express</h5>
+                                        <p class="mb-0 fs-6">1 Day Delivery</p>
+                                      </div>
+                                    </div>
+                                    <!-- text -->
+                                    <div>
+                                      <h3 class="mb-0">$8.99</h3>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Button -->
+                          <div class="d-md-flex justify-content-between mt-4">
+                            <button class="btn btn-outline-primary mb-2 mb-md-0" onclick="stepperForm.previous()">Back to Info</button>
+                            <!-- Button -->
+                            <button class="btn btn-primary" onclick="stepperForm.next()">
+                              Continue to Payment
+                              <i class="fe fe-credit-card ms-2"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- Content three -->
+                        <div id="test-l-3" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepperFormtrigger3">
+                          <!-- Card -->
+                          <div class="mb-5">
+                            <h3 class="mb-1">Payment selection</h3>
+                            <p class="mb-0">Please select and enter your billing information.</p>
+                          </div>
+                          <!-- Card -->
+                          <div class="card card-bordered shadow-none mb-2">
+                            <!-- card body -->
+                            <div class="card-body">
+                              <div class="d-flex">
+                                <div class="form-check">
+                                  <!-- checkbox -->
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="paypal" />
+                                  <label class="form-check-label ms-2" for="paypal"></label>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1">Payment with Paypal</h5>
+                                  <p class="mb-0 fs-6">You will be redirected to PayPal website to complete your purchase securely.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card card-bordered shadow-none mb-2">
+                            <!-- card body -->
+                            <div class="card-body">
+                              <div class="d-flex mb-4">
+                                <div class="form-check">
+                                  <!-- input -->
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="creditdebitcard" />
+                                  <label class="form-check-label ms-2" for="creditdebitcard"></label>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1">Credit / Debit Card</h5>
+                                  <p class="mb-0 fs-6">Safe money transfer using your bank accou k account. We support Mastercard tercard, Visa, Discover and Stripe.</p>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <!-- input -->
+                                  <div class="mb-3">
+                                    <label for="card-mask" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="card-mask" placeholder="xxxx-xxxx-xxxx-xxxx" required />
+                                  </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                  <!-- input -->
+                                  <div class="mb-3 mb-lg-0">
+                                    <label class="form-label" for="nameoncard">Name on card</label>
+                                    <input type="text" class="form-control" placeholder="Enter your first name" id="nameoncard" />
+                                  </div>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                  <!-- input -->
+                                  <div class="mb-3 mb-lg-0">
+                                    <label class="form-label" for="expirydate">Expiry date</label>
+                                    <input type="text" class="form-control" id="expirydate" />
+                                  </div>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                  <!-- input -->
+                                  <div class="mb-3 mb-lg-0">
+                                    <label for="digit-mask" class="form-label">
+                                      CVV Code
+                                      <i class="fe fe-help-circle ms-1" data-bs-toggle="tooltip" data-placement="top" title="A 3 - digit number, typically printed on the back of a card."></i>
+                                    </label>
+                                    <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3" inputmode="numeric" required />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card card-bordered shadow-none mb-2">
+                            <!-- card body -->
+                            <div class="card-body">
+                              <!-- check input -->
+                              <div class="d-flex">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="payoneer" />
+                                  <label class="form-check-label ms-2" for="payoneer"></label>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1">Pay with Payoneer</h5>
+                                  <p class="mb-0 fs-6">You will be redirected to Payoneer website to complete your purchase securely.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- card -->
+                          <div class="card card-bordered shadow-none">
+                            <div class="card-body">
+                              <!-- check input -->
+                              <div class="d-flex">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="cashonDelivery" />
+                                  <label class="form-check-label ms-2" for="cashonDelivery"></label>
+                                </div>
+                                <div>
+                                  <h5 class="mb-1">Cash on Delivery</h5>
+                                  <p class="mb-0 fs-6">Pay with cash when your order is delivered.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Button -->
+                          <div class="d-flex justify-content-between">
+                            <!-- Button -->
+                            <button class="btn btn-outline-primary mt-3" onclick="stepperForm.previous()">Back to shipping</button>
+                            <!-- Button -->
+                            <button type="submit" class="btn btn-primary mt-3" onclick=" location.href='order-summary.html' ">Complete Order</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">Order Summary</h4>
+                    <a href="#">Edit Cart</a>
+                  </div>
+
+                  <div class="d-flex flex-row gap-4">
+                    <div>
+                      <img src="../../../assets/images/ecommerce/ecommerce-img-1.jpg" alt="" class="img-4by3-xl rounded" />
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                      <div class="d-flex flex-column gap-1">
+                        <h4 class="mb-0 text-primary-hover">White &amp; Red Nike Athletic Shoe</h4>
+
+                        <h5 class="mb-0">$49.00</h5>
+                      </div>
+                      <span>Qty:1</span>
+                    </div>
+                  </div>
+                  <hr class="my-3" />
+
+                  <div class="d-flex flex-row gap-4">
+                    <div>
+                      <img src="../../../assets/images/ecommerce/ecommerce-img-9.jpg" alt="" class="img-4by3-xl rounded" />
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                      <div class="d-flex flex-column gap-1">
+                        <h4 class="mb-0 text-primary-hover">Nike Black and White</h4>
+                        <h5 class="mb-0">$79.00</h5>
+                      </div>
+                      <span>Qty:1</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body border-top pt-2">
+                  <ul class="list-group list-group-flush mb-0">
+                    <li class="d-flex justify-content-between list-group-item px-0">
+                      <span>Subtotal</span>
+                      <span class="text-dark fw-semibold">$128.00</span>
+                    </li>
+                    <li class="d-flex justify-content-between list-group-item px-0">
+                      <span>Shipping</span>
+                      <span class="text-dark fw-semibold">$0.00</span>
+                    </li>
+                    <li class="d-flex justify-content-between list-group-item px-0">
+                      <span>Discount</span>
+                      <span class="text-dark fw-semibold">$0.00</span>
+                    </li>
+                    <li class="d-flex justify-content-between list-group-item px-0">
+                      <span>Tax</span>
+                      <span class="text-dark fw-semibold">$0.00</span>
+                    </li>
+                    <li class="d-flex justify-content-between list-group-item px-0 pb-0">
+                      <span class="fs-4 fw-semibold text-dark">Grand Total</span>
+                      <span class="fw-semibold text-dark">$128.00</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal fade" id="addNewAddress" tabindex="-1" aria-labelledby="addNewAddressLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <!-- input -->
+              <div class="mb-3 col-md-6">
+                <label class="form-label" for="firstNameForAddress">First Name</label>
+                <input type="text" class="form-control" placeholder="Enter first name" id="firstNameForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-md-6">
+                <label class="form-label" for="lastNameForAddress">Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter last name" id="lastNameForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-md-6">
+                <label class="form-label" for="emailForAddress">Email (Optional)</label>
+                <input type="email" class="form-control" placeholder="Enter email address" id="emailForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-md-6">
+                <label class="form-label" for="phoneForAddress">Phone</label>
+                <input type="text" class="form-control" placeholder="Enter phone number" id="phoneForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-6">
+                <label class="form-label" for="addressForAddress">Address</label>
+                <input type="text" class="form-control" placeholder="Enter address" id="addressForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-6">
+                <label class="form-label" for="townForAddress">Town / City</label>
+                <input type="text" class="form-control" placeholder="Enter City" id="townForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-6">
+                <label class="form-label" for="stateForAddress">State</label>
+                <input type="text" class="form-control" placeholder="Enter State" id="stateForAddress" />
+              </div>
+              <!-- input -->
+              <div class="mb-3 col-6">
+                <label class="form-label" for="zipForAddress">Zip / Postal Code</label>
+                <input type="text" class="form-control" placeholder="Zip / Postal Code" id="zipForAddress" />
+              </div>
+              <!-- select -->
+              <div class="mb-3 col-12">
+                <label class="form-label" for="contryForAddress">Country</label>
+                <select class="form-select" data-choices="" id="contryForAddress">
+                  <option selected>Select Country</option>
+                  <option value="1">India</option>
+                  <option value="2">UK</option>
+                  <option value="3">US</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/beStepper.js"></script>
+    <script src="@@webRoot/node_modules/imask/dist/imask.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/inputmask.js"></script>
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>

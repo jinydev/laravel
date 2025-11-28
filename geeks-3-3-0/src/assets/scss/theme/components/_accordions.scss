@@ -1,0 +1,15 @@
+// Accordions
+
+.accordion-flush {
+  a[aria-expanded="true"] {
+    color: var(--#{$prefix}primary);
+  }
+}
+
+.btn-collapse svg {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+.btn-collapse.show-more svg {
+  transform: rotate(180deg);
+}

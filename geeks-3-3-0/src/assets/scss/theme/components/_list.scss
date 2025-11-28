@@ -1,0 +1,19 @@
+// list
+
+.list-group-hover {
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var(--#{$prefix}gray-900);
+    .list-group-title {
+      color: var(--#{$prefix}primary);
+    }
+  }
+}
+
+.list-session-hover {
+  background-color: transparent;
+  &:hover {
+    color: var(--#{$prefix}primary);
+  }
+}

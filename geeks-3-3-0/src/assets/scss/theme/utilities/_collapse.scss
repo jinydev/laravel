@@ -1,0 +1,36 @@
+// Collapse
+
+.chevron-arrow {
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+}
+
+// Expanded
+[aria-expanded="true"] .chevron-arrow {
+  transform: rotate(-180deg);
+}
+
+// Collapse Toggle
+
+.collapse-toggle {
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+}
+
+// Expanded
+[aria-expanded="true"] .collapse-toggle {
+  transform: rotate(180deg);
+}
+
+//single
+.accordion-single .accordion-header-single {
+  padding: 16px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid var(--#{$prefix}gray-300);
+  background-color: var(--#{$prefix}body-bg);
+}
+
+.accordion-body-single {
+  padding: 24px;
+  // border-top: 1px solid #cbd5e1;
+}

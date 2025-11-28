@@ -2,11 +2,11 @@
 
 # 사이트 기본 정보
 title: JinyDev
-email: your-email@example.com
+email: your-@example.com
 description: >- # 여러 줄 텍스트
   JinyDev - Laravel과 JinyPHP를 활용한 현대적인 웹 개발 학습 플랫폼입니다.
   초보자부터 실전 배포까지 체계적인 개발 교육을 제공합니다.
-baseurl: "/jinyphp_study_01" # GitHub Pages 저장소 이름
+baseurl: "" # 로컬 개발용: 빈 문자열, GitHub Pages 배포시: "/jinyphp_study_01"
 url: "https://jinyphp.github.io" # GitHub Pages 기본 URL
 
 # 저작자 정보

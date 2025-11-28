@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="@@webRoot/node_modules/quill/dist/quill.snow.css" />
+        @@include("../../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/mail-draft.html" />
+        <title>Mail Draft | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+    </head>
+
+    <body>
+        <!-- Wrapper -->
+        <div id="db-wrapper">
+            <!-- navbar vertical -->
+            @@include('../../partials/navbar-vertical.html', { "page": "mail" })
+            <!-- Page Content -->
+            <main id="page-content">
+                @@include('../../partials/dashboard-header.html')
+                <!-- Page Header -->
+                <!-- Container fluid -->
+                <section class="container-fluid p-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <div class="border-bottom pb-3 mb-3">
+                                <div class="mb-3 mb-lg-0">
+                                    <h1 class="mb-0 h2 fw-bold">Mail</h1>
+                                    <!-- Breadcrumb -->
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="admin-dashboard.html">App</a>
+                                            </li>
+
+                                            <li class="breadcrumb-item">Mail</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Draft</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                            <!-- Card -->
+                            <div class="card">
+                                <!-- Card body -->
+                                <div class="row g-0">
+                                    <div class="col-xxl-2 col-xl-3 border-end">
+                                        <nav class="navbar navbar-expand p-4 navbar-mail">
+                                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                <ul class="navbar-nav flex-column w-100">
+                                                    <li class="d-grid mb-4">
+                                                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#composeMailModal">Compose New Email</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="mail.html">
+                                                            <span class="d-flex align-items-center justify-content-between">
+                                                                <span class="d-flex align-items-center">
+                                                                    <i class="fe fe-inbox me-2"></i>
+                                                                    Inbox
+                                                                </span>
+                                                                <span>3</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span class="d-flex align-items-center justify-content-between">
+                                                                <span class="d-flex align-items-center">
+                                                                    <i class="fe fe-send me-2"></i>
+                                                                    Sent
+                                                                </span>
+                                                                <span>5</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" aria-current="page" href="mail-draft.html">
+                                                            <span class="d-flex align-items-center">
+                                                                <i class="fe fe-mail me-2"></i>
+                                                                Drafts
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span class="d-flex align-items-center justify-content-between">
+                                                                <span class="d-flex align-items-center">
+                                                                    <i class="fe fe-alert-circle me-2"></i>
+                                                                    Spam
+                                                                </span>
+                                                                <span>1</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span class="d-flex align-items-center">
+                                                                <i class="fe fe-trash-2 me-2"></i>
+                                                                Trash
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span class="d-flex align-items-center">
+                                                                <i class="fe fe-archive me-2"></i>
+                                                                Archive
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span class="d-flex align-items-center">
+                                                                <i class="fe fe-star me-2"></i>
+                                                                Starred
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span class="d-flex align-items-center">
+                                                                <span>
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="16"
+                                                                        height="16"
+                                                                        viewBox="0 0 24 24"
+                                                                        fill="none"
+                                                                        stroke="currentColor"
+                                                                        stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        class="feather feather-bookmark">
+                                                                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="ms-2">Important</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">
+                                                            <span>
+                                                                <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="16"
+                                                                    height="16"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    class="feather feather-tag text-success">
+                                                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                                                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                                                </svg>
+                                                            </span>
+                                                            <span class="ms-2">Personal</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="col-xxl-10 col-xl-9 col-12">
+                                        <div class="card-header p-4">
+                                            <div class="d-md-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-wrap gap-2 mb-2 mb-md-0">
+                                                    <div class="d-flex align-items-center border px-3 py-2 rounded-2">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="checkAll" />
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <a href="#" class="dropdown-toggle text-inherit" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                                            <ul class="dropdown-menu dropdown-menu-xs" aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item" href="#">All</a></li>
+                                                                <li><a class="dropdown-item" href="#">Read</a></li>
+                                                                <li><a class="dropdown-item" href="#">Unread</a></li>
+                                                                <li><a class="dropdown-item" href="#">Starred</a></li>
+                                                                <li><a class="dropdown-item" href="#">Unstarred</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-outline-secondary btn-icon">
+                                                        <i class="fe fe-rotate-cw align-middle"></i>
+                                                    </a>
+                                                    <div class="dropdown">
+                                                        <a href="#" class="btn btn-outline-secondary btn-icon" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="fe fe-more-vertical align-middle"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu dropdown-menu-xs" aria-labelledby="dropdownMenuButton2">
+                                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <form>
+                                                        <input type="search" class="form-control" placeholder="Search Email" />
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center py-16">
+                                            <img src="../../assets/images/svg/draft.svg" alt="" class="img-fluid mb-3" />
+                                            <p class="text-dark fs-3 fw-semibold">There is no conversation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade compose-mail" id="composeMailModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header bg-gray-100">
+                        <h5 class="modal-title text-white" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <form>
+                            <div class="border-bottom">
+                                <input class="form-control border-0 shadow-none" type="email" placeholder="To" />
+                            </div>
+                            <div class="border-bottom">
+                                <input class="form-control border-0 shadow-none" type="email" placeholder="Subject" />
+                            </div>
+                            <div>
+                                <div id="editor" class="rounded-0">
+                                    <p>Type something here</p>
+                                    <br />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <div>
+                            <a href="#" class="btn btn-primary btn-sm">Send</a>
+
+                            <span class="ms-4 compose-img-upload cursor-pointer">
+                                <label for="file-input">
+                                    <i class="fe fe-paperclip"></i>
+                                </label>
+
+                                <input id="file-input" type="file" />
+                            </span>
+                            <span class="ms-3 compose-img-upload cursor-pointer">
+                                <label for="file-input-second">
+                                    <i class="fe fe-image"></i>
+                                </label>
+
+                                <input id="file-input-second" type="file" />
+                            </span>
+                            <a href="#" class="ms-3">
+                                <i class="fe fe-link"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-body">
+                                <i class="fe fe-more-vertical" data-bs-toggle="tooltip" data-bs-placement="top" title="More Actions"></i>
+                            </a>
+                            <a href="#" class="text-body ms-2">
+                                <i class="fe fe-trash-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script -->
+        @@include("../../partials/scripts.html")
+        <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+        <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+    </body>
+</html>

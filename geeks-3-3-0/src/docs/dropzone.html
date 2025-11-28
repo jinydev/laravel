@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("../partials/head.html")
+  <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/dropzone.html">
+  <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+  <link href="@@webRoot/node_modules/dropzone/dist/dropzone.css" rel="stylesheet">
+  <title>Dropzone js | Geeks - Bootstrap 5 Template </title>
+
+</head>
+
+<body class="bg-white">
+
+  <!-- Main wrapper -->
+  <div class="docs-main-wrapper">
+    @@include("../partials/doc-navbar.html")
+    <!-- Left sidebar -->
+    @@include("../partials/docs-sidenav.html")
+    <!-- Wrapper  -->
+    <main class="docs-wrapper">
+      <section class="container-fluid">
+        <div class="row">
+          <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+            <!-- Content -->
+            <div class="docs-content mx-xxl-9">
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="mb-6" id="intro">
+                    <h1 class="mb-2 display-3 fw-bold">Dropzone</h1>
+                    <p class="lead ">Drag and drop file uploads with image previews powered by Dropzone.js.
+                      You
+                      can pass any options supported by the plugin via the data-options attribute. The value must be a
+                      valid JSON object.
+                    </p>
+                    <a href="https://www.dropzonejs.com/" target="_blank">Dropzone
+                      Documentation <i class="fe fe-external-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="mb-4" id="usage">
+                    <h2 class="mb-4 fw-semibold">Usage</h2>
+                    <h3 class="fw-semibold mb-1">CSS</h3>
+                    <p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your
+                      <code>&lt;head&gt;</code> to load the CSS.</p>
+                    <div class=" mb-6">
+
+                       <pre class="h-auto"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/css/theme.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                    </div>
+                    <h3 class="fw-semibold mb-1">Js</h3>
+                    <p>Copy-paste the following <code>&lt;script&gt;</code> and
+                      <code>Function</code> near the end of your pages.</p>
+                    <!-- Card -->
+                    <div>
+
+                       <pre class="h-auto"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../node_modules/dropzone/dist/min/dropzone.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                    </div>
+                    <!-- Card -->
+                    <div class=" mt-2">
+
+                       <pre class="h-auto"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@@webRoot/assets/js/vendors/dropzone.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="mb-4" id="basic">
+                    <h2 class="mb-0 fw-semibold">Basic examples</h2>
+                  </div>
+                  <!-- Card -->
+                  <div class="mb-8">
+                    <ul class="nav nav-line-bottom " id="pills-tab-choiceSelect" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-choiceSelect-design-tab" data-bs-toggle="pill"
+                          href="#pills-choiceSelect-design" role="tab" aria-controls="pills-choiceSelect-design"
+                          aria-selected="true">Design</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-choiceSelect-html-tab" data-bs-toggle="pill"
+                          href="#pills-choiceSelect-html" role="tab" aria-controls="pills-choiceSelect-html"
+                          aria-selected="false">HTML</a>
+                      </li>
+                    </ul>
+                    <!-- Tab content -->
+                    <div class="tab-content" id="pills-tabContent-choiceSelect">
+                      <div class="tab-pane tab-example-design fade show active" id="pills-choiceSelect-design"
+                        role="tabpanel" aria-labelledby="pills-choiceSelect-design-tab">
+                        <div id="my-dropzone" class="dropzone mt-4 border-dashed rounded-2 min-h-0"></div>
+                      </div>
+                      <div class="tab-pane tab-example-html fade " id="pills-choiceSelect-html" role="tabpanel"
+                        aria-labelledby="pills-choiceSelect-html-tab">
+                        <pre class="language-markup" tabindex="0"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-dropzone<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dropzone mt-4 border-dashed rounded-2 min-h-0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
+        <div class="sidebar-nav-fixed">
+              <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
+          <!-- Sidebar nav fixed -->
+          <ul class="list-unstyled">
+            <li><a href="#intro" class="active">Introduction</a></li>
+            <li><a href="#usage">How to Use</a></li>
+            <li><a href="#basic">Basic</a></li>
+          </ul>
+        </div>
+     </section>
+    </main>
+  </div>
+ <!-- Scroll top -->
+ @@include("../partials/btn-scroll-top.html")
+  <!-- Scripts --> @@include("../partials/scripts.html")
+  <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+<script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+<script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+<script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+<script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+</body>
+
+</html>

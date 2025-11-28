@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/project-team.html" />
+    <title>Project Team | Geeks - Academy Admin Template</title>
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group_second": "projectSingle", "page_group": "project", "page": "team" })
+      <!-- Page Content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="d-flex flex-column flex-lg-row gap-2 align-items-lg-center justify-content-between mb-2">
+                <div>
+                  <h1 class="mb-0 h2 fw-bold">Geeks UI - Design & Development</h1>
+                </div>
+                <!-- avatar group -->
+                <div class="d-flex align-items-center">
+                  <div class="avatar-group">
+                    <!-- avatar -->
+                    <span class="avatar avatar-md">
+                      <!-- img -->
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-1.jpg" class="rounded-circle imgtooltip" data-template="one" />
+                      <span id="one" class="d-none">
+                        <small class="fw-semibold">Paul Haney</small>
+                      </span>
+                    </span>
+                    <!-- avatar -->
+                    <span class="avatar avatar-md">
+                      <!-- img -->
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-2.jpg" class="rounded-circle imgtooltip" data-template="two" />
+                      <span id="two" class="d-none">
+                        <small class="fw-semibold">Gali Linear</small>
+                      </span>
+                    </span>
+                    <!-- avatar -->
+                    <span class="avatar avatar-md">
+                      <!-- img -->
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-3.jpg" class="rounded-circle imgtooltip" data-template="three" />
+                      <span id="three" class="d-none">
+                        <small class="fw-semibold">Mary Holler</small>
+                      </span>
+                    </span>
+                    <!-- avatar -->
+                    <span class="avatar avatar-md">
+                      <!-- img -->
+                      <img alt="avatar" src="../../assets/images/avatar/avatar-4.jpg" class="rounded-circle imgtooltip" data-template="four" />
+                      <span id="four" class="d-none">
+                        <small class="fw-semibold">Lio Nordal</small>
+                      </span>
+                    </span>
+                    <!-- avatar -->
+                    <span class="avatar avatar-md">
+                      <span class="avatar-initials rounded-circle bg-light text-dark">5+</span>
+                    </span>
+                  </div>
+                  <!-- icon  -->
+                  <a href="#" class="btn btn-icon btn-white border border-2 rounded-circle btn-dashed ms-2">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row mb-4">
+            <!-- col -->
+            <div class="col-12">
+              <!-- nav -->
+              <ul class="nav nav-lb-tab">
+                <!-- nav link -->
+                <li class="nav-item ms-0 me-3">
+                  <a class="nav-link" href="project-overview.html">Overview</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-task.html">Task</a>
+                </li>
+                <!-- nav link -->
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-budget.html">Budget</a>
+                </li>
+                <!-- nav link -->
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-files.html">Files</a>
+                </li>
+                <!-- nav link -->
+                <li class="nav-item mx-3">
+                  <a class="nav-link active" href="project-team.html">Team</a>
+                </li>
+                <!-- nav link -->
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-summary.html">Summary</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <!-- search  -->
+            <div class="col-xxl-2 col-lg-3 col-md-12 col-12">
+              <form>
+                <input type="search" class="form-control" placeholder="Search member" />
+              </form>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-1.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Jitu Chauhan</a></h4>
+                      <p class="mb-0">Product Manager</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownOne" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownOne">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <!-- avatar  -->
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-2.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Anita Parmar</a></h4>
+                      <p class="mb-0">UX Designer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone1">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone1" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video1">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video1" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <!-- dropdown  -->
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownTwo">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg avatar-warning">
+                      <span class="avatar-initials rounded-circle fs-4">FC</span>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Felicia Cordell</a></h4>
+                      <p class="mb-0">Front End Developer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone2">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone2" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video2">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video2" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <!-- dropdown  -->
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownThree" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownThree">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <!-- card  -->
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-4.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Carl Britton</a></h4>
+                      <p class="mb-0">Full Stack Developer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone3">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone3" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video3">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video3" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownFour" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownFour">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-5.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Katherine Wadley</a></h4>
+                      <p class="mb-0">HR Manager</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone4">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone4" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video4">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video4" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownFive" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownFive">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-6.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Kbrian Dobbins</a></h4>
+                      <p class="mb-0">UI Designer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone5">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone5" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video5">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video5" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownSix" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownSix">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-7.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Felicia Cordell</a></h4>
+                      <p class="mb-0">UI Designer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone6">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone6" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video6">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video6" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownSeven" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownSeven">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-8.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Rosalie Hutton</a></h4>
+                      <p class="mb-0">Full Stack Developer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone7">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone7" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video7">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video7" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownEight" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownEight">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-9.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Rmichael Marshall</a></h4>
+                      <p class="mb-0">Product Manager</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone8">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone8" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video8">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video8" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownNine" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownNine">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg avatar-info">
+                      <span class="avatar-initials rounded-circle fs-4">CN</span>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Claire Nonnors</a></h4>
+                      <p class="mb-0">Digital Marketing</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone9">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone9" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video9">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video9" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownTen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownTen">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-10.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Scott Gloria</a></h4>
+                      <p class="mb-0">UX Designer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone10">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone10" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video10">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video10" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownEleven" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownEleven">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-11.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Virginia Elkins</a></h4>
+                      <p class="mb-0">Full Stack Developer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone11">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone11" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video11">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video11" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownThirteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownThirteen">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-2.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Anita Parmar</a></h4>
+                      <p class="mb-0">UX Designer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone12">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone12" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video12">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video12" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownFourteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownFourteen">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-5.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Katherine Wadley</a></h4>
+                      <p class="mb-0">HR Manager</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone14">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone14" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video14">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video14" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownSixteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownSixteen">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg avatar-primary">
+                      <span class="avatar-initials rounded-circle fs-4">FC</span>
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Felicia Cordell</a></h4>
+                      <p class="mb-0">Front End Developer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone19">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone19" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video19">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video19" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownFifteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownFifteen">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card">
+                <div class="card-body d-flex flex-column gap-4">
+                  <div class="d-flex align-items-center flex-row gap-3">
+                    <div class="avatar avatar-lg">
+                      <img src="../../assets/images/avatar/avatar-4.jpg" alt="" class="rounded-circle" />
+                    </div>
+                    <div class="">
+                      <h4 class="mb-0"><a href="#" class="text-inherit">Carl Britton</a></h4>
+                      <p class="mb-0">Full Stack Developer</p>
+                    </div>
+                  </div>
+                  <div class="lh-1 d-flex align-items-center">
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="phone13">
+                      <i class="fe fe-phone-call fs-4"></i>
+                      <!-- text -->
+                      <div id="phone13" class="d-none">
+                        <span>Voice Call</span>
+                      </div>
+                    </a>
+                    <a href="#" class="text-body text-primary-hover me-3 texttooltip" data-template="video13">
+                      <i class="fe fe-video fs-4"></i>
+                      <!-- text -->
+                      <div id="video13" class="d-none">
+                        <span>Video Call</span>
+                      </div>
+                    </a>
+                    <span class="dropdown">
+                      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button" id="DropdownEighteen" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-horizontal fs-4"></i>
+                      </a>
+                      <span class="dropdown-menu" aria-labelledby="DropdownEighteen">
+                        <span class="dropdown-header">Settings</span>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-trash-2 dropdown-item-icon"></i>
+                          Remove
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fe fe-edit dropdown-item-icon"></i>
+                          Edit
+                        </a>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+
+    <script src="@@webRoot/node_modules/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/tooltip.js"></script>
+  </body>
+</html>

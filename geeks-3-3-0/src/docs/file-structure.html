@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        @@include("../partials/head.html")
+        <link rel="canonical" href="https://geeksui.codescandy.com/geeks/docs/file-structure.html">
+        <link href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+        <title>File Structure | Geeks - Bootstrap 5 Template</title>
+    </head>
+
+    <body class="bg-white">
+        <!-- Main wrapper -->
+        <div class="docs-main-wrapper">
+            @@include("../partials/doc-navbar.html")
+            <!-- left sidebar -->
+            @@include("../partials/docs-sidenav.html")
+            <!-- Wrapper  -->
+            <main class="docs-wrapper">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12">
+                            <!-- Content -->
+                            <div class="docs-content mx-xxl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="mb-8" id="intro">
+                                            <h1 class="fw-bold display-3">File Structure</h1>
+                                            <p class="mb-6 lead">This section will show you how to keep your files organized. Our theme file structure that looks like this.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div class="mb-8">
+                                            <h2 class="fw-semibold">Theme folder and file structure</h2>
+                                            <p>As mentioned previously, the default Geeks themes are some of the best examples of good theme development.</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="mb-3">For instance, here is how the Geeks Theme organizes its file structure:</h4>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item px-0">
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <div>
+                                                                <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="20"
+                                                                    height="20"
+                                                                    fill="currentColor"
+                                                                    class="bi bi-folder-fill text-body"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z">
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col d-flex ms-n3">
+                                                            <span class="me-4 text-dark fw-bold">Geeks</span>
+                                                            <p class="mb-0">Folder contains all template source and production files.</p>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush ps-3 mt-3">
+                                                        <li class="list-group-item px-0">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <div>
+                                                                        <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="20"
+                                                                            height="20"
+                                                                            fill="currentColor"
+                                                                            class="bi bi-folder2 text-body"
+                                                                            viewBox="0 0 16 16">
+                                                                            <path
+                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col d-flex ms-n3">
+                                                                    <span class="me-4 text-dark fw-bold">dist</span>
+                                                                    <p class="mb-0">Compiled version - Ready to use</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item px-0">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <div>
+                                                                        <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="20"
+                                                                            height="20"
+                                                                            fill="currentColor"
+                                                                            class="bi bi-folder2 text-body"
+                                                                            viewBox="0 0 16 16">
+                                                                            <path
+                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col d-flex ms-n3">
+                                                                    <span class="me-4 text-dark fw-bold">node_modules</span>
+                                                                    <p class="mb-0">Directory where npm installs dependencies.</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item px-0">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <div>
+                                                                        <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="20"
+                                                                            height="20"
+                                                                            fill="currentColor"
+                                                                            class="bi bi-folder2 text-body"
+                                                                            viewBox="0 0 16 16">
+                                                                            <path
+                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col d-flex ms-n3">
+                                                                    <span class="me-4 text-dark fw-bold">src</span>
+                                                                    <p class="mb-0">This folder holds all template source files and folder.</p>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="list-group list-group-flush ps-3 mt-3">
+                                                                <li class="list-group-item px-0 border-top">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <div>
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20"
+                                                                                    height="20"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-folder2 text-body"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col ms-n3">
+                                                                            <p class="mb-0"><span class="me-4 text-dark fw-bold">assets</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <ul class="list-group list-group-flush ps-3 mt-3">
+                                                                        <li class="list-group-item px-0 border-top">
+                                                                            <div class="row">
+                                                                                <div class="col-auto">
+                                                                                    <div>
+                                                                                        <svg
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            width="20"
+                                                                                            height="20"
+                                                                                            fill="currentColor"
+                                                                                            class="bi bi-folder2 text-body"
+                                                                                            viewBox="0 0 16 16">
+                                                                                            <path
+                                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col d-flex ms-n3">
+                                                                                    <span class="me-4 text-dark fw-bold">css</span>
+                                                                                    <p class="mb-0">Compiled CSS</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item px-0">
+                                                                            <div class="row">
+                                                                                <div class="col-auto">
+                                                                                    <div>
+                                                                                        <svg
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            width="20"
+                                                                                            height="20"
+                                                                                            fill="currentColor"
+                                                                                            class="bi bi-folder2 text-body"
+                                                                                            viewBox="0 0 16 16">
+                                                                                            <path
+                                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col d-flex ms-n3">
+                                                                                    <span class="me-4 text-dark fw-bold">fonts</span>
+                                                                                    <p class="mb-0">All fonts are used in the theme.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item px-0">
+                                                                            <div class="row">
+                                                                                <div class="col-auto">
+                                                                                    <div>
+                                                                                        <svg
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            width="20"
+                                                                                            height="20"
+                                                                                            fill="currentColor"
+                                                                                            class="bi bi-folder2 text-body"
+                                                                                            viewBox="0 0 16 16">
+                                                                                            <path
+                                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col d-flex ms-n3">
+                                                                                    <span class="me-4 text-dark fw-bold">images</span>
+                                                                                    <p class="mb-0">All the images are used in the theme</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item px-0">
+                                                                            <div class="row">
+                                                                                <div class="col-auto">
+                                                                                    <div>
+                                                                                        <svg
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            width="20"
+                                                                                            height="20"
+                                                                                            fill="currentColor"
+                                                                                            class="bi bi-folder2 text-body"
+                                                                                            viewBox="0 0 16 16">
+                                                                                            <path
+                                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col d-flex ms-n3">
+                                                                                    <span class="me-4 text-dark fw-bold">js</span>
+                                                                                    <p class="mb-0">All Javascript source files used in theme.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="list-group-item px-0 pb-0">
+                                                                            <div class="row">
+                                                                                <div class="col-auto">
+                                                                                    <div>
+                                                                                        <svg
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            width="20"
+                                                                                            height="20"
+                                                                                            fill="currentColor"
+                                                                                            class="bi bi-folder2 text-body"
+                                                                                            viewBox="0 0 16 16">
+                                                                                            <path
+                                                                                                d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col d-flex ms-n3">
+                                                                                    <span class="me-4 text-dark fw-bold">scss</span>
+                                                                                    <p class="mb-0">All SASS file and folder included in it</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="list-group-item px-0">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <div>
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20"
+                                                                                    height="20"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-folder2 text-body"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col d-flex ms-n3">
+                                                                            <span class="me-4 text-dark fw-bold">docs</span>
+                                                                            <p class="mb-0">A Complete Documentation for theme.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item px-0">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <div>
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20"
+                                                                                    height="20"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-folder2 text-body"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col d-flex ms-n3">
+                                                                            <span class="me-4 text-dark fw-bold">pages</span>
+                                                                            <p class="mb-0">All the theme HTML pages with Subfolder.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item px-0">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <div>
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20"
+                                                                                    height="20"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-folder2 text-body"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col d-flex ms-n3">
+                                                                            <span class="me-4 text-dark fw-bold">partials</span>
+                                                                            <p class="mb-0">A specific loop header and footer files for the templating.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item px-0">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <div>
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20"
+                                                                                    height="20"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-folder2 text-body"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col d-flex ms-n3">
+                                                                            <span class="me-4 text-dark fw-bold">index.html</span>
+                                                                            <p class="mb-0">Index file is start file run when the gulp</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item px-0">
+                                                                    <div class="row">
+                                                                        <div class="col-auto">
+                                                                            <div>
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="20"
+                                                                                    height="20"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-folder2 text-body"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z">
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col d-flex ms-n3">
+                                                                            <span class="me-4 text-dark fw-bold">gulpfile.js</span>
+                                                                            <p class="mb-0">
+                                                                                Configuration file for Gulp library. It contains all tasks you want to perform with Gulp. Learn more about it from
+                                                                                section or
+                                                                                <a href="working-with-gulp.html">Working with Gulp</a>
+                                                                                <a href="https://gulpjs.com/">official Gulp documentation</a>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0">
+                            <!-- Sidebar nav fixed -->
+                            <div class="sidebar-nav-fixed">
+                                <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semibold fs-6">Contents</span>
+
+                                <ul class="list-unstyled">
+                                    <li><a href="#intro" class="active">Introduction</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Scroll top -->
+        @@include("../partials/btn-scroll-top.html")
+        <!-- Scripts -->
+        @@include("../partials/scripts.html")
+        <script src="@@webRoot/assets/js/vendors/sidebarMenu.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/components/prism-scss.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+        <script src="@@webRoot/node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    </body>
+</html>

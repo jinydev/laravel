@@ -1,0 +1,107 @@
+<aside class="docs-nav-sidebar">
+  <div class="py-5"></div>
+  <div class="docs-nav">
+    <nav class="navbar navbar-expand-md">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav flex-column" id="sidebarnav">
+
+          {% assign sorted_pages = site.pages | sort: 'path' %}
+          {% assign current_dir = "" %}
+          {% assign current_subdir = "" %}
+
+          {% for p in sorted_pages %}
+          {% assign parts = p.path | split: '/' %}
+          {% assign depth = parts.size %}
+          {% assign filename = parts | last %}
+
+          {% comment %} Exclude 404.html, assets, or other system files if they appear in pages {% endcomment %}
+          {% unless filename == '404.html' or parts[0] == 'assets' or parts[0] == 'search.json' %}
+
+          {% comment %} Level 1: Root files (e.g. index.md) {% endcomment %}
+          {% if depth == 1 %}
+          <li class="nav-item">
+            <a href="{{ p.url | relative_url }}" class="nav-link {% if page.url == p.url %}active{% endif %}">
+              {{ p.title | default: filename }}
+            </a>
+          </li>
+
+          {% comment %} Level 2: Files in a subdirectory (e.g. 01.Start/file.md) {% endcomment %}
+          {% elsif depth == 2 %}
+          {% assign dir_name = parts[0] %}
+
+          {% if current_dir != dir_name %}
+          {% if current_dir != "" %}
+          <li>
+            <div class="navbar-border"></div>
+          </li>
+          {% endif %}
+
+          <li class="navbar-header">
+            <h5 class="heading">{{ dir_name }}</h5>
+          </li>
+          {% assign current_dir = dir_name %}
+          {% endif %}
+
+          <li class="nav-item">
+            <a href="{{ p.url | relative_url }}" class="nav-link {% if page.url == p.url %}active{% endif %}">
+              {{ p.title | default: filename }}
+            </a>
+          </li>
+
+          {% comment %} Level 3: Files in a sub-subdirectory (e.g. 01.Start/Sub/file.md) {% endcomment %}
+          {% elsif depth == 3 %}
+          {% assign dir_name = parts[0] %}
+          {% assign subdir_name = parts[1] %}
+
+          {% if current_dir != dir_name %}
+          <li class="navbar-header">
+            <h5 class="heading">{{ dir_name }}</h5>
+          </li>
+          {% assign current_dir = dir_name %}
+          {% assign current_subdir = "" %}
+          {% endif %}
+
+          {% if current_subdir != subdir_name %}
+          {% assign subdir_id = subdir_name | slugify %}
+          <li class="nav-item">
+            <a class="nav-link" href="#{{ subdir_id }}" data-bs-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="{{ subdir_id }}">
+              {{ subdir_name }}
+            </a>
+            <div class="collapse" id="{{ subdir_id }}">
+              <ul class="nav flex-column">
+                {% assign current_subdir = subdir_name %}
+                {% endif %}
+
+                <li class="nav-item">
+                  <a href="{{ p.url | relative_url }}" class="nav-link {% if page.url == p.url %}active{% endif %}">
+                    {{ p.title | default: filename }}
+                  </a>
+                </li>
+
+                {% comment %} Check if next item is in same subdir, if not close the list {% endcomment %}
+                {% assign next_index = forloop.index0 | plus: 1 %}
+                {% assign next_page = sorted_pages[next_index] %}
+                {% assign next_parts = next_page.path | split: '/' %}
+                {% if next_parts[1] != subdir_name %}
+              </ul>
+            </div>
+          </li>
+          {% endif %}
+
+          {% endif %}
+
+          {% endunless %}
+          {% endfor %}
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="nav-footer">
+    <p class="mb-0">
+      Developed by
+      <a href="https://github.com/jinydev/laravel" target="_blank">JinyDev</a>
+    </p>
+  </div>
+</aside>

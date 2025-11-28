@@ -22,6 +22,7 @@ bundle install
 
 # 4. 로컬 서버 실행
 bundle exec jekyll serve
+# jekyll serve --watch
 
 # 5. 브라우저에서 http://localhost:4000 접속
 ```

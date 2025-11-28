@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <link rel="canonical" href="https://geeksui.codescandy.com/geeks/pages/dashboard/setting-general.html" />
+    <title>General Setting | Geeks - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page": "general", "page_group": "sitesetting" })
+      <!-- Page content -->
+      <main id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Page header -->
+        <section class="container-fluid p-4">
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <div class="border-bottom pb-3 mb-3">
+                <div class="d-flex flex-column gap-1">
+                  <h1 class="mb-0 h2 fw-bold">General Setting</h1>
+                  <!-- Breadcrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="../dashboard/admin-dashboard.html">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">Setting</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">General Setting</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row -->
+          <div class="row">
+            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-12">
+              <div class="d-flex flex-column gap-4">
+                <!-- Card -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header">
+                    <h4 class="mb-0">General Settings</h4>
+                  </div>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <!-- Form -->
+                    <form>
+                      <div class="mb-4">
+                        <label for="siteName" class="form-label">
+                          Site Name
+                          <small>(Enter your website name below)</small>
+                        </label>
+                        <input class="form-control" id="siteName" placeholder="Your Site " type="text" required />
+                        <small>The site title might be the name of your company or organization, or a brief description of the organization, or a combination of the two.</small>
+                      </div>
+                      <div class="mb-4">
+                        <label for="siteDescription" class="form-label">
+                          Site Description
+                          <small>(Enter your website description below)</small>
+                        </label>
+                        <textarea class="form-control" id="siteDescription" placeholder="Site Description " required rows="4"></textarea>
+                        <small>The site title might be the name of your company or organization, or a brief description of the organization, or a combination of the two.</small>
+                      </div>
+                      <div class="mb-4">
+                        <p class="mb-1 text-dark">Logo</p>
+                        <div class="input-group mb-1">
+                          <input type="file" class="form-control" id="inputLogo" />
+                          <label class="input-group-text" for="inputLogo">Upload</label>
+                        </div>
+                        <small>(Upload your website logo - 120 x 40 )</small>
+                      </div>
+                      <div class="mb-4">
+                        <p class="mb-1 text-dark">
+                          Favicon
+                          <small>(Upload your website favicon - Standard for most desktop browsers. 32×32)</small>
+                        </p>
+                        <div class="input-group mb-1">
+                          <input type="file" class="form-control" id="inputfavicon" />
+                          <label class="input-group-text" for="inputfavicon">Upload</label>
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Update Settings</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header">
+                    <h4 class="mb-0">Currency Settings</h4>
+                  </div>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <form>
+                      <select class="form-select" data-choices="">
+                        <option value="">Select</option>
+                        <option value="&#8377; Indian">&#8377; Indian</option>
+                        <option value="$ USD">$ USD</option>
+                        <option value="€ Euro">€ Euro</option>
+                        <option value="£ British Pound">£ British Pound</option>
+                      </select>
+                      <button type="submit" class="btn btn-primary mt-3">Update Setting</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header">
+                    <h4 class="mb-0">Language Settings</h4>
+                  </div>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <form>
+                      <select class="form-select" data-choices="">
+                        <option value="">Select</option>
+                        <option value="English">English</option>
+                        <option value="German">German</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Hindi">Hindi</option>
+                      </select>
+                      <button type="submit" class="btn btn-primary mt-3">Update Setting</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="@@webRoot/assets/js/vendors/choice.js"></script>
+  </body>
+</html>
